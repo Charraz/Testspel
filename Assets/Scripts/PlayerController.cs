@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D playerRigidBody;
-    Vector2 speed;
-    float maxSpeed;
+    Rigidbody2D playerRigidbody;
     float moveHorizontal;
-    float xSpeed;
     float ySpeed;
+    float xSpeed;
     float jump;
     bool isGrounded;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRigidBody = GetComponent<Rigidbody2D>();
-        maxSpeed = 10f;
-        isGrounded = false;
+        playerRigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -26,39 +24,44 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         jump = Input.GetAxisRaw("Jump");
-        speed = playerRigidBody.velocity;
-        xSpeed = speed.x;
-        ySpeed = speed.y;
-        Debug.Log(playerRigidBody.velocity);
+        ySpeed = playerRigidbody.velocity.y;
+        //Debug.Log(playerRigidbody.velocity);
+
+
     }
 
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
-        if(moveHorizontal > 0.1f && xSpeed < maxSpeed)
+        if (moveHorizontal > 0.1f)
         {
-            playerRigidBody.AddForce(new Vector2(1f, 0f), ForceMode2D.Impulse);
-        }
-        else if(moveHorizontal < -0.1f && xSpeed > maxSpeed * -1)
-        {
-            playerRigidBody.AddForce(new Vector2(-1f, 0f), ForceMode2D.Impulse);
-        }
-        else if (moveHorizontal == 0)
-        {
-            playerRigidBody.velocity = new Vector2(0, ySpeed);
+            playerRigidbody.velocity = new Vector2(10f, ySpeed);
         }
 
-        if(isGrounded == true)
+        else if (moveHorizontal < -0.1f)
         {
-            if(jump == 1)
+            playerRigidbody.velocity = new Vector2(-10f, ySpeed);
+        }
+
+        else if (moveHorizontal == 0)
+        {
+            playerRigidbody.velocity = new Vector2(0f, ySpeed);
+        }
+
+        if (isGrounded == true)
+        {
+            if (jump == 1)
             {
-                playerRigidBody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                //playerRigidbody.velocity = new Vector2(xSpeed, 10f);
+                playerRigidbody.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
             }
+
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
@@ -66,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
         }
