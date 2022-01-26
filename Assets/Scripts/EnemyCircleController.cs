@@ -5,9 +5,14 @@ using UnityEngine;
 public class EnemyCircleController : MonoBehaviour
 {
     Rigidbody2D rb2D;
+    [SerializeField] Rigidbody2D bullet;
 
     float moveSpeed;
-    bool movingLeft;
+    float fallSpeed;
+    public bool movingLeft;
+    float shotTimer;
+    Vector2 bulletSpawn;
+    float bulletSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -15,45 +20,44 @@ public class EnemyCircleController : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         
         movingLeft = true;
-        moveSpeed = 5;
+        moveSpeed = -3;
+        shotTimer = 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(movingLeft == true)
-        {
-            moveSpeed = -5;
-        }
-        else if(movingLeft == false)
-        {
-            moveSpeed = 5;
-        }
+        fallSpeed = rb2D.velocity.y;
     }
 
     void FixedUpdate()
     {
         if (movingLeft == true)
         {
-            rb2D.AddForce(new Vector2(moveSpeed, 0f));
+            rb2D.velocity = new Vector2(moveSpeed, fallSpeed);
+        }
+        else if (movingLeft == false)
+        {
+            rb2D.velocity = new Vector2(moveSpeed * -1, fallSpeed);
+        }
+
+        shotTimer = shotTimer - 1;
+        if (shotTimer <= 0)
+        {
+            Vector2 mousePos = Input.mousePosition;
+            bulletSpawn = new Vector2(0f, 0f);
+            Rigidbody2D clone;
+            clone = Instantiate(bullet, bulletSpawn, transform.rotation);
+            clone.velocity = Vector2.MoveTowards(transform.position, mousePos, bulletSpeed);
+            shotTimer = 60;
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground" && movingLeft == true)
-    //    {
-    //        rb2D.AddForce(new Vector2(0f, 0f));
-    //        movingLeft = false;
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground" && movingLeft == false)
-    //    {
-    //        rb2D.AddForce(new Vector2(0f, 0f));
-    //        movingLeft = true;
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            movingLeft = !movingLeft;
+        }
+    }
 }
