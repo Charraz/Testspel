@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             if (jump == 1)
             {
                 //playerRigidbody.velocity = new Vector2(xSpeed, 10f);
-                playerRigidbody.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
+                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
             }
 
         }
