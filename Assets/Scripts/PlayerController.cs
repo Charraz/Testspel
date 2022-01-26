@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     float jump;
     bool isGrounded;
 
+    [SerializeField]Rigidbody2D bullet;
+    Vector2 bulletSpawn;
+    float bulletspeed = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,11 @@ public class PlayerController : MonoBehaviour
         ySpeed = playerRigidbody.velocity.y;
         //Debug.Log(playerRigidbody.velocity);
 
+        //Går inte att ha i FixedUpdate får knapptryckning blir fucked
+        if (Input.GetMouseButtonDown(0))
+        {
+            skott();
+        }
 
     }
 
@@ -73,5 +81,15 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+
+    void skott()
+    {
+        Vector2 mousePos = Input.mousePosition;
+        bulletSpawn = new Vector2(playerRigidbody.position.x, playerRigidbody.position.y + 1f);
+        Rigidbody2D clone;
+        clone = Instantiate(bullet, bulletSpawn, transform.rotation);
+        clone.velocity = Vector2.MoveTowards(bulletSpawn, mousePos, 10f);
     }
 }
