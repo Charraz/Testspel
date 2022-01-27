@@ -947,9 +947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 805830524910239829, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 5584466626710963665, guid: 3c8673ba53c061b479a220813f3babdd, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 805830524910239828, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 805830524910239828, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
