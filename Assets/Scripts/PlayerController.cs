@@ -10,16 +10,17 @@ public class PlayerController : MonoBehaviour
     float xSpeed;
     float jump;
     bool isGrounded;
+    bool facingRight;
+    bool jumpCD;
+    int i = 0;
 
-    [SerializeField]Rigidbody2D bullet;
-    Vector2 bulletSpawn;
-    float bulletspeed = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
-
+        facingRight = true;
+        jumpCD = false;
     }
 
     // Update is called once per frame
@@ -28,14 +29,7 @@ public class PlayerController : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         jump = Input.GetAxisRaw("Jump");
         ySpeed = playerRigidbody.velocity.y;
-        //Debug.Log(playerRigidbody.velocity);
-
-        //Går inte att ha i FixedUpdate får knapptryckning blir fucked
-        if (Input.GetMouseButtonDown(0))
-        {
-            skott();
-        }
-
+        Debug.Log(jumpCD);
     }
 
 
@@ -44,11 +38,21 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0.1f)
         {
             playerRigidbody.velocity = new Vector2(10f, ySpeed);
+
+            if (facingRight == false)
+            {
+                Flip();
+            }
         }
 
         else if (moveHorizontal < -0.1f)
         {
             playerRigidbody.velocity = new Vector2(-10f, ySpeed);
+
+            if (facingRight == true)
+            {
+                Flip();
+            }
         }
 
         else if (moveHorizontal == 0)
@@ -58,10 +62,14 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded == true)
         {
-            if (jump == 1)
-            {
+            if (jump == 1 && jumpCD == false)
+            {             
                 //playerRigidbody.velocity = new Vector2(xSpeed, 10f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                jumpCD = true;
+
+                Invoke("CD", 0.3f);
+
             }
 
         }
@@ -83,13 +91,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-    void skott()
+    private void Flip()
     {
-        Vector2 mousePos = Input.mousePosition;
-        bulletSpawn = new Vector2(playerRigidbody.position.x, playerRigidbody.position.y + 1f);
-        Rigidbody2D clone;
-        clone = Instantiate(bullet, bulletSpawn, transform.rotation);
-        clone.velocity = Vector2.MoveTowards(bulletSpawn, mousePos, 10f);
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void CD()
+    {
+        jumpCD = false;
     }
 }
