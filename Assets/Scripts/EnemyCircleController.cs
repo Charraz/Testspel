@@ -27,6 +27,7 @@ public class EnemyCircleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Graty
         fallSpeed = rb2D.velocity.y;
     }
 
@@ -42,22 +43,24 @@ public class EnemyCircleController : MonoBehaviour
         }
 
         shotTimer = shotTimer - 1;
-        if (shotTimer <= 0)
-        {
-            Vector2 mousePos = Input.mousePosition;
-            bulletSpawn = new Vector2(0f, 0f);
-            Rigidbody2D clone;
-            clone = Instantiate(bullet, bulletSpawn, transform.rotation);
-            clone.velocity = Vector2.MoveTowards(transform.position, mousePos, bulletSpeed);
-            shotTimer = 60;
-        }
+        //if (shotTimer <= 0)
+        //{
+        //    Vector2 mousePos = Input.mousePosition;
+        //    bulletSpawn = new Vector2(0f, 0f);
+        //    Rigidbody2D clone;
+        //    clone = Instantiate(bullet, bulletSpawn, transform.rotation);
+        //    clone.velocity = Vector2.MoveTowards(transform.position, mousePos, bulletSpeed);
+        //    shotTimer = 60;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Enemy changes direction when hitting a wall
         if (collision.gameObject.tag == "Wall")
         {
             movingLeft = !movingLeft;
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 }
