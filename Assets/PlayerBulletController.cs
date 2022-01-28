@@ -19,4 +19,20 @@ public class PlayerBulletController : MonoBehaviour
     {
         
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Object.Destroy(gameObject);
+            Debug.Log("Enemy");
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            Object.Destroy(gameObject);
+            Debug.Log("Wall");
+        }
+    }
 }

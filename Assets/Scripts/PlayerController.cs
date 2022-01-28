@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     bool facingRight;
     bool jumpCD;
-    int i = 0;
 
 
     // Start is called before the first frame update
@@ -29,7 +28,6 @@ public class PlayerController : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         jump = Input.GetAxisRaw("Jump");
         ySpeed = playerRigidbody.velocity.y;
-        Debug.Log(jumpCD);
     }
 
 
