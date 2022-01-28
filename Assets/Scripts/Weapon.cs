@@ -8,18 +8,20 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public GameObject rotationTarget;
-    float rotationZ;
+    public float speed = 5f;
 
     // Update is called once per frame
     void Update()
     {
+        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
-
-        //transform.RotateAround(rotationTarget.transform.position, new Vector3(10, 10), 20 * Time.deltaTime);
     }
 
     void Shoot()
