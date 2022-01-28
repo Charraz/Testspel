@@ -6,6 +6,7 @@ public class EnemyCircleController : MonoBehaviour
 {
     Rigidbody2D rb2D;
     [SerializeField] Rigidbody2D bullet;
+    public GameObject blueExplosion;
 
     float moveSpeed;
     float fallSpeed;
@@ -61,6 +62,12 @@ public class EnemyCircleController : MonoBehaviour
         {
             movingLeft = !movingLeft;
             transform.Rotate(0f, 180f, 0f);
+        }
+
+        if(collision.gameObject.tag == "PlayerBullet")
+        {
+            Object.Destroy(gameObject);
+            blueExplosion = Instantiate(blueExplosion, transform.position, Quaternion.identity);
         }
     }
 }
