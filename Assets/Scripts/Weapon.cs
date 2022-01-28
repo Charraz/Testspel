@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject rotationTarget;
+    float rotationZ;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +18,8 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
         }
+
+        //transform.RotateAround(rotationTarget.transform.position, new Vector3(10, 10), 20 * Time.deltaTime);
     }
 
     void Shoot()
