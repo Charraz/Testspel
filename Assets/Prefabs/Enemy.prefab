@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5584466626710963665, guid: 3c8673ba53c061b479a220813f3babdd, type: 3}
+  blueExplosion: {fileID: 8007187689169312386, guid: 0edbc9c8f6abad74d86786da554581cd, type: 3}
   movingLeft: 0
 --- !u!61 &805830524910239835
 BoxCollider2D:
