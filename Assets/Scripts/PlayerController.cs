@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D playerRigidbody;
+    SpriteRenderer playerSprite;
     float moveHorizontal;
     float ySpeed;
     float xSpeed;
     float jump;
     bool isGrounded;
-    bool facingRight;
     bool jumpCD;
 
 
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
-        facingRight = true;
+        playerSprite = GetComponent<SpriteRenderer>();
         jumpCD = false;
     }
 
@@ -36,21 +36,13 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0.1f)
         {
             playerRigidbody.velocity = new Vector2(10f, ySpeed);
-
-            if (facingRight == false)
-            {
-                Flip();
-            }
+            playerSprite.flipY = false;
         }
 
         else if (moveHorizontal < -0.1f)
         {
             playerRigidbody.velocity = new Vector2(-10f, ySpeed);
-
-            if (facingRight == true)
-            {
-                Flip();
-            }
+            playerSprite.flipY = true;
         }
 
         else if (moveHorizontal == 0)
@@ -87,12 +79,6 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
-    }
-
-    private void Flip()
-    {
-        facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
     }
 
     private void CD()

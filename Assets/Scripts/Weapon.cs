@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float speed = 5f;
+    public float speed = 50f;
 
     // Update is called once per frame
     void Update()
