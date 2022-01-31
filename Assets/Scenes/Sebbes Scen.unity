@@ -960,9 +960,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 805830524910239829, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
-      propertyPath: blueExplosion
-      value: 
-      objectReference: {fileID: 8007187689169312386, guid: 0edbc9c8f6abad74d86786da554581cd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81818fc71f1ef0944880b35cedf6663c, type: 3}
