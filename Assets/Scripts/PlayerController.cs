@@ -36,13 +36,13 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0.1f)
         {
             playerRigidbody.velocity = new Vector2(10f, ySpeed);
-            playerSprite.flipY = false;
+            playerSprite.flipX = false;
         }
 
         else if (moveHorizontal < -0.1f)
         {
             playerRigidbody.velocity = new Vector2(-10f, ySpeed);
-            playerSprite.flipY = true;
+            playerSprite.flipX = true;
         }
 
         else if (moveHorizontal == 0)
