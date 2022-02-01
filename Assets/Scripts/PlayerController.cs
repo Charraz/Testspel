@@ -6,28 +6,49 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D playerRigidbody;
     SpriteRenderer playerSprite;
+    public new Animator animation;
     float moveHorizontal;
     float ySpeed;
     float xSpeed;
-    float jump;
     bool isGrounded;
-    bool jumpCD;
-
+    bool doubleJump;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
-        jumpCD = false;
+        doubleJump = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        jump = Input.GetAxisRaw("Jump");
         ySpeed = playerRigidbody.velocity.y;
+        xSpeed = 10;
+        Debug.Log(doubleJump);
+
+        //Player jumping
+        if (isGrounded == true)
+        {
+            if (Input.GetButtonDown("Jump") && doubleJump == false)
+            {
+                //Animation = Jumping
+                animation.SetBool("IsJumping", true);
+                //Player jumping
+                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+            }
+        }
+        else if (isGrounded == false)
+        {
+            if (Input.GetButtonDown("Jump") && doubleJump == true)
+            {
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+                playerRigidbody.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
+                doubleJump = false;
+            }
+        }
     }
 
 
@@ -35,54 +56,50 @@ public class PlayerController : MonoBehaviour
     {
         if (moveHorizontal > 0.1f)
         {
-            playerRigidbody.velocity = new Vector2(10f, ySpeed);
+            //Animation = Running
+            animation.SetFloat("Speed", xSpeed);
+            //Player movement
+            playerRigidbody.velocity = new Vector2(xSpeed, ySpeed);
             playerSprite.flipX = false;
         }
 
         else if (moveHorizontal < -0.1f)
         {
-            playerRigidbody.velocity = new Vector2(-10f, ySpeed);
+            //Animation = Running
+            animation.SetFloat("Speed", xSpeed);
+            //Player movement
+            playerRigidbody.velocity = new Vector2(xSpeed * -1, ySpeed);
             playerSprite.flipX = true;
         }
 
         else if (moveHorizontal == 0)
         {
+            //Animation = Idle
+            animation.SetFloat("Speed", 0);
+            //Player movement
             playerRigidbody.velocity = new Vector2(0f, ySpeed);
-        }
-
-        if (isGrounded == true)
-        {
-            if (jump == 1 && jumpCD == false)
-            {             
-                //playerRigidbody.velocity = new Vector2(xSpeed, 10f);
-                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-                jumpCD = true;
-
-                Invoke("CD", 0.3f);
-
-            }
-
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Ändrar så att Grounded är true så man kan hoppa igen
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            //När man är "Grounded" så slutar hoppanimationen att spelas
+            animation.SetBool("IsJumping", false);
+            doubleJump = false;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //Ändrar så att Grounded är false när spelaren lämnar marken
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
+            doubleJump = true;
         }
-    }
-
-    private void CD()
-    {
-        jumpCD = false;
     }
 }
