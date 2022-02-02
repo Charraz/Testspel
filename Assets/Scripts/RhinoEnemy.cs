@@ -25,34 +25,35 @@ public class RhinoEnemy : MonoBehaviour
         
     }
 
-    //private void FixedUpdate()
-    //{
-    //    if (movingLeft == true)
-    //    {
-    //        rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
-    //    }
-    //    else if (movingLeft == false)
-    //    {
-    //        rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
-    //    }
+    private void FixedUpdate()
+    {
+        if (movingLeft == true)
+        {
+            rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
+        }
+        else if (movingLeft == false)
+        {
+            rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
+        }
 
-    //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.7f, Color.green);
-    //    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.7f);
-    //    if (hit.collider.tag == "Wall")
-    //    {
-    //        rigidkropp.transform.Rotate(0f, 180f, 0f);
-    //       // movingLeft = !movingLeft;
-    //    }
-    //    Debug.Log(movingLeft);
-    //}
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.7f, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.7f);
+        if (hit.collider.tag == "Wall")
+        {
+            Debug.Log("Hej");
+            rigidkropp.transform.Rotate(0f, 180f, 0f);
+            movingLeft = false;
+        }
+        
+    }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
 
-    //    //Death if colliding with a player bullet.
-    //    if (collision.gameObject.tag == "PlayerBullet")
-    //    {
-    //        Object.Destroy(gameObject);
-    //    }
-    //}
+        //Death if colliding with a player bullet.
+        if (collision.gameObject.tag == "PlayerBullet")
+        {
+            Object.Destroy(gameObject);
+        }
+    }
 }
