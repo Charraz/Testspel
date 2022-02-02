@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811889, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -209,6 +213,14 @@ PrefabInstance:
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: animation
+      value: 
+      objectReference: {fileID: 435153661}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: jumpForce
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319e28013f724074887dddc0e575980f, type: 3}
@@ -539,6 +551,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &435153661 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1240665349, guid: 319e28013f724074887dddc0e575980f, type: 3}
+  m_PrefabInstance: {fileID: 40011736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &485419437
 GameObject:
   m_ObjectHideFlags: 0

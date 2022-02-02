@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerSprite;
     public new Animator animation;
     float moveHorizontal;
-    float ySpeed;
     float xSpeed;
+    public float jumpForce;
     bool isGrounded;
     bool doubleJump;
 
@@ -25,19 +25,20 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        ySpeed = playerRigidbody.velocity.y;
         xSpeed = 10;
-        Debug.Log(doubleJump);
+        //Debug.Log(doubleJump);
 
         //Player jumping
         if (isGrounded == true)
         {
+            //Alternativ lösning i ifsatsen efter getbuttondown: Mathf.Abs(playerRigidbody.velocity.y) < 0.001)
+
             if (Input.GetButtonDown("Jump") && doubleJump == false)
             {
                 //Animation = Jumping
                 animation.SetBool("IsJumping", true);
                 //Player jumping
-                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             }
         }
         else if (isGrounded == false)
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && doubleJump == true)
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
-                playerRigidbody.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
+                playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 doubleJump = false;
             }
         }
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
             //Animation = Running
             animation.SetFloat("Speed", xSpeed);
             //Player movement
-            playerRigidbody.velocity = new Vector2(xSpeed, ySpeed);
+            playerRigidbody.velocity = new Vector2(xSpeed, playerRigidbody.velocity.y);
             playerSprite.flipX = false;
         }
 
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
             //Animation = Running
             animation.SetFloat("Speed", xSpeed);
             //Player movement
-            playerRigidbody.velocity = new Vector2(xSpeed * -1, ySpeed);
+            playerRigidbody.velocity = new Vector2(xSpeed * -1, playerRigidbody.velocity.y);
             playerSprite.flipX = true;
         }
 
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour
             //Animation = Idle
             animation.SetFloat("Speed", 0);
             //Player movement
-            playerRigidbody.velocity = new Vector2(0f, ySpeed);
+            playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
         }
     }
 
