@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     Rigidbody2D playerRigidbody;
     SpriteRenderer playerSprite;
+    
     public new Animator animation;
+    
+    //Movementvariabler
     float moveHorizontal;
-    float xSpeed;
-    public float jumpForce;
+    public float moveSpeed;
+
+    //Jumpvariabler
     bool isGrounded;
-    bool wallClimb;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+    public float jumpForce;
     int doubleJump;
+
+    //Wallclimbvariabler
+    bool isTouchingFront;
+    public Transform frontCheck;
+    public float wallSlidingSpeed;
+    bool wallSliding;
+    bool wallClimb;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +41,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        xSpeed = 10;
-        Debug.Log(wallClimb);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+        Debug.Log(isGrounded);
 
         //Player jumping
         if (isGrounded == true)
@@ -66,18 +82,18 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0.1f)
         {
             //Animation = Running
-            animation.SetFloat("Speed", xSpeed);
+            animation.SetFloat("Speed", moveSpeed);
             //Player movement
-            playerRigidbody.velocity = new Vector2(xSpeed, playerRigidbody.velocity.y);
+            playerRigidbody.velocity = new Vector2(moveSpeed, playerRigidbody.velocity.y);
             playerSprite.flipX = false;
         }
 
         else if (moveHorizontal < -0.1f)
         {
             //Animation = Running
-            animation.SetFloat("Speed", xSpeed);
+            animation.SetFloat("Speed", moveSpeed);
             //Player movement
-            playerRigidbody.velocity = new Vector2(xSpeed * -1, playerRigidbody.velocity.y);
+            playerRigidbody.velocity = new Vector2(moveSpeed * -1, playerRigidbody.velocity.y);
             playerSprite.flipX = true;
         }
 
