@@ -5,9 +5,12 @@ using UnityEngine;
 public class RhinoEnemy : MonoBehaviour
 {
     public Rigidbody2D rigidkropp;
+    public new Animator animation;
 
     float moveSpeed;
+    float runSpeed;
     float fallSpeed;
+    bool playerInSight;
     bool movingLeft;
 
     // Start is called before the first frame update
@@ -16,13 +19,32 @@ public class RhinoEnemy : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
 
         movingLeft = true;
+        playerInSight = false;
         moveSpeed = -3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 1f, Color.green);
+        RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
+        if (TurnAroundRaycast.collider!=null && TurnAroundRaycast.collider.tag == "Wall")
+        {
+            rigidkropp.transform.Rotate(0f, 180f, 0f);
+            movingLeft = !movingLeft;
+        }
+
+        RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 10f);
+        if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
+        {
+            moveSpeed = -6;
+            animation.SetBool("SeesPlayer", true);
+        }
+        else
+        {
+            moveSpeed = -3;
+            animation.SetBool("SeesPlayer", false);
+        }
     }
 
     private void FixedUpdate()
@@ -35,16 +57,6 @@ public class RhinoEnemy : MonoBehaviour
         {
             rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
         }
-
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.7f, Color.green);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.7f);
-        if (hit.collider.tag == "Wall")
-        {
-            Debug.Log("Hej");
-            rigidkropp.transform.Rotate(0f, 180f, 0f);
-            movingLeft = false;
-        }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +65,16 @@ public class RhinoEnemy : MonoBehaviour
         //Death if colliding with a player bullet.
         if (collision.gameObject.tag == "PlayerBullet")
         {
-            Object.Destroy(gameObject);
+            moveSpeed = -2;
+            Debug.Log("Träff");
+            animation.SetBool("RhinoHit", true);
+            Destroy(gameObject);
+            //Invoke("death", 1f);
         }
+    }
+
+    private void death()
+    {
+        Destroy(gameObject);
     }
 }
