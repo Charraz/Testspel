@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 584151426}
   - component: {fileID: 584151425}
   - component: {fileID: 584151424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Golv
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -977,6 +977,14 @@ PrefabInstance:
     - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: jumpForce
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: checkRadius
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319e28013f724074887dddc0e575980f, type: 3}
