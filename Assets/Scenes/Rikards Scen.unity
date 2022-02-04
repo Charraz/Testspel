@@ -178,6 +178,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: xWallForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: yWallForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: wallJumpTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: checkRadiusFront
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: wallSlidingSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: checkRadiusGround
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325820368308811901, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6eb97db3fbe0267448713188218b79fb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319e28013f724074887dddc0e575980f, type: 3}
 --- !u!1 &122887081
@@ -830,7 +858,7 @@ GameObject:
   - component: {fileID: 1155479199}
   - component: {fileID: 1155479198}
   - component: {fileID: 1155479197}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Golv (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -922,7 +950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155479196}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.53, y: 5.94, z: 0}
+  m_LocalPosition: {x: 17.53, y: 2.32, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1031,7 +1059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171396939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.34, y: -0.02, z: 0}
+  m_LocalPosition: {x: 15.53, y: -0.9, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1048,7 +1076,7 @@ GameObject:
   - component: {fileID: 1214836611}
   - component: {fileID: 1214836610}
   - component: {fileID: 1214836609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Golv (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1140,8 +1168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214836608}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 12.18, y: 3.54, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_LocalPosition: {x: 12.18, y: 2.58, z: 0}
+  m_LocalScale: {x: 9.975, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1157,7 +1185,7 @@ GameObject:
   - component: {fileID: 1351405216}
   - component: {fileID: 1351405215}
   - component: {fileID: 1351405214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Golv (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
