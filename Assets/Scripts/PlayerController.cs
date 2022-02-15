@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        Debug.Log(playerRigidbody.velocity);
+        //Debug.Log(playerRigidbody.velocity);
 
         //Player jumping
         if (isGrounded == true)

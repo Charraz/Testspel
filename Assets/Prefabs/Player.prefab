@@ -317,7 +317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animation: {fileID: 1240665349}
   moveSpeed: 10
-  groundCheck: {fileID: 0}
   jumpForce: 15
 --- !u!61 &6325820368308811901
 BoxCollider2D:
@@ -438,4 +437,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1434698833}
   bulletPrefab: {fileID: 7578623964889464009, guid: c799d97b59ca9204397d77146209009b, type: 3}
+  myPlayer: {fileID: 0}
   speed: 50
