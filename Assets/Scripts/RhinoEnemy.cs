@@ -8,8 +8,8 @@ public class RhinoEnemy : MonoBehaviour
     public new Animator animation;
 
     float moveSpeed;
-    float runSpeed;
-    float fallSpeed;
+    //float runSpeed;
+    //float fallSpeed;
     bool playerInSight;
     bool movingLeft;
 
@@ -34,7 +34,7 @@ public class RhinoEnemy : MonoBehaviour
             movingLeft = !movingLeft;
         }
 
-        RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 10f);
+        RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3f);
         if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
         {
             moveSpeed = -6;
