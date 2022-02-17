@@ -8,8 +8,6 @@ public class RhinoEnemy : MonoBehaviour
     public new Animator animation;
 
     float moveSpeed;
-    //float runSpeed;
-    //float fallSpeed;
     bool playerInSight;
     bool movingLeft;
 

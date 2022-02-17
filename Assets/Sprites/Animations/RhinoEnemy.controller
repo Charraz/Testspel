@@ -66,6 +66,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: HitWall
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SeesPlayer
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2345951553691589260}
   m_Solo: 0
@@ -112,7 +115,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: HitByShot
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -9063507013244899943}
   m_Solo: 0
@@ -149,6 +155,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: HitWall
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: HitByShot
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -249,6 +261,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: SeesPlayer
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: HitWall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4359827095716926101}

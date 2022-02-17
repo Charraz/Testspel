@@ -9,9 +9,8 @@ public class RhinoBehaviour : MonoBehaviour
     public new Animator animation;
 
     float moveSpeed;
-    bool playerInSight;
     bool movingLeft;
-    //bool seesPlayer;
+    float rhinoHitAnimationComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +18,17 @@ public class RhinoBehaviour : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
 
-        movingLeft = true;
-        playerInSight = false;
         moveSpeed = -3;
-        //seesPlayer = false;
+        movingLeft = true;
+        rhinoHitAnimationComplete = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Sätter animationen beroende på vilket state rhinon är i
+        rhinoStateChecker();
+
         Debug.Log(npcMode);
         switch (npcMode)
         {
@@ -38,27 +39,38 @@ public class RhinoBehaviour : MonoBehaviour
                 RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 5f);
                 if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
                 {
-                    
                     npcMode = NPCMode.RhinoRun;
-                    animation.SetBool("SeesPlayer", true);
                 }
                 break;
 
             case NPCMode.RhinoRun:
                 rhinoRun();
 
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
                 {
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
-                    animation.SetBool("HitWall", true);
+                }
+                else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
+                {
+                    npcMode = NPCMode.RhinoWallOrPlayerHit;
                 }
 
                 break;
 
             case NPCMode.RhinoWallOrPlayerHit:
                 rhinoWallOrPlayerHit();
+
+                if (rhinoHitAnimationComplete >= 120)
+                {
+                    rigidkropp.transform.Rotate(0f, 180f, 0f);
+                    movingLeft = !movingLeft;
+                    npcMode = NPCMode.RhinoWalk;
+                }
+
+                rhinoHitAnimationComplete = rhinoHitAnimationComplete + 1;
+
                 break;
 
             //case NPCMode.RhinoHit:
@@ -72,8 +84,9 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoWalk()
     {
-        //Sätter bara hastigheten på Rhino i det state där den används
+        //Sätter hastighet då rhinoWalk är aktivt till -3 och nollställer animationstriggern för rhinoWallOrPlayerHit
         moveSpeed = -3;
+        rhinoHitAnimationComplete = 0;
 
         //Vänd när Rhino kommer till en vägg
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
@@ -111,7 +124,46 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoWallOrPlayerHit()
     {
-        animation.SetBool("WallHit", true);
+        if (movingLeft == true)
+        {
+            rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
+        }
+        else if (movingLeft == false)
+        {
+            rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
+        }
+    }
+
+    private void rhinoStateChecker()
+    {
+        if (npcMode == NPCMode.RhinoWalk)
+        {
+            animation.SetBool("SeesPlayer", false);
+            animation.SetBool("HitAnimationComplete", true);
+            animation.SetBool("HitWall", false);
+            animation.SetBool("HitByShot", false);
+        }
+        else if (npcMode == NPCMode.RhinoRun)
+        {
+            animation.SetBool("SeesPlayer", true);
+            animation.SetBool("HitAnimationComplete", false);
+            animation.SetBool("HitWall", false);
+            animation.SetBool("HitByShot", false);
+        }
+        else if (npcMode == NPCMode.RhinoWallOrPlayerHit)
+        {
+            animation.SetBool("SeesPlayer", false);
+            animation.SetBool("HitAnimationComplete", false);
+            animation.SetBool("HitWall", true);
+            animation.SetBool("HitByShot", false);
+        }
+        else if (npcMode == NPCMode.RhinoHit)
+        {
+            animation.SetBool("SeesPlayer", false);
+            animation.SetBool("HitAnimationComplete", false);
+            animation.SetBool("HitWall", false);
+            animation.SetBool("HitByShot", true);
+        }
     }
 
     public enum NPCMode
