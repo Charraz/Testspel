@@ -7,24 +7,24 @@ public class RhinoBehaviour : MonoBehaviour
     private NPCMode npcMode = NPCMode.RhinoWalk;
     public Rigidbody2D rigidkropp;
     public new Animator animation;
+    SpriteRenderer spriterenderer;
 
     float moveSpeed;
     bool movingLeft;
-    float HP;
-    float rhinoHitAnimationComplete;
-    float hitByShotAnimation;
+    //float HP;
+    //float hitByShotAnimation;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
+        spriterenderer = gameObject.GetComponent<SpriteRenderer>();
 
         moveSpeed = -3;
         movingLeft = true;
-        HP = 2;
-        rhinoHitAnimationComplete = 0;
-        hitByShotAnimation = 0;
+        //HP = 2;
+        //hitByShotAnimation = 0;
     }
 
     // Update is called once per frame
@@ -33,16 +33,16 @@ public class RhinoBehaviour : MonoBehaviour
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
-        Debug.Log(npcMode);
         switch (npcMode)
         {
             case NPCMode.RhinoWalk:
                 rhinoWalk();
                
                 //Tittar om spelaren är nära nog för att gå in i sitt attack state
-                RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 5f);
+                RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 8f);
                 if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
                 {
+                    spriterenderer.color = Color.red;
                     npcMode = NPCMode.RhinoRun;
                 }
 
@@ -50,30 +50,26 @@ public class RhinoBehaviour : MonoBehaviour
 
             case NPCMode.RhinoRun:
                 rhinoRun();
-                
+
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
                 {
+                    spriterenderer.color = Color.white;
+                    rhinoWallOrPlayerHit();
+                    Invoke("stunComplete", 2);
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
                 }
                 else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
                 {
+                    spriterenderer.color = Color.white;
+                    rhinoWallOrPlayerHit();
+                    Invoke("stunComplete", 2);
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
                 }
 
                 break;
 
             case NPCMode.RhinoWallOrPlayerHit:
-                rhinoWallOrPlayerHit();
-
-                if (rhinoHitAnimationComplete >= 60)
-                {
-                    rigidkropp.transform.Rotate(0f, 180f, 0f);
-                    movingLeft = !movingLeft;
-                    npcMode = NPCMode.RhinoWalk;
-                }
-
-                rhinoHitAnimationComplete = rhinoHitAnimationComplete + 1;
 
                 break;
 
@@ -104,7 +100,6 @@ public class RhinoBehaviour : MonoBehaviour
     {
         //Sätter hastighet då rhinoWalk är aktivt till -3 och nollställer animationstriggern för rhinoWallOrPlayerHit
         moveSpeed = -3;
-        rhinoHitAnimationComplete = 0;
 
         //Vänd när Rhino kommer till en vägg
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
@@ -144,12 +139,18 @@ public class RhinoBehaviour : MonoBehaviour
     {
         if (movingLeft == true)
         {
-            rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
+            rigidkropp.AddForce(new Vector2(10f, 4f), ForceMode2D.Impulse);
         }
         else if (movingLeft == false)
         {
-            rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
+            rigidkropp.AddForce(new Vector2(-10f, 4f), ForceMode2D.Impulse);
         }
+    }
+
+    private void stunComplete()
+    {
+        Debug.Log("hej hej");
+        npcMode = NPCMode.RhinoWalk;
     }
 
     //private void rhinoHit()
@@ -157,7 +158,7 @@ public class RhinoBehaviour : MonoBehaviour
     //    if (HP > 0)
     //    {
     //        HP = HP - 1;
-            
+
     //    }
     //    else if (HP < 1)
     //    {
