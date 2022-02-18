@@ -10,7 +10,9 @@ public class RhinoBehaviour : MonoBehaviour
 
     float moveSpeed;
     bool movingLeft;
+    float HP;
     float rhinoHitAnimationComplete;
+    float hitByShotAnimation;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,9 @@ public class RhinoBehaviour : MonoBehaviour
 
         moveSpeed = -3;
         movingLeft = true;
+        HP = 2;
         rhinoHitAnimationComplete = 0;
+        hitByShotAnimation = 0;
     }
 
     // Update is called once per frame
@@ -41,12 +45,12 @@ public class RhinoBehaviour : MonoBehaviour
                 {
                     npcMode = NPCMode.RhinoRun;
                 }
+
                 break;
 
             case NPCMode.RhinoRun:
                 rhinoRun();
-
-                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
+                
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
                 {
@@ -62,7 +66,7 @@ public class RhinoBehaviour : MonoBehaviour
             case NPCMode.RhinoWallOrPlayerHit:
                 rhinoWallOrPlayerHit();
 
-                if (rhinoHitAnimationComplete >= 120)
+                if (rhinoHitAnimationComplete >= 60)
                 {
                     rigidkropp.transform.Rotate(0f, 180f, 0f);
                     movingLeft = !movingLeft;
@@ -75,10 +79,24 @@ public class RhinoBehaviour : MonoBehaviour
 
             //case NPCMode.RhinoHit:
             //    rhinoHit();
+                
+            //    if (hitByShotAnimation >= 60)
+            //    {
+            //        npcMode = NPCMode.RhinoWalk;
+            //    }
+
             //    break;
 
             default:
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerBullet")
+        {
+            npcMode = NPCMode.RhinoHit;
         }
     }
 
@@ -133,6 +151,21 @@ public class RhinoBehaviour : MonoBehaviour
             rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
         }
     }
+
+    //private void rhinoHit()
+    //{
+    //    if (HP > 0)
+    //    {
+    //        HP = HP - 1;
+            
+    //    }
+    //    else if (HP < 1)
+    //    {
+    //        Object.Destroy(gameObject);
+    //    }
+
+    //    npcMode = NPCMode.RhinoWalk;
+    //}
 
     private void rhinoStateChecker()
     {
