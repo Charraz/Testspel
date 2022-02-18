@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBulletController : MonoBehaviour
 {
 
-    public float speed = 2f;
+    public float speed;
     public Rigidbody2D rb;
 
     Vector2 lastVelocity;
@@ -16,13 +16,12 @@ public class PlayerBulletController : MonoBehaviour
         rb.velocity = transform.right * speed;
 
         //Döda bullet efter 3 sekunder
-        Invoke("Death", 20f);
+        Invoke("Death", 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity);
         lastVelocity = rb.velocity;
     }
 

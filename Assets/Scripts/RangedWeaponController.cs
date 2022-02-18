@@ -9,6 +9,7 @@ public class RangedWeaponController : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject myPlayer;
+    public GameObject rocketPrefab;
 
     // Update is called once per frame
 
@@ -17,6 +18,11 @@ public class RangedWeaponController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            ShootRocket();
         }
     }
     void FixedUpdate()
@@ -52,5 +58,10 @@ public class RangedWeaponController : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void ShootRocket()
+    {
+        Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
     }
 }
