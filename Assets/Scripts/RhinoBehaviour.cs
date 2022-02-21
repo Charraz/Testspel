@@ -30,6 +30,7 @@ public class RhinoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(npcMode);
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
@@ -42,8 +43,9 @@ public class RhinoBehaviour : MonoBehaviour
                 RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 8f);
                 if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
                 {
-                    spriterenderer.color = Color.red;
-                    npcMode = NPCMode.RhinoRun;
+                    rigidkropp.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
+                    Invoke("jumpComplete", 0.65f);
+                    npcMode = NPCMode.RhinoJumping;
                 }
 
                 break;
@@ -73,9 +75,14 @@ public class RhinoBehaviour : MonoBehaviour
 
                 break;
 
+            case NPCMode.RhinoJumping:
+                rhinoJumping();
+
+                break;
+
             //case NPCMode.RhinoHit:
             //    rhinoHit();
-                
+
             //    if (hitByShotAnimation >= 60)
             //    {
             //        npcMode = NPCMode.RhinoWalk;
@@ -123,6 +130,7 @@ public class RhinoBehaviour : MonoBehaviour
     private void rhinoRun()
     {
         moveSpeed = -7;
+        spriterenderer.color = Color.red;
 
         //Får Rhino att röra sig
         if (movingLeft == true)
@@ -147,10 +155,20 @@ public class RhinoBehaviour : MonoBehaviour
         }
     }
 
+    private void rhinoJumping()
+    {
+        moveSpeed = 0;
+        rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
+    }
+
     private void stunComplete()
     {
-        Debug.Log("hej hej");
         npcMode = NPCMode.RhinoWalk;
+    }
+
+    private void jumpComplete()
+    {
+        npcMode = NPCMode.RhinoRun;
     }
 
     //private void rhinoHit()
@@ -176,13 +194,15 @@ public class RhinoBehaviour : MonoBehaviour
             animation.SetBool("HitAnimationComplete", true);
             animation.SetBool("HitWall", false);
             animation.SetBool("HitByShot", false);
+            animation.SetBool("Jumping", false);
         }
         else if (npcMode == NPCMode.RhinoRun)
         {
-            animation.SetBool("SeesPlayer", true);
+            animation.SetBool("SeesPlayer", false);
             animation.SetBool("HitAnimationComplete", false);
             animation.SetBool("HitWall", false);
             animation.SetBool("HitByShot", false);
+            animation.SetBool("Jumping", false);
         }
         else if (npcMode == NPCMode.RhinoWallOrPlayerHit)
         {
@@ -190,6 +210,7 @@ public class RhinoBehaviour : MonoBehaviour
             animation.SetBool("HitAnimationComplete", false);
             animation.SetBool("HitWall", true);
             animation.SetBool("HitByShot", false);
+            animation.SetBool("Jumping", false);
         }
         else if (npcMode == NPCMode.RhinoHit)
         {
@@ -197,6 +218,15 @@ public class RhinoBehaviour : MonoBehaviour
             animation.SetBool("HitAnimationComplete", false);
             animation.SetBool("HitWall", false);
             animation.SetBool("HitByShot", true);
+            animation.SetBool("Jumping", false);
+        }
+        else if (npcMode == NPCMode.RhinoJumping)
+        {
+            animation.SetBool("SeesPlayer", false);
+            animation.SetBool("HitAnimationComplete", false);
+            animation.SetBool("HitWall", false);
+            animation.SetBool("HitByShot", false);
+            animation.SetBool("Jumping", true);
         }
     }
 
@@ -205,6 +235,7 @@ public class RhinoBehaviour : MonoBehaviour
         RhinoWalk,
         RhinoRun,
         RhinoWallOrPlayerHit,
-        RhinoHit
+        RhinoHit,
+        RhinoJumping
     }
 }
