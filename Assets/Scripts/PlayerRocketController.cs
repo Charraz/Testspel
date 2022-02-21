@@ -6,6 +6,7 @@ public class PlayerRocketController : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
+    public GameObject particleExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,14 @@ public class PlayerRocketController : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            particleExplosion = Instantiate(particleExplosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

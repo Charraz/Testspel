@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 9
   rb: {fileID: 0}
+  particleExplosion: {fileID: 8342795581081125656, guid: f47ab47727ed30e4fa3a12e64bfdbd5f, type: 3}
 --- !u!96 &324839077183627789
 TrailRenderer:
   serializedVersion: 2
