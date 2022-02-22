@@ -7,9 +7,7 @@ public class PlayerRocketController : MonoBehaviour
     public float speed;
     Rigidbody2D rb;
     public GameObject particleExplosion;
-    Collider2D activeExplosion;
-    public float explosionRadius;
-    int hit;
+    public GameObject explosionRadius;
 
     // Start is called before the first frame update
     void Start()
@@ -23,20 +21,13 @@ public class PlayerRocketController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void Death()
     {
         particleExplosion = Instantiate(particleExplosion, transform.position, Quaternion.identity);
-        activeExplosion = Physics2D.OverlapCircle(transform.position, explosionRadius);
-        hit++;
-        Debug.Log(hit);
-
-        if (activeExplosion.tag == "Enemy")
-        {
-            Debug.Log("OOOOO");
-        }
+        explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
     }
@@ -45,18 +36,13 @@ public class PlayerRocketController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-
-            hit++;
-            Debug.Log(hit);
             particleExplosion = Instantiate(particleExplosion, transform.position, Quaternion.identity);
-            activeExplosion = Physics2D.OverlapCircle(transform.position, explosionRadius);
+            explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
+            Debug.Log("DÖ");
 
-            if (activeExplosion.tag == "Enemy")
-            {
-                Debug.Log("OOOOO");
-            }
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+
     }
 }

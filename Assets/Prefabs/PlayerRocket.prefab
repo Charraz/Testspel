@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9
-  particleExplosion: {fileID: 8342795581081125656, guid: f47ab47727ed30e4fa3a12e64bfdbd5f, type: 3}
-  explosionRadius: 5
+  particleExplosion: {fileID: 4494744821287106505, guid: 6231324277e660442981fc3938601d26, type: 3}
+  explosionRadius: {fileID: 2866751546348537679, guid: be7d3dac86878b34f898bd66901b5bf1, type: 3}
 --- !u!96 &324839077183627789
 TrailRenderer:
   serializedVersion: 2
