@@ -83,11 +83,6 @@ public class RhinoBehaviour : MonoBehaviour
             //case NPCMode.RhinoHit:
             //    rhinoHit();
 
-            //    if (hitByShotAnimation >= 60)
-            //    {
-            //        npcMode = NPCMode.RhinoWalk;
-            //    }
-
             //    break;
 
             default:
@@ -171,20 +166,19 @@ public class RhinoBehaviour : MonoBehaviour
         npcMode = NPCMode.RhinoRun;
     }
 
-    //private void rhinoHit()
-    //{
-    //    if (HP > 0)
-    //    {
-    //        HP = HP - 1;
+    private void rhinoHit()
+    {
+        spriterenderer.color = Color.white;
+        //if (HP > 0)
+        //{
+        //    HP = HP - 1;
 
-    //    }
-    //    else if (HP < 1)
-    //    {
-    //        Object.Destroy(gameObject);
-    //    }
-
-    //    npcMode = NPCMode.RhinoWalk;
-    //}
+        //}
+        //else if (HP < 1)
+        //{
+        //    Object.Destroy(gameObject);
+        //}
+    }
 
     private void rhinoStateChecker()
     {
