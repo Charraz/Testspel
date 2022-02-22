@@ -188,7 +188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -355,3 +355,4 @@ MonoBehaviour:
   firePoint: {fileID: 1434698833}
   bulletPrefab: {fileID: 7578623964889464009, guid: c799d97b59ca9204397d77146209009b, type: 3}
   myPlayer: {fileID: 6325820368308811888}
+  rocketPrefab: {fileID: 0}
