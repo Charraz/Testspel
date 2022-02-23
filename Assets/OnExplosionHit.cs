@@ -21,7 +21,7 @@ public class OnExplosionHit : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("AAAAAAA");
+
         }
     }
 
