@@ -7,6 +7,7 @@ public class PlayerBulletController : MonoBehaviour
 
     public float speed;
     public Rigidbody2D rb;
+    public GameObject particleEffect;
 
     Vector2 lastVelocity;
     // Start is called before the first frame update
@@ -30,8 +31,9 @@ public class PlayerBulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            particleEffect = Instantiate(particleEffect, transform.position, Quaternion.identity);
             Object.Destroy(gameObject);
-            Debug.Log("Enemy");
+            
         }
 
         //if (collision.gameObject.tag == "Wall")
@@ -48,18 +50,17 @@ public class PlayerBulletController : MonoBehaviour
     }
 
     //Studsar bullet när den kolliderar med colliders
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        var speed = lastVelocity.magnitude;
-        var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    var speed = lastVelocity.magnitude;
+    //    var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-        rb.velocity = direction * Mathf.Max(speed, 0f);
-
-        Debug.Log("Hit");
-    }
+    //    rb.velocity = direction * Mathf.Max(speed, 0f);
+    //}
 
     private void Death()
     {
         Destroy(gameObject);
+        particleEffect = Instantiate(particleEffect, transform.position, Quaternion.identity);
     }
 }
