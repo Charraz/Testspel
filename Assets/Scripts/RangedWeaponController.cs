@@ -10,7 +10,13 @@ public class RangedWeaponController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject myPlayer;
     public GameObject rocketPrefab;
+    private bool weaponCD;
 
+
+    private void Start()
+    {
+        weaponCD = false;
+    }
     // Update is called once per frame
 
     private void Update()
@@ -20,9 +26,11 @@ public class RangedWeaponController : MonoBehaviour
             Shoot();
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && weaponCD == false)
         {
             ShootRocket();
+            weaponCD = true;
+            Invoke("WeaponCDActive", 1f);
         }
     }
     void FixedUpdate()
@@ -63,5 +71,10 @@ public class RangedWeaponController : MonoBehaviour
     void ShootRocket()
     {
         Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void WeaponCDActive()
+    {
+        weaponCD = false;
     }
 }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     
     Rigidbody2D playerRigidbody;
     SpriteRenderer playerSprite;
+    public GameObject dirtEffect;
     
     public new Animator animation;
     
