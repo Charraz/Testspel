@@ -11,7 +11,8 @@ public class RhinoBehaviour : MonoBehaviour
 
     float moveSpeed;
     bool movingLeft;
-    //float HP;
+    float HP;
+    bool rhinoReadyToBeShotAgain;
     //float hitByShotAnimation;
 
     // Start is called before the first frame update
@@ -23,7 +24,8 @@ public class RhinoBehaviour : MonoBehaviour
 
         moveSpeed = -3;
         movingLeft = true;
-        //HP = 2;
+        HP = 3;
+        rhinoReadyToBeShotAgain = true;
         //hitByShotAnimation = 0;
     }
 
@@ -80,21 +82,33 @@ public class RhinoBehaviour : MonoBehaviour
 
                 break;
 
-            //case NPCMode.RhinoHit:
-            //    rhinoHit();
+            case NPCMode.RhinoHit:
+                rhinoHit();
 
-            //    break;
+                break;
 
             default:
                 break;
         }
+
+        checkIfDead();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet")
+        if (collision.gameObject.tag == "PlayerBullet" && HP >= 1) 
         {
-            npcMode = NPCMode.RhinoHit;
+            if (rhinoReadyToBeShotAgain == true)
+            {
+                Invoke("rhinoShotHitComplete", 0.4f);
+                npcMode = NPCMode.RhinoHit;
+                rhinoReadyToBeShotAgain = false;
+                HP = HP - 1;
+            }
+            else if (rhinoReadyToBeShotAgain == false)
+            {
+
+            }
         }
     }
 
@@ -168,16 +182,22 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoHit()
     {
+        moveSpeed = 0;
         spriterenderer.color = Color.white;
-        //if (HP > 0)
-        //{
-        //    HP = HP - 1;
+    }
 
-        //}
-        //else if (HP < 1)
-        //{
-        //    Object.Destroy(gameObject);
-        //}
+    private void rhinoShotHitComplete()
+    {
+        rhinoReadyToBeShotAgain = true;
+        npcMode = NPCMode.RhinoWalk;
+    }
+
+    private void checkIfDead()
+    {
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void rhinoStateChecker()
