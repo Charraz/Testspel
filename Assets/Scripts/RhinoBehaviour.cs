@@ -13,10 +13,7 @@ public class RhinoBehaviour : MonoBehaviour
     float moveSpeed;
     bool movingLeft;
     float HP;
-    bool rhinoReadyToBeShotAgain;
-    //float hitByShotAnimation;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
@@ -26,11 +23,8 @@ public class RhinoBehaviour : MonoBehaviour
         moveSpeed = -3;
         movingLeft = true;
         HP = 3;
-        rhinoReadyToBeShotAgain = true;
-        //hitByShotAnimation = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Debug.Log(npcMode);
@@ -71,21 +65,13 @@ public class RhinoBehaviour : MonoBehaviour
                     Invoke("stunComplete", 2);
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
                 }
-
                 break;
 
             case NPCMode.RhinoWallOrPlayerHit:
-
                 break;
 
             case NPCMode.RhinoJumping:
                 rhinoJumping();
-
-                break;
-
-            case NPCMode.RhinoHit:
-                rhinoHit();
-
                 break;
 
             default:
@@ -99,17 +85,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerBullet" && HP >= 1) 
         {
-            if (rhinoReadyToBeShotAgain == true)
-            {
-                Invoke("rhinoShotHitComplete", 0.4f);
-                npcMode = NPCMode.RhinoHit;
-                rhinoReadyToBeShotAgain = false;
-                HP = HP - 1;
-            }
-            else if (rhinoReadyToBeShotAgain == false)
-            {
-
-            }
+            HP = HP - 1;
         }
     }
 
@@ -181,18 +157,6 @@ public class RhinoBehaviour : MonoBehaviour
         npcMode = NPCMode.RhinoRun;
     }
 
-    private void rhinoHit()
-    {
-        moveSpeed = 0;
-        spriterenderer.color = Color.white;
-    }
-
-    private void rhinoShotHitComplete()
-    {
-        rhinoReadyToBeShotAgain = true;
-        npcMode = NPCMode.RhinoWalk;
-    }
-
     private void checkIfDead()
     {
         if (HP <= 0)
@@ -207,42 +171,30 @@ public class RhinoBehaviour : MonoBehaviour
         if (npcMode == NPCMode.RhinoWalk)
         {
             animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitAnimationComplete", true);
             animation.SetBool("HitWall", false);
-            animation.SetBool("HitByShot", false);
             animation.SetBool("Jumping", false);
+            animation.SetBool("Charge", false);
+        }
+        else if (npcMode == NPCMode.RhinoJumping)
+        {
+            animation.SetBool("SeesPlayer", true);
+            animation.SetBool("HitWall", false);
+            animation.SetBool("Jumping", true);
+            animation.SetBool("Charge", false);
         }
         else if (npcMode == NPCMode.RhinoRun)
         {
             animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitAnimationComplete", false);
             animation.SetBool("HitWall", false);
-            animation.SetBool("HitByShot", false);
             animation.SetBool("Jumping", false);
+            animation.SetBool("Charge", true);
         }
         else if (npcMode == NPCMode.RhinoWallOrPlayerHit)
         {
             animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitAnimationComplete", false);
             animation.SetBool("HitWall", true);
-            animation.SetBool("HitByShot", false);
             animation.SetBool("Jumping", false);
-        }
-        else if (npcMode == NPCMode.RhinoHit)
-        {
-            animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitAnimationComplete", false);
-            animation.SetBool("HitWall", false);
-            animation.SetBool("HitByShot", true);
-            animation.SetBool("Jumping", false);
-        }
-        else if (npcMode == NPCMode.RhinoJumping)
-        {
-            animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitAnimationComplete", false);
-            animation.SetBool("HitWall", false);
-            animation.SetBool("HitByShot", false);
-            animation.SetBool("Jumping", true);
+            animation.SetBool("Charge", false);
         }
     }
 
@@ -251,7 +203,7 @@ public class RhinoBehaviour : MonoBehaviour
         RhinoWalk,
         RhinoRun,
         RhinoWallOrPlayerHit,
-        RhinoHit,
+        //RhinoHit,
         RhinoJumping
     }
 }
