@@ -8,6 +8,7 @@ public class RhinoBehaviour : MonoBehaviour
     public Rigidbody2D rigidkropp;
     public new Animator animation;
     SpriteRenderer spriterenderer;
+    public GameObject onDeathBloodSplash;
 
     float moveSpeed;
     bool movingLeft;
@@ -196,6 +197,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         if (HP <= 0)
         {
+            onDeathBloodSplash = Instantiate(onDeathBloodSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             Destroy(gameObject);
         }
     }
