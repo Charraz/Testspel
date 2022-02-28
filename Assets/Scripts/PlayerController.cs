@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     Rigidbody2D playerRigidbody;
-    SpriteRenderer playerSprite;
     public GameObject dirtEffect;
-    
+    private SpriteRenderer playerSprite;
+
     public new Animator animation;
-    
+
     //Movementvariabler
     float moveHorizontal;
     public float moveSpeed;
@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     public float jumpForce;
     int doubleJump;
+    bool canJump;
+    bool canDoubleJump;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         doubleJump = 0;
+        canJump = false;
+        canDoubleJump = false;
     }
 
     // Update is called once per frame
@@ -43,19 +47,20 @@ public class PlayerController : MonoBehaviour
             {
                 //Animation = Jumping
                 animation.SetBool("IsJumping", true);
+
+                canJump = true;
                 //Player jumping
-                playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+
             }
         }
-            else if (isGrounded == false)
+        else if (isGrounded == false)
+        {
+            if (Input.GetButtonDown("Jump") && doubleJump >= 1)
             {
-                if (Input.GetButtonDown("Jump") && doubleJump >= 1)
-                {
-                    playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
-                    playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-                    doubleJump --;
-                }
+                canDoubleJump = true;
+                doubleJump--;
             }
+        }
     }
 
 
@@ -67,8 +72,8 @@ public class PlayerController : MonoBehaviour
             animation.SetFloat("Speed", moveSpeed);
             //Player movement
             playerRigidbody.velocity = new Vector2(moveSpeed, playerRigidbody.velocity.y);
-            //playerSprite.flipX = false;
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            playerSprite.flipX = false;
+            //transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         else if (moveHorizontal < -0.1f)
@@ -77,8 +82,8 @@ public class PlayerController : MonoBehaviour
             animation.SetFloat("Speed", moveSpeed);
             //Player movement
             playerRigidbody.velocity = new Vector2(moveSpeed * -1, playerRigidbody.velocity.y);
-            //playerSprite.flipX = true;
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            playerSprite.flipX = true;
+            //transform.eulerAngles = new Vector3(0, 180, 0);
 
         }
 
@@ -88,6 +93,19 @@ public class PlayerController : MonoBehaviour
             animation.SetFloat("Speed", 0);
             //Player movement
             playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
+        }
+
+        if (canJump == true)
+        {
+            playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            canJump = false;
+        }
+
+        if (canDoubleJump == true)
+        {
+            playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+            playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            canDoubleJump = false;
         }
     }
 
@@ -118,7 +136,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
-            doubleJump ++;
+            doubleJump++;
         }
     }
 }
