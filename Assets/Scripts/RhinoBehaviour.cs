@@ -12,7 +12,7 @@ public class RhinoBehaviour : MonoBehaviour
 
     float moveSpeed;
     bool movingLeft;
-    float HP;
+    [SerializeField] float HP;
 
     void Start()
     {
@@ -22,7 +22,6 @@ public class RhinoBehaviour : MonoBehaviour
 
         moveSpeed = -3;
         movingLeft = true;
-        HP = 3;
     }
 
     void Update()

@@ -121,6 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidkropp: {fileID: 0}
   animation: {fileID: 0}
+  onDeathBloodSplash: {fileID: 0}
+  matWhite: {fileID: 2100000, guid: a64d5e0066e734244b92df7e1503a6e7, type: 2}
+  HP: 5
 --- !u!61 &681427023061891589
 BoxCollider2D:
   m_ObjectHideFlags: 0
