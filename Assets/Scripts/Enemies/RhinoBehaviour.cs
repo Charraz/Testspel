@@ -15,6 +15,7 @@ public class RhinoBehaviour : MonoBehaviour
 
     float moveSpeed;
     bool movingLeft;
+    bool isRed;
     [SerializeField] float HP;
 
     void Start()
@@ -28,11 +29,12 @@ public class RhinoBehaviour : MonoBehaviour
 
         moveSpeed = -3;
         movingLeft = true;
+        isRed = false;
     }
 
     void Update()
     {
-        Debug.Log(npcMode);
+        //Debug.Log(npcMode);
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
@@ -75,7 +77,12 @@ public class RhinoBehaviour : MonoBehaviour
                 break;
 
             case NPCMode.RhinoWallOrPlayerHit:
-                resetMaterial();
+                if (isRed == true)
+                {
+                    spriterenderer.material = matDefault;
+                    isRed = false;
+                }
+
                 break;
 
             case NPCMode.RhinoJumping:
@@ -92,7 +99,7 @@ public class RhinoBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "PlayerBullet") 
         {
             HP = HP - 1;
-            spriterenderer.material = matWhite;
+            whiteFlash();
             
             if (HP < 1)
             {
@@ -134,6 +141,7 @@ public class RhinoBehaviour : MonoBehaviour
     private void rhinoRun()
     {
         moveSpeed = -10;
+        isRed = true;
         //spriterenderer.color = Color.red;
         //spriterenderer.material = matRed;
 
@@ -193,6 +201,11 @@ public class RhinoBehaviour : MonoBehaviour
         {
             spriterenderer.material = matDefault;
         }
+    }
+
+    private void whiteFlash()
+    {
+        spriterenderer.material = matWhite;
     }
 
     private void rhinoStateChecker()
