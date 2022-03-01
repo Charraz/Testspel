@@ -9,6 +9,9 @@ public class RhinoBehaviour : MonoBehaviour
     public new Animator animation;
     SpriteRenderer spriterenderer;
     public GameObject onDeathBloodSplash;
+    private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
+    private Material matRed; //Används för att göra rhinon röd när han är arger
+    private Material matDefault; //Återställer rhinons materail till default
 
     float moveSpeed;
     bool movingLeft;
@@ -19,6 +22,9 @@ public class RhinoBehaviour : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
+        matDefault = spriterenderer.material;
 
         moveSpeed = -3;
         movingLeft = true;
@@ -52,14 +58,16 @@ public class RhinoBehaviour : MonoBehaviour
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
                 {
-                    spriterenderer.color = Color.white;
+                    //spriterenderer.color = Color.white;
+                    resetMaterial();
                     rhinoWallOrPlayerHit();
                     Invoke("stunComplete", 2);
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
                 }
                 else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
                 {
-                    spriterenderer.color = Color.white;
+                    //spriterenderer.color = Color.white;
+                    resetMaterial();
                     rhinoWallOrPlayerHit();
                     Invoke("stunComplete", 2);
                     npcMode = NPCMode.RhinoWallOrPlayerHit;
@@ -67,6 +75,7 @@ public class RhinoBehaviour : MonoBehaviour
                 break;
 
             case NPCMode.RhinoWallOrPlayerHit:
+                resetMaterial();
                 break;
 
             case NPCMode.RhinoJumping:
@@ -76,15 +85,25 @@ public class RhinoBehaviour : MonoBehaviour
             default:
                 break;
         }
-
-        checkIfDead();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet" && HP >= 1) 
+        if (collision.gameObject.tag == "PlayerBullet") 
         {
             HP = HP - 1;
+            spriterenderer.material = matWhite;
+            
+            if (HP < 1)
+            {
+                killSelf();
+            }
+            else
+            {
+                Invoke("resetMaterial", .1f);
+            }
+            
+            
         }
     }
 
@@ -114,8 +133,9 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoRun()
     {
-        moveSpeed = -7;
-        spriterenderer.color = Color.red;
+        moveSpeed = -10;
+        //spriterenderer.color = Color.red;
+        //spriterenderer.material = matRed;
 
         //Får Rhino att röra sig
         if (movingLeft == true)
@@ -132,11 +152,11 @@ public class RhinoBehaviour : MonoBehaviour
     {
         if (movingLeft == true)
         {
-            rigidkropp.AddForce(new Vector2(10f, 4f), ForceMode2D.Impulse);
+            rigidkropp.AddForce(new Vector2(12f, 4f), ForceMode2D.Impulse);
         }
         else if (movingLeft == false)
         {
-            rigidkropp.AddForce(new Vector2(-10f, 4f), ForceMode2D.Impulse);
+            rigidkropp.AddForce(new Vector2(-12f, 4f), ForceMode2D.Impulse);
         }
     }
 
@@ -153,15 +173,25 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void jumpComplete()
     {
+        spriterenderer.material = matRed;
         npcMode = NPCMode.RhinoRun;
     }
 
-    private void checkIfDead()
+    private void killSelf()
     {
-        if (HP <= 0)
+         onDeathBloodSplash = Instantiate(onDeathBloodSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+         Destroy(gameObject);
+    }
+
+    void resetMaterial()
+    {
+        if (npcMode == NPCMode.RhinoRun)
         {
-            onDeathBloodSplash = Instantiate(onDeathBloodSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-            Destroy(gameObject);
+            spriterenderer.material = matRed;
+        }
+        else
+        {
+            spriterenderer.material = matDefault;
         }
     }
 
@@ -202,7 +232,6 @@ public class RhinoBehaviour : MonoBehaviour
         RhinoWalk,
         RhinoRun,
         RhinoWallOrPlayerHit,
-        //RhinoHit,
         RhinoJumping
     }
 }
