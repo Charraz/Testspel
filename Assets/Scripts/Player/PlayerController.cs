@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     //Movementvariabler
     float moveHorizontal;
     public float moveSpeed;
+    public float ySpeed;
 
     //Jumpvariabler
     bool isGrounded;
@@ -59,8 +60,14 @@ public class PlayerController : MonoBehaviour
             {
                 canDoubleJump = true;
                 doubleJump--;
+
             }
         }
+
+        ySpeed = playerRigidbody.velocity.y;
+
+        //Animation = Jumping
+        animation.SetFloat("YSpeed", ySpeed);
     }
 
 
@@ -89,7 +96,6 @@ public class PlayerController : MonoBehaviour
 
         else if (moveHorizontal == 0)
         {
-            //Animation = Idle
             animation.SetFloat("Speed", 0);
             //Player movement
             playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
