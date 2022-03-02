@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
 
     Rigidbody2D playerRigidbody;
-    public GameObject dirtEffect;
     private SpriteRenderer playerSprite;
 
     public new Animator animation;
@@ -22,6 +21,9 @@ public class PlayerController : MonoBehaviour
     int doubleJump;
     bool canJump;
     bool canDoubleJump;
+
+    //Partikelvariabler
+    public ParticleSystem dustEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,19 @@ public class PlayerController : MonoBehaviour
 
         //Animation = Jumping
         animation.SetFloat("YSpeed", ySpeed);
+
+        if (moveHorizontal > 0.1f)
+        {
+            Debug.Log("SPRING");
+            dustEffect.Play();
+        }
+
+        else if (moveHorizontal < -0.1f)
+        {
+            dustEffect.Play();
+
+        }
+
     }
 
 
@@ -144,5 +159,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             doubleJump++;
         }
+    }
+
+    void CreateDust()
+    {
+        dustEffect.Play();
     }
 }
