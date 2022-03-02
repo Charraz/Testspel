@@ -8,6 +8,7 @@ public class RangedWeaponController : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject muzzleFlash;
     public GameObject myPlayer;
     public GameObject rocketPrefab;
     private bool weapon1CD;
@@ -71,6 +72,7 @@ public class RangedWeaponController : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
     }
 
     void ShootRocket()
