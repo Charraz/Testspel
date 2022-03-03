@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RhinoBehaviour : MonoBehaviour
 {
-    private NPCMode npcMode = NPCMode.RhinoWalk;
+    private State state = State.RhinoWalk;
     public Rigidbody2D rigidkropp;
     public new Animator animation;
     SpriteRenderer spriterenderer;
@@ -34,13 +34,13 @@ public class RhinoBehaviour : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(npcMode);
+        //Debug.Log(state);
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
-        switch (npcMode)
+        switch (state)
         {
-            case NPCMode.RhinoWalk:
+            case State.RhinoWalk:
                 rhinoWalk();
                
                 //Tittar om spelaren är nära nog för att gå in i sitt attack state
@@ -49,12 +49,12 @@ public class RhinoBehaviour : MonoBehaviour
                 {
                     rigidkropp.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
                     Invoke("jumpComplete", 0.65f);
-                    npcMode = NPCMode.RhinoJumping;
+                    state = State.RhinoJumping;
                 }
 
                 break;
 
-            case NPCMode.RhinoRun:
+            case State.RhinoRun:
                 rhinoRun();
 
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
@@ -64,7 +64,7 @@ public class RhinoBehaviour : MonoBehaviour
                     resetMaterial();
                     rhinoWallOrPlayerHit();
                     Invoke("stunComplete", 2);
-                    npcMode = NPCMode.RhinoWallOrPlayerHit;
+                    state = State.RhinoWallOrPlayerHit;
                 }
                 else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
                 {
@@ -72,11 +72,11 @@ public class RhinoBehaviour : MonoBehaviour
                     resetMaterial();
                     rhinoWallOrPlayerHit();
                     Invoke("stunComplete", 2);
-                    npcMode = NPCMode.RhinoWallOrPlayerHit;
+                    state = State.RhinoWallOrPlayerHit;
                 }
                 break;
 
-            case NPCMode.RhinoWallOrPlayerHit:
+            case State.RhinoWallOrPlayerHit:
                 if (isRed == true)
                 {
                     spriterenderer.material = matDefault;
@@ -85,7 +85,7 @@ public class RhinoBehaviour : MonoBehaviour
 
                 break;
 
-            case NPCMode.RhinoJumping:
+            case State.RhinoJumping:
                 rhinoJumping();
                 break;
 
@@ -142,8 +142,6 @@ public class RhinoBehaviour : MonoBehaviour
     {
         moveSpeed = -10;
         isRed = true;
-        //spriterenderer.color = Color.red;
-        //spriterenderer.material = matRed;
 
         //Får Rhino att röra sig
         if (movingLeft == true)
@@ -176,13 +174,13 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void stunComplete()
     {
-        npcMode = NPCMode.RhinoWalk;
+        state = State.RhinoWalk;
     }
 
     private void jumpComplete()
     {
         spriterenderer.material = matRed;
-        npcMode = NPCMode.RhinoRun;
+        state = State.RhinoRun;
     }
 
     private void killSelf()
@@ -193,7 +191,7 @@ public class RhinoBehaviour : MonoBehaviour
 
     void resetMaterial()
     {
-        if (npcMode == NPCMode.RhinoRun)
+        if (state == State.RhinoRun)
         {
             spriterenderer.material = matRed;
         }
@@ -210,28 +208,28 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoStateChecker()
     {
-        if (npcMode == NPCMode.RhinoWalk)
+        if (state == State.RhinoWalk)
         {
             animation.SetBool("SeesPlayer", false);
             animation.SetBool("HitWall", false);
             animation.SetBool("Jumping", false);
             animation.SetBool("Charge", false);
         }
-        else if (npcMode == NPCMode.RhinoJumping)
+        else if (state == State.RhinoJumping)
         {
             animation.SetBool("SeesPlayer", true);
             animation.SetBool("HitWall", false);
             animation.SetBool("Jumping", true);
             animation.SetBool("Charge", false);
         }
-        else if (npcMode == NPCMode.RhinoRun)
+        else if (state == State.RhinoRun)
         {
             animation.SetBool("SeesPlayer", false);
             animation.SetBool("HitWall", false);
             animation.SetBool("Jumping", false);
             animation.SetBool("Charge", true);
         }
-        else if (npcMode == NPCMode.RhinoWallOrPlayerHit)
+        else if (state == State.RhinoWallOrPlayerHit)
         {
             animation.SetBool("SeesPlayer", false);
             animation.SetBool("HitWall", true);
@@ -240,7 +238,7 @@ public class RhinoBehaviour : MonoBehaviour
         }
     }
 
-    public enum NPCMode
+    public enum State
     {
         RhinoWalk,
         RhinoRun,
