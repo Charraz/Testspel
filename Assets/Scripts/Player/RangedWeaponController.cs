@@ -11,14 +11,26 @@ public class RangedWeaponController : MonoBehaviour
     public GameObject muzzleFlash;
     public GameObject myPlayer;
     public GameObject rocketPrefab;
+    public Animator gunAnimator;
     private bool weapon1CD;
     private bool weapon2CD;
+
+    //Animatorbools
+    private bool pointRight;
+    private bool pointLeft;
+    private bool pointUp;
+    private bool pointDown;
 
 
     private void Start()
     {
         weapon1CD = false;
         weapon2CD = false;
+
+        pointRight = true;
+        pointLeft = false;
+        pointUp = false;
+        pointDown = false;
     }
     // Update is called once per frame
 
@@ -54,6 +66,7 @@ public class RangedWeaponController : MonoBehaviour
             if (myPlayer.transform.eulerAngles.y == 0)
             {
                 transform.localRotation = Quaternion.Euler(180, 0, -rotationZ);
+                
             }
 
             else if (myPlayer.transform.eulerAngles.y == 180)
@@ -61,6 +74,25 @@ public class RangedWeaponController : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(180, 180, -rotationZ);
             }
         }
+
+        if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 0)
+        {
+            pointRight = true;
+            pointLeft = false;
+            pointUp = false;
+            pointDown = false;
+            Debug.Log("RIGHT");
+        }
+
+        if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 180)
+        {
+            pointRight = false;
+            pointLeft = true;
+            pointUp = false;
+            pointDown = false;
+            Debug.Log("LEFT");
+        }
+
         //Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -73,6 +105,11 @@ public class RangedWeaponController : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
+
+        if (pointRight == true)
+        {
+            gunAnimator.SetTrigger("Shoot");
+        }
     }
 
     void ShootRocket()

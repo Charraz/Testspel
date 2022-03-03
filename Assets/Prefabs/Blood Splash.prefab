@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8844913893679296942}
   - component: {fileID: 8844913893679296941}
   - component: {fileID: 8844913893679296940}
-  - component: {fileID: 8844913893679296939}
+  - component: {fileID: 6322842114086133173}
   m_Layer: 0
   m_Name: Blood Splash
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8844913893679296939
+--- !u!114 &6322842114086133173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8844913893679296938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f38135388e52f745ba2d4b52b91938c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cb955450ee45004ea827f0acc3a799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathTimer: 1

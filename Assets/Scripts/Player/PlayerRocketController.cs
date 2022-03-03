@@ -26,7 +26,7 @@ public class PlayerRocketController : MonoBehaviour
 
     void Death()
     {
-        particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
+        particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
         explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
@@ -36,7 +36,7 @@ public class PlayerRocketController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
+            particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
             explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

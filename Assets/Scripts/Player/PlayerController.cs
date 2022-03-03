@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     bool canDoubleJump;
 
     //Partikelvariabler
-    public ParticleSystem dustEffect;
+    public GameObject dustEffect;
+    bool coroutineAllowed;
 
     // Start is called before the first frame update
     void Start()
@@ -73,16 +74,13 @@ public class PlayerController : MonoBehaviour
 
         if (moveHorizontal > 0.1f)
         {
-            Debug.Log("SPRING");
-            dustEffect.Play();
+            
         }
 
         else if (moveHorizontal < -0.1f)
         {
-            dustEffect.Play();
-
+            
         }
-
     }
 
 
@@ -96,6 +94,11 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.velocity = new Vector2(moveSpeed, playerRigidbody.velocity.y);
             playerSprite.flipX = false;
             //transform.eulerAngles = new Vector3(0, 0, 0);
+            if (coroutineAllowed == true)
+            {
+                StartCoroutine("SpawnDust");
+                coroutineAllowed = false;
+            }
         }
 
         else if (moveHorizontal < -0.1f)
@@ -107,6 +110,12 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = true;
             //transform.eulerAngles = new Vector3(0, 180, 0);
 
+            if (coroutineAllowed == true)
+            {
+                StartCoroutine("SpawnDust");
+                coroutineAllowed = false;
+            }
+
         }
 
         else if (moveHorizontal == 0)
@@ -114,6 +123,9 @@ public class PlayerController : MonoBehaviour
             animation.SetFloat("Speed", 0);
             //Player movement
             playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
+
+                StopCoroutine("SpawnDust");
+                coroutineAllowed = true;
         }
 
         if (canJump == true)
@@ -139,6 +151,7 @@ public class PlayerController : MonoBehaviour
             //När man är "Grounded" så slutar hoppanimationen att spelas
             animation.SetBool("IsJumping", false);
             doubleJump = 0;
+            coroutineAllowed = true;
         }
 
         //if (collision.gameObject.tag == "Wall")
@@ -158,11 +171,16 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
             doubleJump++;
+            coroutineAllowed = false;
         }
     }
 
-    void CreateDust()
+    IEnumerator SpawnDust()
     {
-        dustEffect.Play();
+        while(isGrounded)
+        {
+            Instantiate(dustEffect, new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z), dustEffect.transform.rotation);
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }
