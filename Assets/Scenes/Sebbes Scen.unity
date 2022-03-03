@@ -858,6 +858,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &876772570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876772571}
+  m_Layer: 0
+  m_Name: Ground Detection
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876772571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876772570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.48, y: -0.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 393719259}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212800358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441629131}
   m_LocalRotation: {x: -0, y: -1e-45, z: -0, w: 1}
-  m_LocalPosition: {x: -7.91, y: 0.92, z: -10}
+  m_LocalPosition: {x: 2.53, y: 2.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 531568157}
@@ -1331,7 +1361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537810174}
   m_LocalRotation: {x: -0, y: -1e-45, z: -0, w: 1}
-  m_LocalPosition: {x: -7.91, y: 0.92, z: -10}
+  m_LocalPosition: {x: 2.53, y: 2.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1212800359}
@@ -1388,11 +1418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.91
+      value: 2.53
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.92
+      value: 2.72
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29830,6 +29860,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1286523461}
     m_Modifications:
+    - target: {fileID: 8681164780338499729, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7550765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681164780338499729, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13423365
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681164780338499731, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
+      propertyPath: HP
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681164780338499731, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 876772571}
     - target: {fileID: 8681164780338499734, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
       propertyPath: m_Name
       value: SpottSigrid
@@ -29840,11 +29886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8681164780338499735, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.59
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8681164780338499735, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.95
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8681164780338499735, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
       propertyPath: m_LocalPosition.z

@@ -34,7 +34,6 @@ public class RhinoBehaviour : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(state);
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
