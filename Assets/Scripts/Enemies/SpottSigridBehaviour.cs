@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class SpottSigridBehaviour : MonoBehaviour
 {
-    private State state = State.SpottSigridWalk;
+    public GameObject onDeathTreeSplashPrefab;
+    public GameObject spitBulletPrefab;
     public Rigidbody2D rigidkropp;
-    public new Animator animation;
-    SpriteRenderer spriterenderer;
-    public GameObject onDeathTreeSplash;
+    public Transform shotPosition;
+    private State state = State.SpottSigridWalk;
+    private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
+    public new Animator animation;
 
+    private bool canShoot;
     private float moveSpeed;
     private bool movingLeft;
     [SerializeField] float HP;
@@ -26,6 +29,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
 
+        canShoot = false;
         moveSpeed = -2;
         movingLeft = true;
     }
@@ -36,15 +40,30 @@ public class SpottSigridBehaviour : MonoBehaviour
         
         switch (state)
         {
-            case State.SpottSigridIdle:
-                break;
+            //case State.SpottSigridIdle:
+            //    RaycastHit2D SeesPlayerIdleState = Physics2D.Raycast(groundDetection.position, Vector2.left, 10f);
+            //    if (SeesPlayerIdleState.collider.tag == "Player")
+            //    {
+            //        Invoke("spitAttack", 1f);
+            //        state = State.SpottSigridAttack;
+            //    }
+            //    break;
 
             case State.SpottSigridWalk:
                 spottSigridWalk();
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
+                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(groundDetection.position, Vector2.left, 10f);
+                if (SeesPlayerWalkState.collider.tag == "Player")
+                {
+                    state = State.SpottSigridAttack;
+                }
 
                 break;
 
             case State.SpottSigridAttack:
+                canShoot = true;
+                Invoke("spitAttack", 0.1f);
+                Invoke("sigriStartdWalking", 2f);
                 break;
 
             default:
@@ -73,6 +92,21 @@ public class SpottSigridBehaviour : MonoBehaviour
         }
     }
 
+    //private void spottSigridAttack()
+    //{
+        
+    //}
+
+    private void spitAttack()
+    {
+        Instantiate(spitBulletPrefab, shotPosition.position, shotPosition.rotation);
+        canShoot = false;
+    }
+
+    private void sigriStartdWalking()
+    {
+        state = State.SpottSigridWalk;
+    }
 
 
     private void whiteFlash()
@@ -83,7 +117,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     private void killSelf()
     {
-        onDeathTreeSplash = Instantiate(onDeathTreeSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        onDeathTreeSplashPrefab = Instantiate(onDeathTreeSplashPrefab, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -116,7 +150,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     public enum State
     {
-        SpottSigridIdle,
+        //SpottSigridIdle,
         SpottSigridWalk,
         SpottSigridAttack
     }

@@ -6,10 +6,10 @@ public class PlayerBulletController : MonoBehaviour
 {
 
     public float speed;
-    public Rigidbody2D rb;
-    public GameObject particleEffect;
+    private Rigidbody2D rb;
 
     Vector2 lastVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,36 +31,13 @@ public class PlayerBulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            particleEffect = Instantiate(particleEffect, transform.position, Quaternion.identity);
             Object.Destroy(gameObject);
             
         }
-
-        //if (collision.gameObject.tag == "Wall")
-        //{
-        //    rb.velocity = rb.velocity * -1;
-        //    //Object.Destroy(gameObject);
-        //    Debug.Log("Wall");
-        //}
-
-        //if (collision.gameObject.tag == "Ground")
-        //{
-        //    rb.velocity = rb.velocity * -1;
-        //}
     }
-
-    //Studsar bullet när den kolliderar med colliders
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    var speed = lastVelocity.magnitude;
-    //    var direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
-
-    //    rb.velocity = direction * Mathf.Max(speed, 0f);
-    //}
 
     private void Death()
     {
         Destroy(gameObject);
-        particleEffect = Instantiate(particleEffect, transform.position, Quaternion.identity);
     }
 }
