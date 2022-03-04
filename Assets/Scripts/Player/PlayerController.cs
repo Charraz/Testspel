@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     //Movementvariabler
     float moveHorizontal;
     public float moveSpeed;
-    public float ySpeed;
+    private float ySpeed;
 
     //Jumpvariabler
     bool isGrounded;
@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     //Partikelvariabler
     public GameObject dustEffect;
     bool coroutineAllowed;
+
+    //PlayerHealth
+    public float playerHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -162,6 +165,11 @@ public class PlayerController : MonoBehaviour
         //            doubleJump++;
         //        }
         //}
+
+        //if (collision.gameObject.tag == "Enemy")
+        //{
+        //    playerHealth = playerHealth - 1;
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -175,6 +183,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            playerHealth = playerHealth - 1;
+            Debug.Log(playerHealth);
+
+        }
+    }
     IEnumerator SpawnDust()
     {
         while(isGrounded)

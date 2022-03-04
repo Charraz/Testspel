@@ -332,9 +332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animation: {fileID: 1240665349}
   moveSpeed: 8
-  ySpeed: 0
   jumpForce: 15
-  dustEffect: {fileID: 0}
+  dustEffect: {fileID: 4558462613707730391, guid: c398d66d461686247a30a558c6b68791, type: 3}
+  playerHealth: 0
 --- !u!61 &6325820368308811901
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -456,3 +456,4 @@ MonoBehaviour:
   muzzleFlash: {fileID: 3707299932964571610, guid: 6de167fd19e99b04dbfa3636536f3613, type: 3}
   myPlayer: {fileID: 6325820368308811888}
   rocketPrefab: {fileID: 8562075830459117610, guid: 6d2a608074401154bb95b8ac18d28059, type: 3}
+  gunAnimator: {fileID: 0}

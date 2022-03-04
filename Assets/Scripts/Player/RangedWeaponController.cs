@@ -75,23 +75,23 @@ public class RangedWeaponController : MonoBehaviour
             }
         }
 
-        if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 0)
-        {
-            pointRight = true;
-            pointLeft = false;
-            pointUp = false;
-            pointDown = false;
-            Debug.Log("RIGHT");
-        }
+        //if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 0)
+        //{
+        //    pointRight = true;
+        //    pointLeft = false;
+        //    pointUp = false;
+        //    pointDown = false;
+        //    //Debug.Log("RIGHT");
+        //}
 
-        if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 180)
-        {
-            pointRight = false;
-            pointLeft = true;
-            pointUp = false;
-            pointDown = false;
-            Debug.Log("LEFT");
-        }
+        //if (rotationZ > -90 && rotationZ < 90 && transform.eulerAngles.y == 180)
+        //{
+        //    pointRight = false;
+        //    pointLeft = true;
+        //    pointUp = false;
+        //    pointDown = false;
+        //    //Debug.Log("LEFT");
+        //}
 
         //Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
