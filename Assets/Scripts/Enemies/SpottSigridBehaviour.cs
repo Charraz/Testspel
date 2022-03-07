@@ -16,7 +16,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     private bool canShoot;
     private float moveSpeed;
-    private bool movingLeft;
+    public bool movingLeft;
     [SerializeField] float HP;
     public Transform groundDetection;
 
@@ -37,7 +37,6 @@ public class SpottSigridBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         switch (state)
         {
             //case State.SpottSigridIdle:
@@ -51,10 +50,14 @@ public class SpottSigridBehaviour : MonoBehaviour
 
             case State.SpottSigridWalk:
                 spottSigridWalk();
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
-                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(groundDetection.position, Vector2.left, 10f);
-                if (SeesPlayerWalkState.collider.tag == "Player")
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
+                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector2.left), 7f);
+                if (SeesPlayerWalkState.collider != null && SeesPlayerWalkState.collider.tag == "Player")
                 {
+                    animation.SetBool("PlayerInSight", true);
+                    animation.SetBool("AttackDone", false);
+                    Invoke("spitAttack", 0.5f);
+                    Invoke("sigriStartdWalking", 1f);
                     state = State.SpottSigridAttack;
                 }
 
@@ -62,8 +65,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
             case State.SpottSigridAttack:
                 canShoot = true;
-                Invoke("spitAttack", 0.1f);
-                Invoke("sigriStartdWalking", 2f);
+                
                 break;
 
             default:
@@ -84,27 +86,38 @@ public class SpottSigridBehaviour : MonoBehaviour
         }
             
         //Vänd när SpottSigrid kommer till en plattforms kant
-        RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f);
-        if (TurnAroundRaycast.collider == false)
+        RaycastHit2D TurnAroundRaycastEdge = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f);
+        if (TurnAroundRaycastEdge.collider == false)
+        {
+            rigidkropp.transform.Rotate(0f, 180f, 0f);
+            movingLeft = !movingLeft;
+        }
+
+        //Vänd när SpottSigrid kommer till en vägg
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.5f, Color.green);
+        RaycastHit2D TurnAroundRaycastWall = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.5f);
+        if (TurnAroundRaycastWall.collider != null && TurnAroundRaycastWall.collider.tag == "Wall")
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
             movingLeft = !movingLeft;
         }
     }
 
-    //private void spottSigridAttack()
-    //{
-        
-    //}
 
     private void spitAttack()
     {
-        Instantiate(spitBulletPrefab, shotPosition.position, shotPosition.rotation);
-        canShoot = false;
+        if ( canShoot == true)
+        {
+            Instantiate(spitBulletPrefab, shotPosition.position, shotPosition.rotation);
+            canShoot = false;
+        }
     }
+
 
     private void sigriStartdWalking()
     {
+        animation.SetBool("AttackDone", true);
+        animation.SetBool("PlayerInSight", false);
         state = State.SpottSigridWalk;
     }
 
