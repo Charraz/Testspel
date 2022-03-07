@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GhostBehaviour : MonoBehaviour
 {
-    public GameObject spelarn;
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private int HP;
     private Rigidbody2D rigidkropp;
@@ -22,7 +21,7 @@ public class GhostBehaviour : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
-        playerController = spelarn.GetComponent<PlayerController>();
+        playerController = PlayerController.InstanceOfPlayer;
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
     }
@@ -35,9 +34,9 @@ public class GhostBehaviour : MonoBehaviour
             animation.SetBool("IsDead", true);
             Invoke("killSelf", .5f);
         }
-        transform.position = Vector2.MoveTowards(transform.position, spelarn.transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, playerController.transform.position, speed * Time.deltaTime);
 
-        if (spelarn.transform.position.x > rigidkropp.transform.position.x)
+        if (playerController.transform.position.x > rigidkropp.transform.position.x)
         {
             spriterenderer.flipX = true;
         }
