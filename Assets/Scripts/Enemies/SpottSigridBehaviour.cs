@@ -6,19 +6,23 @@ public class SpottSigridBehaviour : MonoBehaviour
 {
     public GameObject onDeathTreeSplashPrefab;
     public GameObject spitBulletPrefab;
-    public Rigidbody2D rigidkropp;
+    private Rigidbody2D rigidkropp;
     public Transform shotPosition;
     private State state = State.SpottSigridWalk;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
-    public new Animator animation;
+    private new Animator animation;
 
     private bool canShoot;
     private float moveSpeed;
-    public bool movingLeft;
+    private bool movingLeft;
     [SerializeField] float HP;
     public Transform groundDetection;
+
+    //referens till spelare
+    private PlayerController playerController;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
+        playerController = player.GetComponent<PlayerController>();
 
         canShoot = false;
         moveSpeed = -2;
@@ -37,6 +42,10 @@ public class SpottSigridBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (HP <= 0)
+        {
+            killSelf();
+        }
         switch (state)
         {
             //case State.SpottSigridIdle:
@@ -148,16 +157,23 @@ public class SpottSigridBehaviour : MonoBehaviour
             HP = HP - 1;
             whiteFlash();
 
-            if (HP < 1)
-            {
-                killSelf();
-            }
-            else
-            {
-                Invoke("resetMaterial", .1f);
-            }
+            Invoke("resetMaterial", 0.1f);
+        }
 
+        if (collision.gameObject.tag == "PlayerExplosion")
+        {
+            HP = HP - 2;
+            whiteFlash();
 
+            Invoke("resetMaterial", 0.2f);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerController.playerHealth--;
         }
     }
 
