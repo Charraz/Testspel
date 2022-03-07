@@ -32,6 +32,13 @@ public class SigridBulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 }
