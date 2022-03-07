@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         doubleJump = 0;
         canJump = false;
         canDoubleJump = false;
+        playerHealth = 5;
     }
 
     // Update is called once per frame
