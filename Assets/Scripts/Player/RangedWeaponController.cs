@@ -16,10 +16,10 @@ public class RangedWeaponController : MonoBehaviour
     private bool weapon2CD;
 
     //Animatorbools
-    private bool pointRight;
-    private bool pointLeft;
-    private bool pointUp;
-    private bool pointDown;
+    //private bool pointRight;
+    //private bool pointLeft;
+    //private bool pointUp;
+    //private bool pointDown;
 
 
     private void Start()
@@ -27,10 +27,10 @@ public class RangedWeaponController : MonoBehaviour
         weapon1CD = false;
         weapon2CD = false;
 
-        pointRight = true;
-        pointLeft = false;
-        pointUp = false;
-        pointDown = false;
+        //pointRight = true;
+        //pointLeft = false;
+        //pointUp = false;
+        //pointDown = false;
     }
     // Update is called once per frame
 
@@ -105,11 +105,8 @@ public class RangedWeaponController : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
+        gunAnimator.SetTrigger("Shoot");
 
-        if (pointRight == true)
-        {
-            gunAnimator.SetTrigger("Shoot");
-        }
     }
 
     void ShootRocket()
