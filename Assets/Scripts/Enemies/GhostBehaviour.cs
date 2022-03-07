@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GhostBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject spelarN;
+    public GameObject spelarn;
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private int HP;
     private Rigidbody2D rigidkropp;
@@ -15,7 +15,6 @@ public class GhostBehaviour : MonoBehaviour
 
     //referar till player
     private PlayerController playerController;
-    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +22,7 @@ public class GhostBehaviour : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
-        playerController = player.GetComponent<PlayerController>();
+        playerController = spelarn.GetComponent<PlayerController>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
     }
@@ -36,9 +35,9 @@ public class GhostBehaviour : MonoBehaviour
             animation.SetBool("IsDead", true);
             Invoke("killSelf", .5f);
         }
-        transform.position = Vector2.MoveTowards(transform.position, spelarN.transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, spelarn.transform.position, speed * Time.deltaTime);
 
-        if (spelarN.transform.position.x > rigidkropp.transform.position.x)
+        if (spelarn.transform.position.x > rigidkropp.transform.position.x)
         {
             spriterenderer.flipX = true;
         }
@@ -69,12 +68,12 @@ public class GhostBehaviour : MonoBehaviour
             playerController.playerHealth--;
             if (spriterenderer.flipX == true)
             {
-                transform.Translate(new Vector2(-1f, 0f));
+                transform.Translate(new Vector2(-7f, 0f));
             }
 
             else if (spriterenderer.flipX == false)
             {
-                transform.Translate(new Vector2(1f, 0f));
+                transform.Translate(new Vector2(7f, 0f));
             }
 
         }

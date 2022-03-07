@@ -66,7 +66,7 @@ public class RhinoBehaviour : MonoBehaviour
 
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
-                if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
+                if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall" || HittingSomething.collider != null && HittingSomething.collider.tag == "Enemy")
                 {
                     //spriterenderer.color = Color.white;
                     resetMaterial();
@@ -104,9 +104,9 @@ public class RhinoBehaviour : MonoBehaviour
         //Sätter hastighet då rhinoWalk är aktivt till -3 och nollställer animationstriggern för rhinoWallOrPlayerHit
         moveSpeed = -3;
 
-        //Vänd när Rhino kommer till en vägg
+        //Vänd när Rhino kommer till en vägg eller en annan fiende
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
-        if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall")
+        if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall" || TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Enemy")
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
             movingLeft = !movingLeft;
