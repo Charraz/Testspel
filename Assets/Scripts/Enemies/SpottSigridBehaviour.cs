@@ -105,7 +105,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         //Vänd när SpottSigrid kommer till en vägg
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.5f, Color.green);
         RaycastHit2D TurnAroundRaycastWall = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.5f);
-        if (TurnAroundRaycastWall.collider != null && TurnAroundRaycastWall.collider.tag == "Wall")
+        if (TurnAroundRaycastWall.collider != null && TurnAroundRaycastWall.collider.tag == "Wall" || TurnAroundRaycastWall.collider != null && TurnAroundRaycastWall.collider.tag == "Enemy")
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
             movingLeft = !movingLeft;
