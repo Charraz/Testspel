@@ -64,7 +64,7 @@ public class RhinoBehaviour : MonoBehaviour
             case State.RhinoRun:
                 rhinoRun();
 
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall" || HittingSomething.collider != null && HittingSomething.collider.tag == "Enemy")
                 {
