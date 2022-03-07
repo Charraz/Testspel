@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Vi har gjort en singleton
+    public static PlayerController InstanceOfPlayer;
 
     Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSprite;
@@ -28,6 +30,13 @@ public class PlayerController : MonoBehaviour
 
     //PlayerHealth
     public float playerHealth;
+
+    //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
+    //Denna kan sedan kommas åt av alla andra script i projektet.
+    private void Awake()
+    {
+        InstanceOfPlayer = this;
+    }
 
     // Start is called before the first frame update
     void Start()
