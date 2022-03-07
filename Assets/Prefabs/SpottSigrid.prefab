@@ -234,3 +234,4 @@ MonoBehaviour:
   movingLeft: 0
   HP: 3
   groundDetection: {fileID: 876772571}
+  player: {fileID: 6325820368308811888, guid: 319e28013f724074887dddc0e575980f, type: 3}

@@ -13,12 +13,17 @@ public class GhostBehaviour : MonoBehaviour
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
 
+    //referar till player
+    private PlayerController playerController;
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
+        playerController = player.GetComponent<PlayerController>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
     }
@@ -57,6 +62,21 @@ public class GhostBehaviour : MonoBehaviour
             HP = HP - 2;
             whiteFlash();
             Invoke("resetMaterial", 0.2f);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            playerController.playerHealth--;
+            if (spriterenderer.flipX == true)
+            {
+                transform.Translate(new Vector2(-1f, 0f));
+            }
+
+            else if (spriterenderer.flipX == false)
+            {
+                transform.Translate(new Vector2(1f, 0f));
+            }
+
         }
     }
 

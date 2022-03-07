@@ -249,12 +249,10 @@ public class RhinoBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("SMÄLL");
             resetMaterial();
             Invoke("stunComplete", 2);
             rhinoWallOrPlayerHit();
             playerController.playerHealth--;
-            Debug.Log(playerController.playerHealth);
             state = State.RhinoWallOrPlayerHit;
         }
     }

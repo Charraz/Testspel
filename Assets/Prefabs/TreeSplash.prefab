@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3175002393695255781}
   - component: {fileID: 3175002393695255780}
   - component: {fileID: 3175002393695255783}
-  - component: {fileID: 5126389125094119475}
+  - component: {fileID: 2137363352907536288}
   m_Layer: 0
   m_Name: TreeSplash
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5126389125094119475
+--- !u!114 &2137363352907536288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3175002393695255782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53389c3aa58689e499e5e7f65a8e270b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cb955450ee45004ea827f0acc3a799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathTimer: 1
