@@ -122,7 +122,7 @@ MonoBehaviour:
   rigidkropp: {fileID: 0}
   animation: {fileID: 0}
   onDeathBloodSplash: {fileID: 8844913893679296938, guid: 1e5c66efe03c9084ca40efa2ed9fd5a7, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 6325820368308811888, guid: 319e28013f724074887dddc0e575980f, type: 3}
   HP: 5
 --- !u!61 &681427023061891589
 BoxCollider2D:
