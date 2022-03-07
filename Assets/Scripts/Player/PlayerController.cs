@@ -183,15 +183,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            playerHealth = playerHealth - 1;
-            Debug.Log(playerHealth);
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        playerHealth = playerHealth - 1f;
+    //        Debug.Log(playerHealth);
 
-        }
-    }
+    //    }
+    //}
     IEnumerator SpawnDust()
     {
         while(isGrounded)

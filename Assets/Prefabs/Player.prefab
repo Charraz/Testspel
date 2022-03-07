@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434698832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 0.069, z: 0}
+  m_LocalPosition: {x: 1.014, y: 0.069, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 78201377921636102}
@@ -334,7 +334,7 @@ MonoBehaviour:
   moveSpeed: 8
   jumpForce: 15
   dustEffect: {fileID: 4558462613707730391, guid: c398d66d461686247a30a558c6b68791, type: 3}
-  playerHealth: 0
+  playerHealth: 5
 --- !u!61 &6325820368308811901
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -416,6 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78201377921636102}
   - component: {fileID: 224354544}
+  - component: {fileID: 435705850}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -456,4 +457,23 @@ MonoBehaviour:
   muzzleFlash: {fileID: 3707299932964571610, guid: 6de167fd19e99b04dbfa3636536f3613, type: 3}
   myPlayer: {fileID: 6325820368308811888}
   rocketPrefab: {fileID: 8562075830459117610, guid: 6d2a608074401154bb95b8ac18d28059, type: 3}
-  gunAnimator: {fileID: 0}
+  gunAnimator: {fileID: 435705850}
+--- !u!95 &435705850
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446336651769568111}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 864d2417aac6806488598db70bd27ea5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

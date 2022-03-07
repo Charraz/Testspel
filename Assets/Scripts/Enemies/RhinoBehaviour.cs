@@ -12,6 +12,8 @@ public class RhinoBehaviour : MonoBehaviour
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matRed; //Används för att göra rhinon röd när han är arger
     private Material matDefault; //Återställer rhinons materail till default
+    private PlayerController playerController;
+    public GameObject player;
 
     float moveSpeed;
     bool movingLeft;
@@ -22,6 +24,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
+        playerController = player.GetComponent<PlayerController>();
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
@@ -36,6 +39,11 @@ public class RhinoBehaviour : MonoBehaviour
     {
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
+
+        if (HP <= 0)
+        {
+            killSelf();
+        }
 
         switch (state)
         {
@@ -56,6 +64,7 @@ public class RhinoBehaviour : MonoBehaviour
             case State.RhinoRun:
                 rhinoRun();
 
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall")
                 {
@@ -65,14 +74,11 @@ public class RhinoBehaviour : MonoBehaviour
                     Invoke("stunComplete", 2);
                     state = State.RhinoWallOrPlayerHit;
                 }
-                else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
-                {
-                    //spriterenderer.color = Color.white;
-                    resetMaterial();
-                    rhinoWallOrPlayerHit();
-                    Invoke("stunComplete", 2);
-                    state = State.RhinoWallOrPlayerHit;
-                }
+                //else if (HittingSomething.collider != null && HittingSomething.collider.tag == "Player")
+                //{
+                //    //spriterenderer.color = Color.white;
+                    
+                //}
                 break;
 
             case State.RhinoWallOrPlayerHit:
@@ -90,26 +96,6 @@ public class RhinoBehaviour : MonoBehaviour
 
             default:
                 break;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "PlayerBullet") 
-        {
-            HP = HP - 1;
-            whiteFlash();
-            
-            if (HP < 1)
-            {
-                killSelf();
-            }
-            else
-            {
-                Invoke("resetMaterial", .1f);
-            }
-            
-            
         }
     }
 
@@ -243,5 +229,33 @@ public class RhinoBehaviour : MonoBehaviour
         RhinoRun,
         RhinoWallOrPlayerHit,
         RhinoJumping
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerBullet")
+        {
+            HP = HP - 1;
+            whiteFlash();
+            Invoke("resetMaterial", 0.1f);
+        }
+
+        if (collision.gameObject.tag == "PlayerExplosion")
+        {
+            HP = HP - 2;
+            whiteFlash();
+            Invoke("resetMaterial", 0.2f);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("SMÄLL");
+            resetMaterial();
+            Invoke("stunComplete", 2);
+            rhinoWallOrPlayerHit();
+            playerController.playerHealth--;
+            Debug.Log(playerController.playerHealth);
+            state = State.RhinoWallOrPlayerHit;
+        }
     }
 }

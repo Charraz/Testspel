@@ -7,8 +7,8 @@ public class GhostBehaviour : MonoBehaviour
     [SerializeField] private GameObject spelarN;
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private int HP;
-    public Rigidbody2D rigidkropp;
-    public new Animator animation;
+    private Rigidbody2D rigidkropp;
+    private new Animator animation;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
@@ -26,6 +26,11 @@ public class GhostBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (HP <= 0)
+        {
+            animation.SetBool("IsDead", true);
+            Invoke("killSelf", .5f);
+        }
         transform.position = Vector2.MoveTowards(transform.position, spelarN.transform.position, speed * Time.deltaTime);
 
         if (spelarN.transform.position.x > rigidkropp.transform.position.x)
@@ -44,16 +49,14 @@ public class GhostBehaviour : MonoBehaviour
         {
             HP = HP - 1;
             whiteFlash();
+            Invoke("resetMaterial", 0.1f);
+        }
 
-            if (HP < 1)
-            {
-                animation.SetBool("IsDead", true);
-                Invoke("killSelf", .5f);
-            }
-            else
-            {
-                Invoke("resetMaterial", .1f);
-            }
+        if (collision.gameObject.tag == "PlayerExplosion")
+        {
+            HP = HP - 2;
+            whiteFlash();
+            Invoke("resetMaterial", 0.2f);
         }
     }
 
@@ -71,4 +74,6 @@ public class GhostBehaviour : MonoBehaviour
     {
         spriterenderer.material = matDefault;
     }
+
+
 }
