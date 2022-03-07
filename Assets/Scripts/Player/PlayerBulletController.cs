@@ -34,6 +34,11 @@ public class PlayerBulletController : MonoBehaviour
             Object.Destroy(gameObject);
             
         }
+
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Death()
