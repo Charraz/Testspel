@@ -7,14 +7,13 @@ public class TextController : MonoBehaviour
 {
     //referens till spelarskript
     private PlayerController playerController;
-    public GameObject player;
 
     private Text healthText;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = player.GetComponent<PlayerController>();
+        playerController = PlayerController.InstanceOfPlayer;
         healthText = GetComponent<Text>();
     }
 
