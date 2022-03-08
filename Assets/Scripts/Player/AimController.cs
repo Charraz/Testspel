@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
     //private Vector3 mousePosition;
     //private float moveSpeed = 1000f;
 
