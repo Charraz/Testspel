@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8562075830459117614}
   - component: {fileID: 8562075830459117609}
   - component: {fileID: 8562075830459117608}
-  - component: {fileID: 8562075830459117611}
   - component: {fileID: -370509023342069983}
   - component: {fileID: 324839077183627789}
+  - component: {fileID: 466223916087441501}
   m_Layer: 0
   m_Name: PlayerRocket
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8562075830459117610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.6548653, y: 1.4526842, z: -0.72433126}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -3352983389990927706, guid: 6cbf83fa9ca66df4fadc66c785cc0e5a, type: 3}
   m_Color: {r: 0.9622642, g: 0.4884846, b: 0.022694906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,22 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8562075830459117611
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562075830459117610}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &-370509023342069983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d27054c2dc70c24dbe6e6def9df2c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
+  speed: 10
   particleExplosion: {fileID: 4494744821287106505, guid: 6231324277e660442981fc3938601d26, type: 3}
   explosionRadius: {fileID: 2866751546348537679, guid: be7d3dac86878b34f898bd66901b5bf1, type: 3}
 --- !u!96 &324839077183627789
@@ -245,3 +229,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!70 &466223916087441501
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562075830459117610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024982452, y: -0.016655128}
+  m_Size: {x: 0.45393372, y: 0.5627221}
+  m_Direction: 0
