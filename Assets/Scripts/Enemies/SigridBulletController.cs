@@ -18,7 +18,8 @@ public class SigridBulletController : MonoBehaviour
         rigidkroppBullet = GetComponent<Rigidbody2D>();
         rigidkroppBullet.velocity = transform.right * speed;
         Invoke("bulletGravity", 0.5f);
-        playerController = player.GetComponent<PlayerController>();
+        //playerController = player.GetComponent<PlayerController>();
+        playerController = PlayerController.InstanceOfPlayer;
     }
 
     //Update is called once per frame

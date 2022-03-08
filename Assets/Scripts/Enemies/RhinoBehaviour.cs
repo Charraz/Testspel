@@ -13,7 +13,7 @@ public class RhinoBehaviour : MonoBehaviour
     private Material matRed; //Används för att göra rhinon röd när han är arger
     private Material matDefault; //Återställer rhinons materail till default
     private PlayerController playerController;
-    public GameObject player;
+    public Transform groundDetection;
 
     float moveSpeed;
     bool movingLeft;
@@ -24,7 +24,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         animation = gameObject.GetComponent<Animator>();
-        playerController = player.GetComponent<PlayerController>();
+        playerController = PlayerController.InstanceOfPlayer;
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
@@ -107,6 +107,14 @@ public class RhinoBehaviour : MonoBehaviour
         //Vänd när Rhino kommer till en vägg eller en annan fiende
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
         if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall" || TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Enemy")
+        {
+            rigidkropp.transform.Rotate(0f, 180f, 0f);
+            movingLeft = !movingLeft;
+        }
+
+        //Vänd när Rhino kommer till en plattforms kant
+        RaycastHit2D TurnAroundRaycastEdge = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f);
+        if (TurnAroundRaycastEdge.collider == false)
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
             movingLeft = !movingLeft;

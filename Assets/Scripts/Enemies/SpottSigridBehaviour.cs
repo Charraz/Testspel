@@ -22,7 +22,6 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     //referens till spelare
     private PlayerController playerController;
-    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +31,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
-        playerController = player.GetComponent<PlayerController>();
+        playerController = PlayerController.InstanceOfPlayer;
 
         canShoot = false;
         moveSpeed = -2;
