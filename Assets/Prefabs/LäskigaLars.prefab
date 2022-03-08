@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4962247884010541389}
   - component: {fileID: 4962247884010541388}
   m_Layer: 0
-  m_Name: Ghost
+  m_Name: "L\xE4skigaLars"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
