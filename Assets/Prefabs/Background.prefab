@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729996523752105}
   - component: {fileID: 6122729996523752110}
-  - component: {fileID: 6122729996523752111}
+  - component: {fileID: 957101888}
   m_Layer: 0
   m_Name: Fog_2
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729996523752111
+--- !u!114 &957101888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6122729996523752104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
+  m_Script: {fileID: 11500000, guid: f3229f7961e9095429d139db145e11bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.55
 --- !u!1 &6122729996600665152
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997139366323}
   - component: {fileID: 6122729997139366320}
-  - component: {fileID: 6122729997139366321}
   m_Layer: 0
   m_Name: Mountains_2
   m_TagString: Untagged
@@ -301,19 +299,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997139366321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729997139366322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0.75
 --- !u!1 &6122729997272456186
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997272456187}
   - component: {fileID: 6122729997272456184}
-  - component: {fileID: 6122729997272456185}
+  - component: {fileID: 2033590311}
   m_Layer: 0
   m_Name: Fog_1
   m_TagString: Untagged
@@ -398,7 +383,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997272456185
+--- !u!114 &2033590311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -407,10 +392,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6122729997272456186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
+  m_Script: {fileID: 11500000, guid: f3229f7961e9095429d139db145e11bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.5
 --- !u!1 &6122729997397800236
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +487,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997547116300}
   - component: {fileID: 6122729997547116301}
-  - component: {fileID: 6122729997547116290}
   m_Layer: 0
   m_Name: Fir_background 1
   m_TagString: Untagged
@@ -576,19 +559,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997547116290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729997547116303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0.3
 --- !u!1 &6122729997588056133
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997588056154}
   - component: {fileID: 6122729997588056155}
-  - component: {fileID: 6122729997588056152}
+  - component: {fileID: 1702818425}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: Untagged
@@ -615,7 +585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6122729997588056133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.1, z: 0}
+  m_LocalPosition: {x: 0, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6122729997397800237}
@@ -673,7 +643,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997588056152
+--- !u!114 &1702818425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -682,10 +652,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6122729997588056133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8439a663b1c59a14b8727387b300f2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 0.9
 --- !u!1 &6122729997616492739
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +665,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997616492736}
   - component: {fileID: 6122729997616492737}
-  - component: {fileID: 6122729997616492742}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -769,19 +737,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997616492742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729997616492739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0
 --- !u!1 &6122729997673364123
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +747,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997673364120}
   - component: {fileID: 6122729997673364121}
-  - component: {fileID: 6122729997673364126}
   m_Layer: 0
   m_Name: Fir_foreground
   m_TagString: Untagged
@@ -865,19 +819,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997673364126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729997673364123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0.4
 --- !u!1 &6122729997716363500
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +829,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729997716363501}
   - component: {fileID: 6122729997716363490}
-  - component: {fileID: 6122729997716363491}
   m_Layer: 0
   m_Name: Mountains_1
   m_TagString: Untagged
@@ -961,19 +901,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729997716363491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729997716363500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0.7
 --- !u!1 &6122729998142501161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +993,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6122729998359966902}
   - component: {fileID: 6122729998359966903}
-  - component: {fileID: 6122729998359966900}
   m_Layer: 0
   m_Name: Mountains_3
   m_TagString: Untagged
@@ -1139,16 +1065,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6122729998359966900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122729998359966897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f04651136d5e0744b00a0b36401a55c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxEffect: 0.8
