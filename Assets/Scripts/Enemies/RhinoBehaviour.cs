@@ -246,7 +246,10 @@ public class RhinoBehaviour : MonoBehaviour
             whiteFlash();
             Invoke("resetMaterial", 0.2f);
         }
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.tag == "Player")
         {
             resetMaterial();

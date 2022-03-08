@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     //Vi har gjort en singleton
     public static PlayerController InstanceOfPlayer;
 
-    Rigidbody2D playerRigidbody;
+    private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSprite;
 
     public new Animator animation;
