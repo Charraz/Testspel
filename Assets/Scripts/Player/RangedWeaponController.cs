@@ -36,11 +36,11 @@ public class RangedWeaponController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && weapon1CD == false)
+        if (Input.GetButton("Fire1") && weapon1CD == false)
         {
             Shoot();
             weapon1CD = true;
-            Invoke("Weapon1CDActive", 0.3f);
+            Invoke("Weapon1CDActive", 0.2f);
 
         }
 

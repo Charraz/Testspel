@@ -57,7 +57,7 @@ public class GhostBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "PlayerExplosion")
         {
-            HP = HP - 2;
+            HP = HP - 5;
             whiteFlash();
             Invoke("resetMaterial", 0.2f);
         }
