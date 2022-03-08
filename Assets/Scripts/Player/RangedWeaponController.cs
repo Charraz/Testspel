@@ -14,7 +14,6 @@ public class RangedWeaponController : MonoBehaviour
     public Animator gunAnimator;
     private bool weapon1CD;
     private bool weapon2CD;
-
     //Animatorbools
     //private bool pointRight;
     //private bool pointLeft;
@@ -103,7 +102,7 @@ public class RangedWeaponController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
         gunAnimator.SetTrigger("Shoot");
 
@@ -111,7 +110,7 @@ public class RangedWeaponController : MonoBehaviour
 
     void ShootRocket()
     {
-        Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(rocketPrefab, firePoint.position, transform.rotation);
     }
 
     void Weapon1CDActive()

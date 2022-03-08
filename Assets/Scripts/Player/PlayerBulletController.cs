@@ -16,6 +16,7 @@ public class PlayerBulletController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
 
+        transform.Rotate(0, 0, -90);
         //Döda bullet efter 3 sekunder
         Invoke("Death", 3f);
     }
