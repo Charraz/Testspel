@@ -10,7 +10,11 @@ public class SigridBulletController : MonoBehaviour
 
     //referens till spelare
     private PlayerController playerController;
-    public GameObject player;
+
+    private void Awake()
+    {
+        playerController = PlayerController.InstanceOfPlayer;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +22,6 @@ public class SigridBulletController : MonoBehaviour
         rigidkroppBullet = GetComponent<Rigidbody2D>();
         rigidkroppBullet.velocity = transform.right * speed;
         Invoke("bulletGravity", 0.5f);
-        //playerController = player.GetComponent<PlayerController>();
-        playerController = PlayerController.InstanceOfPlayer;
     }
 
     //Update is called once per frame
