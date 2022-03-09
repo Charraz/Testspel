@@ -167,6 +167,12 @@ public class PlayerController : MonoBehaviour
             coroutineAllowed = true;
         }
 
+        if (collision.gameObject.tag == "Enemy")
+        {
+            playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+            Debug.Log("RÖV");
+        }
+
         //if (collision.gameObject.tag == "Wall")
         //{
         //    playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
@@ -193,15 +199,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Enemy")
-    //    {
-    //        playerHealth = playerHealth - 1f;
-    //        Debug.Log(playerHealth);
-
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+            Debug.Log("RÖV");
+        }
+    }
     IEnumerator SpawnDust()
     {
         while(isGrounded)
