@@ -5,19 +5,22 @@ using UnityEngine;
 public class KalleKlinga : MonoBehaviour
 {
     private Rigidbody2D rigidKropp;
-    private PlayerController playerController;
     public float timeToDirectionChange;
     private float moveSpeed;
     private bool movingLeft;
 
+    //referar till player
+    private PlayerController playerController;
+
     private void Awake()
     {
-        playerController = PlayerController.InstanceOfPlayer;
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        playerController = PlayerController.InstanceOfPlayer;
         movingLeft = true;
         moveSpeed = 3f;
         rigidKropp = GetComponent<Rigidbody2D>();
@@ -48,11 +51,7 @@ public class KalleKlinga : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerController.playerHealth--;
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall")
-        {
-            Destroy(gameObject);
+            Debug.Log("ARLSE");
         }
     }
 
