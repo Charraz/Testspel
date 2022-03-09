@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     //PlayerHealth
     public float playerHealth;
+    private bool iFrame;
 
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         canJump = false;
         canDoubleJump = false;
         playerHealth = 5;
+        iFrame = false;
     }
 
     // Update is called once per frame
@@ -169,8 +171,24 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-            Debug.Log("RÖV");
+            if (iFrame == false)
+            {
+                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                iFrame = true;
+                Debug.Log("RÖV");
+                Invoke("iFrameCD", 0.7f);
+            }
+        }
+
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            if (iFrame == false)
+            {
+                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                iFrame = true;
+                Debug.Log("RÖV");
+                Invoke("iFrameCD", 0.7f);
+            }
         }
 
         //if (collision.gameObject.tag == "Wall")
@@ -203,8 +221,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-            Debug.Log("RÖV");
+            if (iFrame == false)
+            {
+                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                iFrame = true;
+                Debug.Log("RÖV");
+                Invoke("iFrameCD", 0.7f);
+            }
         }
     }
     IEnumerator SpawnDust()
@@ -214,5 +237,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(dustEffect, new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z), dustEffect.transform.rotation);
             yield return new WaitForSeconds(0.25f);
         }
+    }
+
+    private void iFrameCD()
+    {
+        iFrame = false;
     }
 }

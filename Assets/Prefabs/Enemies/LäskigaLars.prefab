@@ -155,4 +155,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  HP: 10
+  HP: 5
