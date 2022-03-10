@@ -21,7 +21,7 @@ public class SigridBulletController : MonoBehaviour
     {
         rigidkroppBullet = GetComponent<Rigidbody2D>();
         rigidkroppBullet.velocity = transform.right * speed;
-        Invoke("bulletGravity", 0.5f);
+        Invoke("bulletGravity", 1.5f);
     }
 
     //Update is called once per frame

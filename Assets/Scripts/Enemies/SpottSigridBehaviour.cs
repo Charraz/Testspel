@@ -59,7 +59,7 @@ public class SpottSigridBehaviour : MonoBehaviour
             case State.SpottSigridWalk:
                 spottSigridWalk();
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
-                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector2.left), 7f);
+                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector2.left), 12f);
                 if (SeesPlayerWalkState.collider != null && SeesPlayerWalkState.collider.tag == "Player")
                 {
                     animation.SetBool("PlayerInSight", true);
