@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128528632}
   - component: {fileID: 128528633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (No Effector)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 134220281}
   - component: {fileID: 134220283}
   - component: {fileID: 134220282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (Effector)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 180952932}
   - component: {fileID: 180952934}
   - component: {fileID: 180952933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (Effector) (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036941979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: 6.6704726, z: -2083.821}
+  m_LocalPosition: {x: -0.94, y: 6.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 128528632}
@@ -1660,7 +1660,7 @@ GameObject:
   - component: {fileID: 1592823332}
   - component: {fileID: 1592823334}
   - component: {fileID: 1592823333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (Effector) (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1890,10 +1890,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 363200084, guid: 319e28013f724074887dddc0e575980f, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1537810176}
     - target: {fileID: 6325820368308811888, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1908,7 +1904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.63
+      value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811890, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2012,7 +2008,7 @@ GameObject:
   - component: {fileID: 1999200524}
   - component: {fileID: 1999200526}
   - component: {fileID: 1999200525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (Effector) (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2089,7 +2085,7 @@ GameObject:
   - component: {fileID: 2039043517}
   - component: {fileID: 2039043519}
   - component: {fileID: 2039043518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground (Effector) (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
