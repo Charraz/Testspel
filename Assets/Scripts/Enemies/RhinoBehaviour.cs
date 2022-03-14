@@ -9,6 +9,7 @@ public class RhinoBehaviour : MonoBehaviour
     public new Animator animation;
     SpriteRenderer spriterenderer;
     public GameObject onDeathBloodSplash;
+    public GameObject onDeathBloodParticleScript;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matRed; //Används för att göra rhinon röd när han är arger
     private Material matDefault; //Återställer rhinons materail till default
@@ -171,7 +172,8 @@ public class RhinoBehaviour : MonoBehaviour
     private void killSelf()
     {
          onDeathBloodSplash = Instantiate(onDeathBloodSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-         Destroy(gameObject);
+        onDeathBloodParticleScript = Instantiate(onDeathBloodParticleScript, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Destroy(gameObject);
     }
 
     void resetMaterial()
@@ -193,34 +195,57 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoStateChecker()
     {
-        if (state == State.RhinoWalk)
+        switch (state)
         {
-            animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitWall", false);
-            animation.SetBool("Jumping", false);
-            animation.SetBool("Charge", false);
+            case State.RhinoWalk:
+                UpdateAnimation(false, false, false, false);
+                break;
+            case State.RhinoJumping:
+                UpdateAnimation(true, false, true, false);
+                break;
+            case State.RhinoRun:
+                UpdateAnimation(false, false, false, true);
+                break;
+            case State.RhinoWallOrPlayerHit:
+                UpdateAnimation(false, true, false, false);
+                break;
         }
-        else if (state == State.RhinoJumping)
-        {
-            animation.SetBool("SeesPlayer", true);
-            animation.SetBool("HitWall", false);
-            animation.SetBool("Jumping", true);
-            animation.SetBool("Charge", false);
-        }
-        else if (state == State.RhinoRun)
-        {
-            animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitWall", false);
-            animation.SetBool("Jumping", false);
-            animation.SetBool("Charge", true);
-        }
-        else if (state == State.RhinoWallOrPlayerHit)
-        {
-            animation.SetBool("SeesPlayer", false);
-            animation.SetBool("HitWall", true);
-            animation.SetBool("Jumping", false);
-            animation.SetBool("Charge", false);
-        }
+        //if (state == State.RhinoWalk)
+        //{
+        //    animation.SetBool("SeesPlayer", false);
+        //    animation.SetBool("HitWall", false);
+        //    animation.SetBool("Jumping", false);
+        //    animation.SetBool("Charge", false);
+        //}
+        //else if (state == State.RhinoJumping)
+        //{
+        //    animation.SetBool("SeesPlayer", true);
+        //    animation.SetBool("HitWall", false);
+        //    animation.SetBool("Jumping", true);
+        //    animation.SetBool("Charge", false);
+        //}
+        //else if (state == State.RhinoRun)
+        //{
+        //    animation.SetBool("SeesPlayer", false);
+        //    animation.SetBool("HitWall", false);
+        //    animation.SetBool("Jumping", false);
+        //    animation.SetBool("Charge", true);
+        //}
+        //else if (state == State.RhinoWallOrPlayerHit)
+        //{
+        //    animation.SetBool("SeesPlayer", false);
+        //    animation.SetBool("HitWall", true);
+        //    animation.SetBool("Jumping", false);
+        //    animation.SetBool("Charge", false);
+        //}
+    }
+
+    private void UpdateAnimation(bool seesPlayer, bool hitwall, bool jumping, bool charge)
+    {
+        animation.SetBool("SeesPlayer", seesPlayer);
+        animation.SetBool("HitWall", hitwall);
+        animation.SetBool("Jumping", jumping);
+        animation.SetBool("Charge", charge);
     }
 
     public enum State
