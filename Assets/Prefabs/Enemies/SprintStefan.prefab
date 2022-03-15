@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 681427023061891591}
   - component: {fileID: 681427023061891589}
   - component: {fileID: 681427023061891590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SprintStefan
   m_TagString: Enemy
   m_Icon: {fileID: 0}

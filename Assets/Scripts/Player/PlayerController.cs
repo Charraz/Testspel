@@ -77,8 +77,6 @@ public class PlayerController : MonoBehaviour
                 canJump = true;
                 //Player jumping
 
-                Debug.Log("WOOO");
-
             }
         }
         else if (!IsGrounded())
@@ -94,16 +92,6 @@ public class PlayerController : MonoBehaviour
 
         //Animation = Jumping
         animation.SetFloat("YSpeed", ySpeed);
-
-        if (moveHorizontal > 0.1f)
-        {
-            
-        }
-
-        else if (moveHorizontal < -0.1f)
-        {
-            
-        }
     }
 
 
@@ -145,8 +133,8 @@ public class PlayerController : MonoBehaviour
         {
             animation.SetFloat("Speed", 0);
             //Player movement
-            playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
 
+                playerRigidbody.velocity = new Vector2(0f, playerRigidbody.velocity.y);
                 StopCoroutine("SpawnDust");
                 coroutineAllowed = true;
         }
@@ -168,15 +156,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Ändrar så att Grounded är true så man kan hoppa igen
-        //if (collision.gameObject.tag == "Ground")
-        //{
-        //    isGrounded = true;
-        //    //När man är "Grounded" så slutar hoppanimationen att spelas
-        //    animation.SetBool("IsJumping", false);
-        //    doubleJump = 0;
-        //    coroutineAllowed = true;
-        //}
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -184,7 +163,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
-                Debug.Log("RÖV");
+                Debug.Log(playerHealth);
                 Invoke("iFrameCD", 0.7f);
             }
         }
@@ -195,22 +174,11 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
-                Debug.Log("RÖV");
+                Debug.Log(playerHealth);
                 Invoke("iFrameCD", 0.7f);
             }
         }
     }
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    //Ändrar så att Grounded är false när spelaren lämnar marken
-    //    if (collision.gameObject.tag == "Ground" && IsGrounded())
-    //    {
-    //        isGrounded = false;
-    //        doubleJump++;
-    //        
-    //    }
-    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -220,7 +188,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
-                Debug.Log("RÖV");
+                Debug.Log(playerHealth);
                 Invoke("iFrameCD", 0.7f);
             }
         }

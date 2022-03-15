@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 8681164780338499729}
   - component: {fileID: 8681164780338499756}
   - component: {fileID: 8681164780338499731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpottSigrid
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6699414634871007280}
   - component: {fileID: 6699414634871007283}
   - component: {fileID: 6699414634871007282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet SpottSigrid
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
