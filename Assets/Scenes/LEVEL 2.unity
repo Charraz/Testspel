@@ -693,11 +693,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &450841785 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-  m_PrefabInstance: {fileID: 7893544391283736127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &455206826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,77 +2714,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1907627891148627258, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
-      propertyPath: bloodSplatHolder
-      value: 
-      objectReference: {fileID: 450841785}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
---- !u!1001 &5653541256333072403
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5653541255892592241, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_SortingOrder
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592241, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592242, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5653541255892592243, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
-      propertyPath: m_Name
-      value: Splat Sprite
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 628e7c672e529ab47bd8cad9ba05ed53, type: 3}
 --- !u!1001 &5927766471085556008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48370,60 +48296,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6275088141447431701, guid: be27763fed7eba543be834b4449d717c, type: 3}
   m_PrefabInstance: {fileID: 6275088139635691793}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7893544391283736127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735814, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893544391193735815, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}
-      propertyPath: m_Name
-      value: Blod Splat Holder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: db12fcc620e578a4783c9b841a9670ef, type: 3}

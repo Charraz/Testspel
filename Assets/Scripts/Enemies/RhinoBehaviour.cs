@@ -172,7 +172,7 @@ public class RhinoBehaviour : MonoBehaviour
     private void killSelf()
     {
         //onDeathBloodSplash = Instantiate(onDeathBloodSplash, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, transform.rotation);
+        onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
