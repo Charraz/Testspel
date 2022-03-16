@@ -8,6 +8,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     public GameObject spitBulletPrefab;
     private Rigidbody2D rigidkropp;
     public Transform shotPosition;
+    public GameObject onDeathBloodParticleSystem;
     private State state = State.SpottSigridWalk;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
@@ -139,6 +140,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     private void killSelf()
     {
         onDeathTreeSplashPrefab = Instantiate(onDeathTreeSplashPrefab, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

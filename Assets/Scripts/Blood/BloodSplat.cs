@@ -32,7 +32,7 @@ public class BloodSplat : MonoBehaviour
         SetRotation();
 
         spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-        spriteRenderer.sortingOrder = 50;
+        spriteRenderer.sortingOrder = 15;
     }
 
     private void SetSprite()

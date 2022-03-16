@@ -229,5 +229,6 @@ MonoBehaviour:
   onDeathTreeSplashPrefab: {fileID: 3175002393695255782, guid: 7f1baf9d7d09c244a9875543a0f3cfba, type: 3}
   spitBulletPrefab: {fileID: 6699414634871007293, guid: 2cf518fe1848edf49958570877d2c6b0, type: 3}
   shotPosition: {fileID: 1420584275}
+  onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
   HP: 5
   groundDetection: {fileID: 876772571}
