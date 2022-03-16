@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpottSigridBehaviour : MonoBehaviour
 {
-    public GameObject onDeathTreeSplashPrefab;
+    public GameObject onDeathBloodAnimation;
     public GameObject spitBulletPrefab;
     private Rigidbody2D rigidkropp;
     public Transform shotPosition;
@@ -139,7 +139,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     private void killSelf()
     {
-        onDeathTreeSplashPrefab = Instantiate(onDeathTreeSplashPrefab, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

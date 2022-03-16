@@ -275,6 +275,63 @@ TextureImporter:
   - first:
       213: -5907716115416452911
     second: 9BloodAnimations_90
+  - first:
+      213: -4354808482919610786
+    second: 9BloodAnimations_91
+  - first:
+      213: -5696467539719978170
+    second: 9BloodAnimations_92
+  - first:
+      213: 5971233629839145031
+    second: 9BloodAnimations_93
+  - first:
+      213: 6953937449437758018
+    second: 9BloodAnimations_94
+  - first:
+      213: -8727406212738574720
+    second: 9BloodAnimations_95
+  - first:
+      213: -3253937964658121304
+    second: 9BloodAnimations_96
+  - first:
+      213: 5860641062667672586
+    second: 9BloodAnimations_97
+  - first:
+      213: -8456237256012018984
+    second: 9BloodAnimations_98
+  - first:
+      213: 3017086190187828389
+    second: 9BloodAnimations_99
+  - first:
+      213: -4653488105481630370
+    second: 9BloodAnimations_100
+  - first:
+      213: 8836264980596143575
+    second: 9BloodAnimations_101
+  - first:
+      213: -3841266936742413537
+    second: 9BloodAnimations_102
+  - first:
+      213: 762944902546983594
+    second: 9BloodAnimations_103
+  - first:
+      213: -8851593680443650236
+    second: 9BloodAnimations_104
+  - first:
+      213: 5309850693314140241
+    second: 9BloodAnimations_105
+  - first:
+      213: -5850736109760781934
+    second: 9BloodAnimations_106
+  - first:
+      213: -9164559280824890281
+    second: 9BloodAnimations_107
+  - first:
+      213: -9001232460435760092
+    second: 9BloodAnimations_108
+  - first:
+      213: -7901443470195650575
+    second: 9BloodAnimations_109
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -319,7 +376,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -379,7 +436,7 @@ TextureImporter:
       name: 9BloodAnimations_0
       rect:
         serializedVersion: 2
-        x: 110
+        x: 0
         y: 0
         width: 110
         height: 93
@@ -400,7 +457,7 @@ TextureImporter:
       name: 9BloodAnimations_1
       rect:
         serializedVersion: 2
-        x: 220
+        x: 110
         y: 0
         width: 110
         height: 93
@@ -421,7 +478,7 @@ TextureImporter:
       name: 9BloodAnimations_2
       rect:
         serializedVersion: 2
-        x: 330
+        x: 220
         y: 0
         width: 110
         height: 93
@@ -442,7 +499,7 @@ TextureImporter:
       name: 9BloodAnimations_3
       rect:
         serializedVersion: 2
-        x: 440
+        x: 330
         y: 0
         width: 110
         height: 93
@@ -463,7 +520,7 @@ TextureImporter:
       name: 9BloodAnimations_4
       rect:
         serializedVersion: 2
-        x: 550
+        x: 440
         y: 0
         width: 110
         height: 93
@@ -484,7 +541,7 @@ TextureImporter:
       name: 9BloodAnimations_5
       rect:
         serializedVersion: 2
-        x: 660
+        x: 550
         y: 0
         width: 110
         height: 93
@@ -505,7 +562,7 @@ TextureImporter:
       name: 9BloodAnimations_6
       rect:
         serializedVersion: 2
-        x: 770
+        x: 660
         y: 0
         width: 110
         height: 93
@@ -526,7 +583,7 @@ TextureImporter:
       name: 9BloodAnimations_7
       rect:
         serializedVersion: 2
-        x: 880
+        x: 770
         y: 0
         width: 110
         height: 93
@@ -547,7 +604,7 @@ TextureImporter:
       name: 9BloodAnimations_8
       rect:
         serializedVersion: 2
-        x: 990
+        x: 880
         y: 0
         width: 110
         height: 93
@@ -568,7 +625,7 @@ TextureImporter:
       name: 9BloodAnimations_9
       rect:
         serializedVersion: 2
-        x: 1430
+        x: 990
         y: 0
         width: 110
         height: 93
@@ -589,7 +646,7 @@ TextureImporter:
       name: 9BloodAnimations_10
       rect:
         serializedVersion: 2
-        x: 1540
+        x: 1100
         y: 0
         width: 110
         height: 93
@@ -610,7 +667,7 @@ TextureImporter:
       name: 9BloodAnimations_11
       rect:
         serializedVersion: 2
-        x: 1650
+        x: 1210
         y: 0
         width: 110
         height: 93
@@ -631,7 +688,7 @@ TextureImporter:
       name: 9BloodAnimations_12
       rect:
         serializedVersion: 2
-        x: 1760
+        x: 1320
         y: 0
         width: 110
         height: 93
@@ -652,7 +709,7 @@ TextureImporter:
       name: 9BloodAnimations_13
       rect:
         serializedVersion: 2
-        x: 1870
+        x: 1430
         y: 0
         width: 110
         height: 93
@@ -673,7 +730,7 @@ TextureImporter:
       name: 9BloodAnimations_14
       rect:
         serializedVersion: 2
-        x: 1980
+        x: 1540
         y: 0
         width: 110
         height: 93
@@ -694,7 +751,7 @@ TextureImporter:
       name: 9BloodAnimations_15
       rect:
         serializedVersion: 2
-        x: 2090
+        x: 1650
         y: 0
         width: 110
         height: 93
@@ -715,7 +772,7 @@ TextureImporter:
       name: 9BloodAnimations_16
       rect:
         serializedVersion: 2
-        x: 2200
+        x: 1760
         y: 0
         width: 110
         height: 93
@@ -736,7 +793,7 @@ TextureImporter:
       name: 9BloodAnimations_17
       rect:
         serializedVersion: 2
-        x: 2310
+        x: 1870
         y: 0
         width: 110
         height: 93
@@ -757,7 +814,7 @@ TextureImporter:
       name: 9BloodAnimations_18
       rect:
         serializedVersion: 2
-        x: 2420
+        x: 1980
         y: 0
         width: 110
         height: 93
@@ -778,7 +835,7 @@ TextureImporter:
       name: 9BloodAnimations_19
       rect:
         serializedVersion: 2
-        x: 2530
+        x: 2090
         y: 0
         width: 110
         height: 93
@@ -799,7 +856,7 @@ TextureImporter:
       name: 9BloodAnimations_20
       rect:
         serializedVersion: 2
-        x: 2750
+        x: 2200
         y: 0
         width: 110
         height: 93
@@ -820,7 +877,7 @@ TextureImporter:
       name: 9BloodAnimations_21
       rect:
         serializedVersion: 2
-        x: 2860
+        x: 2310
         y: 0
         width: 110
         height: 93
@@ -841,7 +898,7 @@ TextureImporter:
       name: 9BloodAnimations_22
       rect:
         serializedVersion: 2
-        x: 2970
+        x: 2420
         y: 0
         width: 110
         height: 93
@@ -862,7 +919,7 @@ TextureImporter:
       name: 9BloodAnimations_23
       rect:
         serializedVersion: 2
-        x: 3080
+        x: 2530
         y: 0
         width: 110
         height: 93
@@ -883,7 +940,7 @@ TextureImporter:
       name: 9BloodAnimations_24
       rect:
         serializedVersion: 2
-        x: 3190
+        x: 2640
         y: 0
         width: 110
         height: 93
@@ -904,7 +961,7 @@ TextureImporter:
       name: 9BloodAnimations_25
       rect:
         serializedVersion: 2
-        x: 3300
+        x: 2750
         y: 0
         width: 110
         height: 93
@@ -925,7 +982,7 @@ TextureImporter:
       name: 9BloodAnimations_26
       rect:
         serializedVersion: 2
-        x: 3410
+        x: 2860
         y: 0
         width: 110
         height: 93
@@ -946,7 +1003,7 @@ TextureImporter:
       name: 9BloodAnimations_27
       rect:
         serializedVersion: 2
-        x: 3740
+        x: 2970
         y: 0
         width: 110
         height: 93
@@ -967,7 +1024,7 @@ TextureImporter:
       name: 9BloodAnimations_28
       rect:
         serializedVersion: 2
-        x: 3850
+        x: 3080
         y: 0
         width: 110
         height: 93
@@ -988,7 +1045,7 @@ TextureImporter:
       name: 9BloodAnimations_29
       rect:
         serializedVersion: 2
-        x: 3960
+        x: 3190
         y: 0
         width: 110
         height: 93
@@ -1009,7 +1066,7 @@ TextureImporter:
       name: 9BloodAnimations_30
       rect:
         serializedVersion: 2
-        x: 4070
+        x: 3300
         y: 0
         width: 110
         height: 93
@@ -1030,7 +1087,7 @@ TextureImporter:
       name: 9BloodAnimations_31
       rect:
         serializedVersion: 2
-        x: 4180
+        x: 3410
         y: 0
         width: 110
         height: 93
@@ -1051,7 +1108,7 @@ TextureImporter:
       name: 9BloodAnimations_32
       rect:
         serializedVersion: 2
-        x: 4290
+        x: 3520
         y: 0
         width: 110
         height: 93
@@ -1072,7 +1129,7 @@ TextureImporter:
       name: 9BloodAnimations_33
       rect:
         serializedVersion: 2
-        x: 4400
+        x: 3630
         y: 0
         width: 110
         height: 93
@@ -1093,7 +1150,7 @@ TextureImporter:
       name: 9BloodAnimations_34
       rect:
         serializedVersion: 2
-        x: 4510
+        x: 3740
         y: 0
         width: 110
         height: 93
@@ -1114,7 +1171,7 @@ TextureImporter:
       name: 9BloodAnimations_35
       rect:
         serializedVersion: 2
-        x: 4620
+        x: 3850
         y: 0
         width: 110
         height: 93
@@ -1135,7 +1192,7 @@ TextureImporter:
       name: 9BloodAnimations_36
       rect:
         serializedVersion: 2
-        x: 4730
+        x: 3960
         y: 0
         width: 110
         height: 93
@@ -1156,7 +1213,7 @@ TextureImporter:
       name: 9BloodAnimations_37
       rect:
         serializedVersion: 2
-        x: 5060
+        x: 4070
         y: 0
         width: 110
         height: 93
@@ -1177,7 +1234,7 @@ TextureImporter:
       name: 9BloodAnimations_38
       rect:
         serializedVersion: 2
-        x: 5170
+        x: 4180
         y: 0
         width: 110
         height: 93
@@ -1198,7 +1255,7 @@ TextureImporter:
       name: 9BloodAnimations_39
       rect:
         serializedVersion: 2
-        x: 5280
+        x: 4290
         y: 0
         width: 110
         height: 93
@@ -1219,7 +1276,7 @@ TextureImporter:
       name: 9BloodAnimations_40
       rect:
         serializedVersion: 2
-        x: 5390
+        x: 4400
         y: 0
         width: 110
         height: 93
@@ -1240,7 +1297,7 @@ TextureImporter:
       name: 9BloodAnimations_41
       rect:
         serializedVersion: 2
-        x: 5500
+        x: 4510
         y: 0
         width: 110
         height: 93
@@ -1261,7 +1318,7 @@ TextureImporter:
       name: 9BloodAnimations_42
       rect:
         serializedVersion: 2
-        x: 5610
+        x: 4620
         y: 0
         width: 110
         height: 93
@@ -1282,7 +1339,7 @@ TextureImporter:
       name: 9BloodAnimations_43
       rect:
         serializedVersion: 2
-        x: 5720
+        x: 4730
         y: 0
         width: 110
         height: 93
@@ -1303,7 +1360,7 @@ TextureImporter:
       name: 9BloodAnimations_44
       rect:
         serializedVersion: 2
-        x: 5830
+        x: 4840
         y: 0
         width: 110
         height: 93
@@ -1324,7 +1381,7 @@ TextureImporter:
       name: 9BloodAnimations_45
       rect:
         serializedVersion: 2
-        x: 6160
+        x: 4950
         y: 0
         width: 110
         height: 93
@@ -1345,7 +1402,7 @@ TextureImporter:
       name: 9BloodAnimations_46
       rect:
         serializedVersion: 2
-        x: 6270
+        x: 5060
         y: 0
         width: 110
         height: 93
@@ -1366,7 +1423,7 @@ TextureImporter:
       name: 9BloodAnimations_47
       rect:
         serializedVersion: 2
-        x: 6380
+        x: 5170
         y: 0
         width: 110
         height: 93
@@ -1387,7 +1444,7 @@ TextureImporter:
       name: 9BloodAnimations_48
       rect:
         serializedVersion: 2
-        x: 6490
+        x: 5280
         y: 0
         width: 110
         height: 93
@@ -1408,7 +1465,7 @@ TextureImporter:
       name: 9BloodAnimations_49
       rect:
         serializedVersion: 2
-        x: 6600
+        x: 5390
         y: 0
         width: 110
         height: 93
@@ -1429,7 +1486,7 @@ TextureImporter:
       name: 9BloodAnimations_50
       rect:
         serializedVersion: 2
-        x: 6710
+        x: 5500
         y: 0
         width: 110
         height: 93
@@ -1450,7 +1507,7 @@ TextureImporter:
       name: 9BloodAnimations_51
       rect:
         serializedVersion: 2
-        x: 6820
+        x: 5610
         y: 0
         width: 110
         height: 93
@@ -1471,7 +1528,7 @@ TextureImporter:
       name: 9BloodAnimations_52
       rect:
         serializedVersion: 2
-        x: 6930
+        x: 5720
         y: 0
         width: 110
         height: 93
@@ -1492,7 +1549,7 @@ TextureImporter:
       name: 9BloodAnimations_53
       rect:
         serializedVersion: 2
-        x: 7040
+        x: 5830
         y: 0
         width: 110
         height: 93
@@ -1513,7 +1570,7 @@ TextureImporter:
       name: 9BloodAnimations_54
       rect:
         serializedVersion: 2
-        x: 7150
+        x: 5940
         y: 0
         width: 110
         height: 93
@@ -1534,7 +1591,7 @@ TextureImporter:
       name: 9BloodAnimations_55
       rect:
         serializedVersion: 2
-        x: 7260
+        x: 6050
         y: 0
         width: 110
         height: 93
@@ -1555,7 +1612,7 @@ TextureImporter:
       name: 9BloodAnimations_56
       rect:
         serializedVersion: 2
-        x: 7590
+        x: 6160
         y: 0
         width: 110
         height: 93
@@ -1576,7 +1633,7 @@ TextureImporter:
       name: 9BloodAnimations_57
       rect:
         serializedVersion: 2
-        x: 7700
+        x: 6270
         y: 0
         width: 110
         height: 93
@@ -1597,7 +1654,7 @@ TextureImporter:
       name: 9BloodAnimations_58
       rect:
         serializedVersion: 2
-        x: 7810
+        x: 6380
         y: 0
         width: 110
         height: 93
@@ -1618,7 +1675,7 @@ TextureImporter:
       name: 9BloodAnimations_59
       rect:
         serializedVersion: 2
-        x: 7920
+        x: 6490
         y: 0
         width: 110
         height: 93
@@ -1639,7 +1696,7 @@ TextureImporter:
       name: 9BloodAnimations_60
       rect:
         serializedVersion: 2
-        x: 8030
+        x: 6600
         y: 0
         width: 110
         height: 93
@@ -1660,7 +1717,7 @@ TextureImporter:
       name: 9BloodAnimations_61
       rect:
         serializedVersion: 2
-        x: 8140
+        x: 6710
         y: 0
         width: 110
         height: 93
@@ -1681,7 +1738,7 @@ TextureImporter:
       name: 9BloodAnimations_62
       rect:
         serializedVersion: 2
-        x: 8250
+        x: 6820
         y: 0
         width: 110
         height: 93
@@ -1702,7 +1759,7 @@ TextureImporter:
       name: 9BloodAnimations_63
       rect:
         serializedVersion: 2
-        x: 8360
+        x: 6930
         y: 0
         width: 110
         height: 93
@@ -1723,7 +1780,7 @@ TextureImporter:
       name: 9BloodAnimations_64
       rect:
         serializedVersion: 2
-        x: 8470
+        x: 7040
         y: 0
         width: 110
         height: 93
@@ -1744,7 +1801,7 @@ TextureImporter:
       name: 9BloodAnimations_65
       rect:
         serializedVersion: 2
-        x: 8580
+        x: 7150
         y: 0
         width: 110
         height: 93
@@ -1765,7 +1822,7 @@ TextureImporter:
       name: 9BloodAnimations_66
       rect:
         serializedVersion: 2
-        x: 8690
+        x: 7260
         y: 0
         width: 110
         height: 93
@@ -1786,7 +1843,7 @@ TextureImporter:
       name: 9BloodAnimations_67
       rect:
         serializedVersion: 2
-        x: 8800
+        x: 7370
         y: 0
         width: 110
         height: 93
@@ -1807,7 +1864,7 @@ TextureImporter:
       name: 9BloodAnimations_68
       rect:
         serializedVersion: 2
-        x: 8910
+        x: 7480
         y: 0
         width: 110
         height: 93
@@ -1828,7 +1885,7 @@ TextureImporter:
       name: 9BloodAnimations_69
       rect:
         serializedVersion: 2
-        x: 9020
+        x: 7590
         y: 0
         width: 110
         height: 93
@@ -1849,7 +1906,7 @@ TextureImporter:
       name: 9BloodAnimations_70
       rect:
         serializedVersion: 2
-        x: 9240
+        x: 7700
         y: 0
         width: 110
         height: 93
@@ -1870,7 +1927,7 @@ TextureImporter:
       name: 9BloodAnimations_71
       rect:
         serializedVersion: 2
-        x: 9350
+        x: 7810
         y: 0
         width: 110
         height: 93
@@ -1891,7 +1948,7 @@ TextureImporter:
       name: 9BloodAnimations_72
       rect:
         serializedVersion: 2
-        x: 9460
+        x: 7920
         y: 0
         width: 110
         height: 93
@@ -1912,7 +1969,7 @@ TextureImporter:
       name: 9BloodAnimations_73
       rect:
         serializedVersion: 2
-        x: 9570
+        x: 8030
         y: 0
         width: 110
         height: 93
@@ -1933,7 +1990,7 @@ TextureImporter:
       name: 9BloodAnimations_74
       rect:
         serializedVersion: 2
-        x: 9680
+        x: 8140
         y: 0
         width: 110
         height: 93
@@ -1954,7 +2011,7 @@ TextureImporter:
       name: 9BloodAnimations_75
       rect:
         serializedVersion: 2
-        x: 9790
+        x: 8250
         y: 0
         width: 110
         height: 93
@@ -1975,7 +2032,7 @@ TextureImporter:
       name: 9BloodAnimations_76
       rect:
         serializedVersion: 2
-        x: 9900
+        x: 8360
         y: 0
         width: 110
         height: 93
@@ -1996,7 +2053,7 @@ TextureImporter:
       name: 9BloodAnimations_77
       rect:
         serializedVersion: 2
-        x: 10010
+        x: 8470
         y: 0
         width: 110
         height: 93
@@ -2017,7 +2074,7 @@ TextureImporter:
       name: 9BloodAnimations_78
       rect:
         serializedVersion: 2
-        x: 10120
+        x: 8580
         y: 0
         width: 110
         height: 93
@@ -2038,7 +2095,7 @@ TextureImporter:
       name: 9BloodAnimations_79
       rect:
         serializedVersion: 2
-        x: 10450
+        x: 8690
         y: 0
         width: 110
         height: 93
@@ -2059,7 +2116,7 @@ TextureImporter:
       name: 9BloodAnimations_80
       rect:
         serializedVersion: 2
-        x: 10560
+        x: 8800
         y: 0
         width: 110
         height: 93
@@ -2080,7 +2137,7 @@ TextureImporter:
       name: 9BloodAnimations_81
       rect:
         serializedVersion: 2
-        x: 10670
+        x: 8910
         y: 0
         width: 110
         height: 93
@@ -2101,7 +2158,7 @@ TextureImporter:
       name: 9BloodAnimations_82
       rect:
         serializedVersion: 2
-        x: 10780
+        x: 9020
         y: 0
         width: 110
         height: 93
@@ -2122,7 +2179,7 @@ TextureImporter:
       name: 9BloodAnimations_83
       rect:
         serializedVersion: 2
-        x: 10890
+        x: 9130
         y: 0
         width: 110
         height: 93
@@ -2143,7 +2200,7 @@ TextureImporter:
       name: 9BloodAnimations_84
       rect:
         serializedVersion: 2
-        x: 11000
+        x: 9240
         y: 0
         width: 110
         height: 93
@@ -2164,7 +2221,7 @@ TextureImporter:
       name: 9BloodAnimations_85
       rect:
         serializedVersion: 2
-        x: 11110
+        x: 9350
         y: 0
         width: 110
         height: 93
@@ -2185,7 +2242,7 @@ TextureImporter:
       name: 9BloodAnimations_86
       rect:
         serializedVersion: 2
-        x: 11220
+        x: 9460
         y: 0
         width: 110
         height: 93
@@ -2206,7 +2263,7 @@ TextureImporter:
       name: 9BloodAnimations_87
       rect:
         serializedVersion: 2
-        x: 11330
+        x: 9570
         y: 0
         width: 110
         height: 93
@@ -2227,7 +2284,7 @@ TextureImporter:
       name: 9BloodAnimations_88
       rect:
         serializedVersion: 2
-        x: 11440
+        x: 9680
         y: 0
         width: 110
         height: 93
@@ -2248,7 +2305,7 @@ TextureImporter:
       name: 9BloodAnimations_89
       rect:
         serializedVersion: 2
-        x: 11550
+        x: 9790
         y: 0
         width: 110
         height: 93
@@ -2269,7 +2326,7 @@ TextureImporter:
       name: 9BloodAnimations_90
       rect:
         serializedVersion: 2
-        x: 11660
+        x: 9900
         y: 0
         width: 110
         height: 93
@@ -2282,6 +2339,405 @@ TextureImporter:
       bones: []
       spriteID: 1d070c25e73930ea0800000000000000
       internalID: -5907716115416452911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_91
+      rect:
+        serializedVersion: 2
+        x: 10010
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5608bee1cc9093c0800000000000000
+      internalID: -4354808482919610786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_92
+      rect:
+        serializedVersion: 2
+        x: 10120
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643827c24f412f0b0800000000000000
+      internalID: -5696467539719978170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_93
+      rect:
+        serializedVersion: 2
+        x: 10230
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748bd6179551ed250800000000000000
+      internalID: 5971233629839145031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_94
+      rect:
+        serializedVersion: 2
+        x: 10340
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24206084449518060800000000000000
+      internalID: 6953937449437758018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_95
+      rect:
+        serializedVersion: 2
+        x: 10450
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0861e2f0a4602e680800000000000000
+      internalID: -8727406212738574720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_96
+      rect:
+        serializedVersion: 2
+        x: 10560
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5256749a0b7d2d0800000000000000
+      internalID: -3253937964658121304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_97
+      rect:
+        serializedVersion: 2
+        x: 10670
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cdf58defd255150800000000000000
+      internalID: 5860641062667672586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_98
+      rect:
+        serializedVersion: 2
+        x: 10780
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dacafac40965aa80800000000000000
+      internalID: -8456237256012018984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_99
+      rect:
+        serializedVersion: 2
+        x: 10890
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4d1ee97e7ded920800000000000000
+      internalID: 3017086190187828389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_100
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d034a293d7b6fb0800000000000000
+      internalID: -4653488105481630370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_101
+      rect:
+        serializedVersion: 2
+        x: 11110
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d538adee28b0aa70800000000000000
+      internalID: 8836264980596143575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_102
+      rect:
+        serializedVersion: 2
+        x: 11220
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bf30ca21411bac0800000000000000
+      internalID: -3841266936742413537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_103
+      rect:
+        serializedVersion: 2
+        x: 11330
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa028bb856869a00800000000000000
+      internalID: 762944902546983594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_104
+      rect:
+        serializedVersion: 2
+        x: 11440
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f40150272d82580800000000000000
+      internalID: -8851593680443650236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_105
+      rect:
+        serializedVersion: 2
+        x: 11550
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158d951a21160b940800000000000000
+      internalID: 5309850693314140241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_106
+      rect:
+        serializedVersion: 2
+        x: 11660
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2916827b1820ecea0800000000000000
+      internalID: -5850736109760781934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_107
+      rect:
+        serializedVersion: 2
+        x: 11770
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c4c67d3e1f0d080800000000000000
+      internalID: -9164559280824890281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_108
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cd20f84c2351380800000000000000
+      internalID: -9001232460435760092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_109
+      rect:
+        serializedVersion: 2
+        x: 11990
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff882a070f685290800000000000000
+      internalID: -7901443470195650575
       vertices: []
       indices: 
       edges: []
