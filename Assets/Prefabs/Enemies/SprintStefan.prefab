@@ -153,7 +153,7 @@ MonoBehaviour:
   rigidkropp: {fileID: 0}
   animation: {fileID: 0}
   onDeathBloodSplash: {fileID: 8844913893679296938, guid: 1e5c66efe03c9084ca40efa2ed9fd5a7, type: 3}
-  onDeathBloodParticleScript: {fileID: 7914556733053013321, guid: 1a78ae504a73f9a48aeab1b55ec8d69e, type: 3}
+  onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
   groundDetection: {fileID: 5826719297514410488}
   HP: 10
 --- !u!61 &681427023061891589

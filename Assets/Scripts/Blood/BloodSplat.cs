@@ -7,7 +7,7 @@ public class BloodSplat : MonoBehaviour
     public enum SplatLocation
     {
         Foreground,
-        Background,
+        //Background,
     }
 
     public Color backgroundTint;
@@ -31,7 +31,8 @@ public class BloodSplat : MonoBehaviour
         SetSize();
         SetRotation();
 
-        SetLocationProperties();
+        spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        spriteRenderer.sortingOrder = 50;
     }
 
     private void SetSprite()
@@ -54,19 +55,18 @@ public class BloodSplat : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, randomRotation);
     }
 
-    private void SetLocationProperties()
-    {
-        switch (splatLocation)
-        {
-            case SplatLocation.Background:
-                spriteRenderer.color = backgroundTint;
-                spriteRenderer.sortingOrder = -100;
-                break;
+    //private void SetLocationProperties()
+    //{
+    //    //switch (splatLocation)
+    //    //{
+    //    //    case SplatLocation.Background:
+    //    //        spriteRenderer.color = backgroundTint;
+    //    //        spriteRenderer.sortingOrder = -100;
+    //    //        break;
 
-            case SplatLocation.Foreground:
-                spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-                spriteRenderer.sortingOrder = 50;
-                break;
-        }
-    }
+    //    //    case SplatLocation.Foreground:
+
+    //            //break;
+    //    //}
+    //}
 }

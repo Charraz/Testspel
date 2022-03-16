@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempBlood : MonoBehaviour
+public class BloodParticleSpawner : MonoBehaviour
 {
     public ParticleSystem bloodSplatParticles;
     public GameObject bloodSplatPrefab;
