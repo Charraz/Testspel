@@ -17,7 +17,7 @@ public class TempBlood : MonoBehaviour
     private void SpawnBloodEffect()
     {
         GameObject splat = Instantiate(bloodSplatPrefab, transform.position, Quaternion.identity) as GameObject;
-        splat.transform.SetParent(bloodSplatHolder, true);
+        //splat.transform.SetParent(bloodSplatHolder, true);
         BloodSplat bloodSplatScript = splat.GetComponent<BloodSplat>();
 
         bloodSplatParticles.transform.position = transform.position;

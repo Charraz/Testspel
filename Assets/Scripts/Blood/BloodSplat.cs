@@ -65,7 +65,7 @@ public class BloodSplat : MonoBehaviour
 
             case SplatLocation.Foreground:
                 spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-                spriteRenderer.sortingOrder = 6;
+                spriteRenderer.sortingOrder = 50;
                 break;
         }
     }

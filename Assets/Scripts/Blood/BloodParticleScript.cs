@@ -19,7 +19,7 @@ public class BloodParticleScript : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             GameObject splat = Instantiate(bloodSplatPrefab, collisionEvents[i].intersection, Quaternion.identity) as GameObject;
-            splat.transform.SetParent(bloodSplatHolder, true);
+            //splat.transform.SetParent(bloodSplatHolder, true);
             BloodSplat splatScript = splat.GetComponent<BloodSplat>();
             splatScript.Initialize(BloodSplat.SplatLocation.Foreground);
         }
