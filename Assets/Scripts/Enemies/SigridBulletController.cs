@@ -42,7 +42,7 @@ public class SigridBulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerController.playerHealth--;
+            //playerController.playerHealth--;
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall")

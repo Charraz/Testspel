@@ -6,7 +6,7 @@ public class KalleKlinga : MonoBehaviour
 {
     private Rigidbody2D rigidKropp;
     public float timeToDirectionChange;
-    private float moveSpeed;
+    [SerializeField] private float moveSpeed;
     private bool movingLeft;
 
     //referar till player
@@ -50,8 +50,7 @@ public class KalleKlinga : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerController.playerHealth--;
-            Debug.Log("ARLSE");
+            //playerController.playerHealth--;
         }
     }
 

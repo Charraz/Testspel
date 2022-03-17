@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5150645748482979961}
   m_Layer: 0
   m_Name: KalleKlinga
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDirectionChange: 2.5
+  moveSpeed: 3
 --- !u!50 &5150645748482979961
 Rigidbody2D:
   serializedVersion: 4

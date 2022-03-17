@@ -168,13 +168,13 @@ public class SpottSigridBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            playerController.playerHealth--;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        playerController.playerHealth--;
+    //    }
+    //}
 
     public enum State
     {

@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     //PlayerHealth
     public float playerHealth;
     private bool iFrame;
+    private Material matWhite;
+    private Material matDefault;
+
 
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<BoxCollider2D>();
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        matDefault = playerSprite.material;
         hasJumped = false;
         canJump = false;
         canDoubleJump = false;
@@ -163,8 +168,15 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
+                playerHealth--;
                 Debug.Log(playerHealth);
-                Invoke("iFrameCD", 0.7f);
+                whiteFlash();
+                Invoke("resetMaterial", 0.2f);
+                Invoke("whiteFlash", 0.4f);
+                Invoke("resetMaterial", 0.6f);
+                Invoke("whiteFlash", 0.8f);
+                Invoke("resetMaterial", 1f);
+                Invoke("iFrameCD", 1f);
             }
         }
 
@@ -174,8 +186,15 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
+                playerHealth--;
                 Debug.Log(playerHealth);
-                Invoke("iFrameCD", 0.7f);
+                whiteFlash();
+                Invoke("resetMaterial", 0.2f);
+                Invoke("whiteFlash", 0.4f);
+                Invoke("resetMaterial", 0.6f);
+                Invoke("whiteFlash", 0.8f);
+                Invoke("resetMaterial", 1f);
+                Invoke("iFrameCD", 1f);
             }
         }
     }
@@ -188,8 +207,15 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
                 iFrame = true;
+                playerHealth--;
                 Debug.Log(playerHealth);
-                Invoke("iFrameCD", 0.7f);
+                whiteFlash();
+                Invoke("resetMaterial", 0.2f);
+                Invoke("whiteFlash", 0.4f);
+                Invoke("resetMaterial", 0.6f);
+                Invoke("whiteFlash", 0.8f);
+                Invoke("resetMaterial", 1f);
+                Invoke("iFrameCD", 1f);
             }
         }
     }
@@ -223,5 +249,15 @@ public class PlayerController : MonoBehaviour
     private void ParticleCD()
     {
         particleCD = false;
+    }
+
+    private void resetMaterial()
+    {
+        playerSprite.material = matDefault;
+    }
+
+    private void whiteFlash()
+    {
+        playerSprite.material = matWhite;
     }
 }

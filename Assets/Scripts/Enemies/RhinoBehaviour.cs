@@ -280,7 +280,7 @@ public class RhinoBehaviour : MonoBehaviour
             resetMaterial();
             Invoke("stunComplete", 2);
             rhinoWallOrPlayerHit();
-            playerController.playerHealth--;
+            //playerController.playerHealth--;
             state = State.RhinoWallOrPlayerHit;
         }
     }
