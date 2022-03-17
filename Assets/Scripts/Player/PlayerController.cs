@@ -166,7 +166,8 @@ public class PlayerController : MonoBehaviour
         {
             if (iFrame == false)
             {
-                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
                 Debug.Log(playerHealth);
@@ -184,7 +185,8 @@ public class PlayerController : MonoBehaviour
         {
             if (iFrame == false)
             {
-                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
                 Debug.Log(playerHealth);
@@ -205,7 +207,8 @@ public class PlayerController : MonoBehaviour
         {
             if (iFrame == false)
             {
-                playerRigidbody.AddForce(new Vector2(0f, 7f), ForceMode2D.Impulse);
+                playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
+                playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
                 Debug.Log(playerHealth);
