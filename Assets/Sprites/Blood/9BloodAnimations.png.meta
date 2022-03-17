@@ -1,0 +1,2760 @@
+fileFormatVersion: 2
+guid: a11c9aff972086a43baffce17a76d8d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6424560969831865673
+    second: 9BloodAnimations_0
+  - first:
+      213: -868967389683314904
+    second: 9BloodAnimations_1
+  - first:
+      213: 3699285706219989779
+    second: 9BloodAnimations_2
+  - first:
+      213: -7259379354859431767
+    second: 9BloodAnimations_3
+  - first:
+      213: -7313700150132063725
+    second: 9BloodAnimations_4
+  - first:
+      213: 8780020873874206029
+    second: 9BloodAnimations_5
+  - first:
+      213: -5266014345660779908
+    second: 9BloodAnimations_6
+  - first:
+      213: -4716847595821586712
+    second: 9BloodAnimations_7
+  - first:
+      213: -4443009348375088809
+    second: 9BloodAnimations_8
+  - first:
+      213: 7265335112063442227
+    second: 9BloodAnimations_9
+  - first:
+      213: -4783149491718036345
+    second: 9BloodAnimations_10
+  - first:
+      213: -6763009922833667631
+    second: 9BloodAnimations_11
+  - first:
+      213: -7261468626908242034
+    second: 9BloodAnimations_12
+  - first:
+      213: 7469042372698354432
+    second: 9BloodAnimations_13
+  - first:
+      213: 6694127813317778484
+    second: 9BloodAnimations_14
+  - first:
+      213: -2682037915429411387
+    second: 9BloodAnimations_15
+  - first:
+      213: 3218151635309839262
+    second: 9BloodAnimations_16
+  - first:
+      213: 1464497218539541713
+    second: 9BloodAnimations_17
+  - first:
+      213: -4333504970248115544
+    second: 9BloodAnimations_18
+  - first:
+      213: 1616549090333805726
+    second: 9BloodAnimations_19
+  - first:
+      213: -8749007917459815611
+    second: 9BloodAnimations_20
+  - first:
+      213: -3132288701032020204
+    second: 9BloodAnimations_21
+  - first:
+      213: 632485224044774
+    second: 9BloodAnimations_22
+  - first:
+      213: -414234222699076
+    second: 9BloodAnimations_23
+  - first:
+      213: 1374347285294804528
+    second: 9BloodAnimations_24
+  - first:
+      213: -7422857701777671334
+    second: 9BloodAnimations_25
+  - first:
+      213: 6946833660606838072
+    second: 9BloodAnimations_26
+  - first:
+      213: 4885044446854820058
+    second: 9BloodAnimations_27
+  - first:
+      213: 7814875703552803582
+    second: 9BloodAnimations_28
+  - first:
+      213: 6516372479685124877
+    second: 9BloodAnimations_29
+  - first:
+      213: -5460057187837343040
+    second: 9BloodAnimations_30
+  - first:
+      213: 8098106723242900209
+    second: 9BloodAnimations_31
+  - first:
+      213: 1203661646618382981
+    second: 9BloodAnimations_32
+  - first:
+      213: -2949995884998425299
+    second: 9BloodAnimations_33
+  - first:
+      213: -3361805753272709683
+    second: 9BloodAnimations_34
+  - first:
+      213: -5381459031239361587
+    second: 9BloodAnimations_35
+  - first:
+      213: 6064521781627769184
+    second: 9BloodAnimations_36
+  - first:
+      213: 4258487517133381623
+    second: 9BloodAnimations_37
+  - first:
+      213: -7249979599184628315
+    second: 9BloodAnimations_38
+  - first:
+      213: 3064628021668938801
+    second: 9BloodAnimations_39
+  - first:
+      213: -862567534090711527
+    second: 9BloodAnimations_40
+  - first:
+      213: -2506542717711288101
+    second: 9BloodAnimations_41
+  - first:
+      213: 2143811623107197539
+    second: 9BloodAnimations_42
+  - first:
+      213: 5713102009935688108
+    second: 9BloodAnimations_43
+  - first:
+      213: 9167043128150721917
+    second: 9BloodAnimations_44
+  - first:
+      213: -2108689132268223726
+    second: 9BloodAnimations_45
+  - first:
+      213: -6794856302073822923
+    second: 9BloodAnimations_46
+  - first:
+      213: -5992565888038061921
+    second: 9BloodAnimations_47
+  - first:
+      213: -6571694546090095633
+    second: 9BloodAnimations_48
+  - first:
+      213: -1704330699168271551
+    second: 9BloodAnimations_49
+  - first:
+      213: 4141144597577799683
+    second: 9BloodAnimations_50
+  - first:
+      213: 8552947972473445913
+    second: 9BloodAnimations_51
+  - first:
+      213: 3020133971852980128
+    second: 9BloodAnimations_52
+  - first:
+      213: -8027784459020520140
+    second: 9BloodAnimations_53
+  - first:
+      213: 2159973773732409262
+    second: 9BloodAnimations_54
+  - first:
+      213: 385632261379105438
+    second: 9BloodAnimations_55
+  - first:
+      213: 5214529871337815188
+    second: 9BloodAnimations_56
+  - first:
+      213: -5058290673252881349
+    second: 9BloodAnimations_57
+  - first:
+      213: 6755039842007240191
+    second: 9BloodAnimations_58
+  - first:
+      213: -3553081588031593786
+    second: 9BloodAnimations_59
+  - first:
+      213: 7312140865262628130
+    second: 9BloodAnimations_60
+  - first:
+      213: -5212166577158663971
+    second: 9BloodAnimations_61
+  - first:
+      213: 1082986227062750239
+    second: 9BloodAnimations_62
+  - first:
+      213: -1032129293625735039
+    second: 9BloodAnimations_63
+  - first:
+      213: 4149176332057137290
+    second: 9BloodAnimations_64
+  - first:
+      213: -8266644366900659359
+    second: 9BloodAnimations_65
+  - first:
+      213: 311713077137753175
+    second: 9BloodAnimations_66
+  - first:
+      213: -4689538253487171045
+    second: 9BloodAnimations_67
+  - first:
+      213: -4934587951486548354
+    second: 9BloodAnimations_68
+  - first:
+      213: 565335337775584268
+    second: 9BloodAnimations_69
+  - first:
+      213: 8812168064042571252
+    second: 9BloodAnimations_70
+  - first:
+      213: -2668022438115775650
+    second: 9BloodAnimations_71
+  - first:
+      213: 8988181482870847207
+    second: 9BloodAnimations_72
+  - first:
+      213: 1973610446007429827
+    second: 9BloodAnimations_73
+  - first:
+      213: -4989367013836138973
+    second: 9BloodAnimations_74
+  - first:
+      213: 417928067843622240
+    second: 9BloodAnimations_75
+  - first:
+      213: 8513199549243527375
+    second: 9BloodAnimations_76
+  - first:
+      213: 3940877096444007269
+    second: 9BloodAnimations_77
+  - first:
+      213: -3813199377342410006
+    second: 9BloodAnimations_78
+  - first:
+      213: 1136660643643817681
+    second: 9BloodAnimations_79
+  - first:
+      213: -4145914545984011419
+    second: 9BloodAnimations_80
+  - first:
+      213: -309287657132573112
+    second: 9BloodAnimations_81
+  - first:
+      213: 6788064020720338060
+    second: 9BloodAnimations_82
+  - first:
+      213: -3419374431105977565
+    second: 9BloodAnimations_83
+  - first:
+      213: 3648822120799407022
+    second: 9BloodAnimations_84
+  - first:
+      213: 747405582562787655
+    second: 9BloodAnimations_85
+  - first:
+      213: 1039600238412515477
+    second: 9BloodAnimations_86
+  - first:
+      213: -2478964709745425474
+    second: 9BloodAnimations_87
+  - first:
+      213: -2931712592661271474
+    second: 9BloodAnimations_88
+  - first:
+      213: 5971848581698686271
+    second: 9BloodAnimations_89
+  - first:
+      213: -5907716115416452911
+    second: 9BloodAnimations_90
+  - first:
+      213: -4354808482919610786
+    second: 9BloodAnimations_91
+  - first:
+      213: -5696467539719978170
+    second: 9BloodAnimations_92
+  - first:
+      213: 5971233629839145031
+    second: 9BloodAnimations_93
+  - first:
+      213: 6953937449437758018
+    second: 9BloodAnimations_94
+  - first:
+      213: -8727406212738574720
+    second: 9BloodAnimations_95
+  - first:
+      213: -3253937964658121304
+    second: 9BloodAnimations_96
+  - first:
+      213: 5860641062667672586
+    second: 9BloodAnimations_97
+  - first:
+      213: -8456237256012018984
+    second: 9BloodAnimations_98
+  - first:
+      213: 3017086190187828389
+    second: 9BloodAnimations_99
+  - first:
+      213: -4653488105481630370
+    second: 9BloodAnimations_100
+  - first:
+      213: 8836264980596143575
+    second: 9BloodAnimations_101
+  - first:
+      213: -3841266936742413537
+    second: 9BloodAnimations_102
+  - first:
+      213: 762944902546983594
+    second: 9BloodAnimations_103
+  - first:
+      213: -8851593680443650236
+    second: 9BloodAnimations_104
+  - first:
+      213: 5309850693314140241
+    second: 9BloodAnimations_105
+  - first:
+      213: -5850736109760781934
+    second: 9BloodAnimations_106
+  - first:
+      213: -9164559280824890281
+    second: 9BloodAnimations_107
+  - first:
+      213: -9001232460435760092
+    second: 9BloodAnimations_108
+  - first:
+      213: -7901443470195650575
+    second: 9BloodAnimations_109
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 9BloodAnimations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2255336df57d6a0800000000000000
+      internalID: -6424560969831865673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f078853cec0f3f0800000000000000
+      internalID: -868967389683314904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b2ce900c0865330800000000000000
+      internalID: 3699285706219989779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a89cc740f0814b90800000000000000
+      internalID: -7259379354859431767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31248ad8674808a90800000000000000
+      internalID: -7313700150132063725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d69cb5776e8d970800000000000000
+      internalID: 8780020873874206029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7237c86adb5be6b0800000000000000
+      internalID: -5266014345660779908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6266f3a146a8eb0800000000000000
+      internalID: -4716847595821586712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751fc58a9824752c0800000000000000
+      internalID: -4443009348375088809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_9
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dd6b08ac7a3d460800000000000000
+      internalID: 7265335112063442227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_10
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7846e8621e6de9db0800000000000000
+      internalID: -4783149491718036345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_11
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9ae01ae46f422a0800000000000000
+      internalID: -6763009922833667631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_12
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f9d79b1c41a3b90800000000000000
+      internalID: -7261468626908242034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_13
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003b60d177e57a760800000000000000
+      internalID: 7469042372698354432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_14
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c5ed977c156ec50800000000000000
+      internalID: 6694127813317778484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_15
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c563b8d9bc77cad0800000000000000
+      internalID: -2682037915429411387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_16
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e934cff9cdb29ac20800000000000000
+      internalID: 3218151635309839262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_17
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4d8950670f25410800000000000000
+      internalID: 1464497218539541713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_18
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaa8ff703c4cd3c0800000000000000
+      internalID: -4333504970248115544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_19
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cc35335d22f6610800000000000000
+      internalID: 1616549090333805726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_20
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5434abe37a7459680800000000000000
+      internalID: -8749007917459815611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_21
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4174401a500e784d0800000000000000
+      internalID: -3132288701032020204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_22
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8da11fd3f320000800000000000000
+      internalID: 632485224044774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_23
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd5d4491478efff0800000000000000
+      internalID: -414234222699076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_24
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ee40a0399a21310800000000000000
+      internalID: 1374347285294804528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_25
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bf44b8f36bcf890800000000000000
+      internalID: -7422857701777671334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_26
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835723e886c186060800000000000000
+      internalID: 6946833660606838072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_27
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0b6c6da0a2bc340800000000000000
+      internalID: 4885044446854820058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_28
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef288122c04047c60800000000000000
+      internalID: 7814875703552803582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_29
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0363cbbe3ece6a50800000000000000
+      internalID: 6516372479685124877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_30
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca03a19aeaf934b0800000000000000
+      internalID: -5460057187837343040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_31
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa7810c821426070800000000000000
+      internalID: 8098106723242900209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_32
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582537ce3e344b010800000000000000
+      internalID: 1203661646618382981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_33
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d250ec15f528f07d0800000000000000
+      internalID: -2949995884998425299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_34
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdc050aa777851d0800000000000000
+      internalID: -3361805753272709683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_35
+      rect:
+        serializedVersion: 2
+        x: 3850
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbf8a5f5873155b0800000000000000
+      internalID: -5381459031239361587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_36
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061da8edd62892450800000000000000
+      internalID: 6064521781627769184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_37
+      rect:
+        serializedVersion: 2
+        x: 4070
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff9b2b95df291b30800000000000000
+      internalID: 4258487517133381623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_38
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a575c177f5e26b90800000000000000
+      internalID: -7249979599184628315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_39
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1340948d2feb78a20800000000000000
+      internalID: 3064628021668938801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_40
+      rect:
+        serializedVersion: 2
+        x: 4400
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e0db7d56b8704f0800000000000000
+      internalID: -862567534090711527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_41
+      rect:
+        serializedVersion: 2
+        x: 4510
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8f970bda8f63dd0800000000000000
+      internalID: -2506542717711288101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_42
+      rect:
+        serializedVersion: 2
+        x: 4620
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a78a4105950cd10800000000000000
+      internalID: 2143811623107197539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_43
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca179cb3204094f40800000000000000
+      internalID: 5713102009935688108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_44
+      rect:
+        serializedVersion: 2
+        x: 4840
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d750c1ee721e73f70800000000000000
+      internalID: 9167043128150721917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_45
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2130d61186e6cb2e0800000000000000
+      internalID: -2108689132268223726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_46
+      rect:
+        serializedVersion: 2
+        x: 5060
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531c017a132d3b1a0800000000000000
+      internalID: -6794856302073822923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_47
+      rect:
+        serializedVersion: 2
+        x: 5170
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f983e56231126dca0800000000000000
+      internalID: -5992565888038061921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_48
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb8defe0a6acc4a0800000000000000
+      internalID: -6571694546090095633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_49
+      rect:
+        serializedVersion: 2
+        x: 5390
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143384052400958e0800000000000000
+      internalID: -1704330699168271551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_50
+      rect:
+        serializedVersion: 2
+        x: 5500
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308172e121d487930800000000000000
+      internalID: 4141144597577799683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_51
+      rect:
+        serializedVersion: 2
+        x: 5610
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e5da19ddc22b670800000000000000
+      internalID: 8552947972473445913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_52
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afe26698dba9e920800000000000000
+      internalID: 3020133971852980128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_53
+      rect:
+        serializedVersion: 2
+        x: 5830
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4353eaa4194979090800000000000000
+      internalID: -8027784459020520140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_54
+      rect:
+        serializedVersion: 2
+        x: 5940
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafea7304b4c9fd10800000000000000
+      internalID: 2159973773732409262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_55
+      rect:
+        serializedVersion: 2
+        x: 6050
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92ae61af7a0a5500800000000000000
+      internalID: 385632261379105438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_56
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cf0cb4a4bbd5840800000000000000
+      internalID: 5214529871337815188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_57
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c2712ce675dc9b0800000000000000
+      internalID: -5058290673252881349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_58
+      rect:
+        serializedVersion: 2
+        x: 6380
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdc37252f8bebd50800000000000000
+      internalID: 6755039842007240191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_59
+      rect:
+        serializedVersion: 2
+        x: 6490
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c26567ee1be0bec0800000000000000
+      internalID: -3553081588031593786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_60
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22da8952061f97560800000000000000
+      internalID: 7312140865262628130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_61
+      rect:
+        serializedVersion: 2
+        x: 6710
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05b420d1aaaa7b0800000000000000
+      internalID: -5212166577158663971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_62
+      rect:
+        serializedVersion: 2
+        x: 6820
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c37b05c3a870f00800000000000000
+      internalID: 1082986227062750239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_63
+      rect:
+        serializedVersion: 2
+        x: 6930
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188c92b30e32da1f0800000000000000
+      internalID: -1032129293625735039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_64
+      rect:
+        serializedVersion: 2
+        x: 7040
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8059b604e5d49930800000000000000
+      internalID: 4149176332057137290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_65
+      rect:
+        serializedVersion: 2
+        x: 7150
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bf6623fbaf64d80800000000000000
+      internalID: -8266644366900659359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_66
+      rect:
+        serializedVersion: 2
+        x: 7260
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754c3a2646d635400800000000000000
+      internalID: 311713077137753175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_67
+      rect:
+        serializedVersion: 2
+        x: 7370
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a9a400ec96beeb0800000000000000
+      internalID: -4689538253487171045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_68
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76c8b61762d48bb0800000000000000
+      internalID: -4934587951486548354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_69
+      rect:
+        serializedVersion: 2
+        x: 7590
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04d6139e7978d700800000000000000
+      internalID: 565335337775584268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_70
+      rect:
+        serializedVersion: 2
+        x: 7700
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f59c465a2c1b4a70800000000000000
+      internalID: 8812168064042571252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_71
+      rect:
+        serializedVersion: 2
+        x: 7810
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b66537ab749fad0800000000000000
+      internalID: -2668022438115775650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_72
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6b24fef6f6cbc70800000000000000
+      internalID: 8988181482870847207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_73
+      rect:
+        serializedVersion: 2
+        x: 8030
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae5477e3ca36b10800000000000000
+      internalID: 1973610446007429827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_74
+      rect:
+        serializedVersion: 2
+        x: 8140
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326de3eb22532cab0800000000000000
+      internalID: -4989367013836138973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_75
+      rect:
+        serializedVersion: 2
+        x: 8250
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0650c790d57ccc500800000000000000
+      internalID: 417928067843622240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_76
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc01daa92e5f42670800000000000000
+      internalID: 8513199549243527375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_77
+      rect:
+        serializedVersion: 2
+        x: 8470
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563940de6dec0b630800000000000000
+      internalID: 3940877096444007269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_78
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2d3c79e5bc41bc0800000000000000
+      internalID: -3813199377342410006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_79
+      rect:
+        serializedVersion: 2
+        x: 8690
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de7e8645da36cf00800000000000000
+      internalID: 1136660643643817681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_80
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5638f79bfa0c676c0800000000000000
+      internalID: -4145914545984011419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_81
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e3337b38035bbf0800000000000000
+      internalID: -309287657132573112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_82
+      rect:
+        serializedVersion: 2
+        x: 9020
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8445ab134c043e50800000000000000
+      internalID: 6788064020720338060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_83
+      rect:
+        serializedVersion: 2
+        x: 9130
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323ffdf4211fb80d0800000000000000
+      internalID: -3419374431105977565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_84
+      rect:
+        serializedVersion: 2
+        x: 9240
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab06d6f26833a230800000000000000
+      internalID: 3648822120799407022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_85
+      rect:
+        serializedVersion: 2
+        x: 9350
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7418ccbda615f5a00800000000000000
+      internalID: 747405582562787655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_86
+      rect:
+        serializedVersion: 2
+        x: 9460
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5984df6a8e66d6e00800000000000000
+      internalID: 1039600238412515477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_87
+      rect:
+        serializedVersion: 2
+        x: 9570
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb305e80bb2f89dd0800000000000000
+      internalID: -2478964709745425474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_88
+      rect:
+        serializedVersion: 2
+        x: 9680
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ca2ea0ee67057d0800000000000000
+      internalID: -2931712592661271474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_89
+      rect:
+        serializedVersion: 2
+        x: 9790
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d029415a440e250800000000000000
+      internalID: 5971848581698686271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_90
+      rect:
+        serializedVersion: 2
+        x: 9900
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d070c25e73930ea0800000000000000
+      internalID: -5907716115416452911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_91
+      rect:
+        serializedVersion: 2
+        x: 10010
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5608bee1cc9093c0800000000000000
+      internalID: -4354808482919610786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_92
+      rect:
+        serializedVersion: 2
+        x: 10120
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643827c24f412f0b0800000000000000
+      internalID: -5696467539719978170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_93
+      rect:
+        serializedVersion: 2
+        x: 10230
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748bd6179551ed250800000000000000
+      internalID: 5971233629839145031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_94
+      rect:
+        serializedVersion: 2
+        x: 10340
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24206084449518060800000000000000
+      internalID: 6953937449437758018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_95
+      rect:
+        serializedVersion: 2
+        x: 10450
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0861e2f0a4602e680800000000000000
+      internalID: -8727406212738574720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_96
+      rect:
+        serializedVersion: 2
+        x: 10560
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5256749a0b7d2d0800000000000000
+      internalID: -3253937964658121304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_97
+      rect:
+        serializedVersion: 2
+        x: 10670
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0cdf58defd255150800000000000000
+      internalID: 5860641062667672586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_98
+      rect:
+        serializedVersion: 2
+        x: 10780
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dacafac40965aa80800000000000000
+      internalID: -8456237256012018984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_99
+      rect:
+        serializedVersion: 2
+        x: 10890
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4d1ee97e7ded920800000000000000
+      internalID: 3017086190187828389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_100
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d034a293d7b6fb0800000000000000
+      internalID: -4653488105481630370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_101
+      rect:
+        serializedVersion: 2
+        x: 11110
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d538adee28b0aa70800000000000000
+      internalID: 8836264980596143575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_102
+      rect:
+        serializedVersion: 2
+        x: 11220
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bf30ca21411bac0800000000000000
+      internalID: -3841266936742413537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_103
+      rect:
+        serializedVersion: 2
+        x: 11330
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa028bb856869a00800000000000000
+      internalID: 762944902546983594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_104
+      rect:
+        serializedVersion: 2
+        x: 11440
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f40150272d82580800000000000000
+      internalID: -8851593680443650236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_105
+      rect:
+        serializedVersion: 2
+        x: 11550
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158d951a21160b940800000000000000
+      internalID: 5309850693314140241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_106
+      rect:
+        serializedVersion: 2
+        x: 11660
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2916827b1820ecea0800000000000000
+      internalID: -5850736109760781934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_107
+      rect:
+        serializedVersion: 2
+        x: 11770
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c4c67d3e1f0d080800000000000000
+      internalID: -9164559280824890281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_108
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cd20f84c2351380800000000000000
+      internalID: -9001232460435760092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9BloodAnimations_109
+      rect:
+        serializedVersion: 2
+        x: 11990
+        y: 0
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff882a070f685290800000000000000
+      internalID: -7901443470195650575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

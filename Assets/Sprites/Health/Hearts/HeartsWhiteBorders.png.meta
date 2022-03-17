@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: 2cbabe137eba7bc4aa9e704615f84c2e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5091948964327035033
+    second: HeartsWhiteBorders_0
+  - first:
+      213: -3545682155078818675
+    second: HeartsWhiteBorders_1
+  - first:
+      213: 4623349376083398349
+    second: HeartsWhiteBorders_2
+  - first:
+      213: 8302941337147287778
+    second: HeartsWhiteBorders_3
+  - first:
+      213: 437292783736932829
+    second: HeartsWhiteBorders_4
+  - first:
+      213: 7651066139039651423
+    second: HeartsWhiteBorders_5
+  - first:
+      213: -868500762486355958
+    second: HeartsWhiteBorders_6
+  - first:
+      213: 3041525347162221168
+    second: HeartsWhiteBorders_7
+  - first:
+      213: 5528945467200933524
+    second: HeartsWhiteBorders_8
+  - first:
+      213: 533715449212499029
+    second: HeartsWhiteBorders_9
+  - first:
+      213: 1090296226562306365
+    second: HeartsWhiteBorders_10
+  - first:
+      213: 169725542539479517
+    second: HeartsWhiteBorders_11
+  - first:
+      213: 6302121024089201719
+    second: HeartsWhiteBorders_12
+  - first:
+      213: 7945486911914351319
+    second: HeartsWhiteBorders_13
+  - first:
+      213: -6710746808400390216
+    second: HeartsWhiteBorders_14
+  - first:
+      213: 2397355548674796899
+    second: HeartsWhiteBorders_15
+  - first:
+      213: -7733513212867607019
+    second: HeartsWhiteBorders_16
+  - first:
+      213: 6408188796990969979
+    second: HeartsWhiteBorders_17
+  - first:
+      213: 1307766248984851657
+    second: HeartsWhiteBorders_18
+  - first:
+      213: 8006487483558471526
+    second: HeartsWhiteBorders_19
+  - first:
+      213: 6588454109155564581
+    second: HeartsWhiteBorders_20
+  - first:
+      213: 5001349781783541953
+    second: HeartsWhiteBorders_21
+  - first:
+      213: 2303347331723782489
+    second: HeartsWhiteBorders_22
+  - first:
+      213: 6901184569279701078
+    second: HeartsWhiteBorders_23
+  - first:
+      213: 3686430786552312204
+    second: HeartsWhiteBorders_24
+  - first:
+      213: 1572522781044324300
+    second: HeartsWhiteBorders_25
+  - first:
+      213: -610083981760870853
+    second: HeartsWhiteBorders_26
+  - first:
+      213: 3132891158652124744
+    second: HeartsWhiteBorders_27
+  - first:
+      213: 282175015397109820
+    second: HeartsWhiteBorders_28
+  - first:
+      213: 6434058861084850840
+    second: HeartsWhiteBorders_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f6ede2563c559b0800000000000000
+      internalID: -5091948964327035033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84e514add43bcec0800000000000000
+      internalID: -3545682155078818675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce89f113cf692040800000000000000
+      internalID: 4623349376083398349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8229fb729f93370800000000000000
+      internalID: 8302941337147287778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd94b7d4873911600800000000000000
+      internalID: 437292783736932829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartsWhiteBorders_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 85
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f565a7acd1c0e2a60800000000000000
+      internalID: 7651066139039651423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
