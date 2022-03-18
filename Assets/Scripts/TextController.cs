@@ -5,21 +5,41 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
-    //referens till spelarskript
-    private PlayerController playerController;
-
-    private Text healthText;
+    [SerializeField] private float gameTime;
+    public Text timeText;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = PlayerController.InstanceOfPlayer;
-        healthText = GetComponent<Text>();
+        gameTime = 180f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Health:" + playerController.playerHealth;
+        if (gameTime > 0)
+        {
+            gameTime = gameTime - 1f * Time.deltaTime;
+        }
+
+        else
+        {
+            gameTime = 0;
+        }
+
+        DisplayTime(gameTime);
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        if (timeToDisplay < 0)
+        {
+            timeToDisplay = 0;
+        }
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
