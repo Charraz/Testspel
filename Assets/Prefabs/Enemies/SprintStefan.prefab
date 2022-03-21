@@ -155,6 +155,7 @@ MonoBehaviour:
   onDeathBloodAnimation: {fileID: 7727960266939480054, guid: 7186f0bcb1add39479e320c9f1d62fde, type: 3}
   onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
   groundDetection: {fileID: 5826719297514410488}
+  points: 10
   HP: 10
 --- !u!61 &681427023061891589
 BoxCollider2D:

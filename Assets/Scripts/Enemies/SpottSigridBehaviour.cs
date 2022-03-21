@@ -14,6 +14,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
     private new Animator animation;
+    public int points;
 
     private bool canShoot;
     private float moveSpeed;
@@ -23,6 +24,7 @@ public class SpottSigridBehaviour : MonoBehaviour
 
     //referens till spelare
     private PlayerController playerController;
+    private GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
         playerController = PlayerController.InstanceOfPlayer;
+        gameController = GameController.InstanceOfGame;
 
         canShoot = false;
         moveSpeed = -2;
@@ -141,6 +144,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     {
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
+        gameController.points += points;
         Destroy(gameObject);
     }
 

@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class PointTextController : MonoBehaviour
 {
-    private PlayerController playerController;
+    private GameController game;
     public Text pointText;
-    public int myPoints;
+    public int myPoints = 0;
+
+    private void Awake()
+    {
+        game = GameController.InstanceOfGame;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = PlayerController.InstanceOfPlayer;
+        
     }
 
     // Update is called once per frame
@@ -23,7 +28,7 @@ public class PointTextController : MonoBehaviour
 
     private void test()
     {
-        myPoints = playerController.points;
+        myPoints = game.points;
         pointText.text = myPoints.ToString();
     }
 }

@@ -12,9 +12,11 @@ public class GhostBehaviour : MonoBehaviour
     private Material matDefault; //Återställer rhinons materail till default
     public GameObject ghostDeathEffect;
     public GameObject onDeathGooParticleSystem;
+    public int points;
 
     //referar till player
     private PlayerController playerController;
+    private GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class GhostBehaviour : MonoBehaviour
         playerController = PlayerController.InstanceOfPlayer;
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
+        gameController = GameController.InstanceOfGame;
     }
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class GhostBehaviour : MonoBehaviour
         {
             Instantiate(ghostDeathEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
+            gameController.points += points;
             Destroy(gameObject);
         }
         transform.position = Vector2.MoveTowards(transform.position, playerController.transform.position, speed * Time.deltaTime);

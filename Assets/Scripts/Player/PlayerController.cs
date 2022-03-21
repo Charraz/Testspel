@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
     private Material matWhite;
     private Material matDefault;
 
-    //PlayerPoints
-    [HideInInspector] public int points;
-
 
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
@@ -61,7 +58,6 @@ public class PlayerController : MonoBehaviour
         playerHealth = 5;
         iFrame = false;
         particleCD = false;
-        points = 0;
     }
 
     // Update is called once per frame
