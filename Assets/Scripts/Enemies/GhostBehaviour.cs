@@ -11,6 +11,7 @@ public class GhostBehaviour : MonoBehaviour
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
     public GameObject ghostDeathEffect;
+    public GameObject onDeathGooParticleSystem;
 
     //referar till player
     private PlayerController playerController;
@@ -31,6 +32,7 @@ public class GhostBehaviour : MonoBehaviour
         if (HP <= 0)
         {
             Instantiate(ghostDeathEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         transform.position = Vector2.MoveTowards(transform.position, playerController.transform.position, speed * Time.deltaTime);
