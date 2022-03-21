@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinScript : MonoBehaviour
+public class TreasureChest : MonoBehaviour
 {
     private Rigidbody2D rigidkropp;
     private BoxCollider2D boxCollider;
-    public GameObject coinPickedUp;
+    public GameObject chestPickedUp;
+    public GameObject coinParticleSystem;
     [SerializeField] private LayerMask playerMask;
 
     void Start()
@@ -19,7 +20,8 @@ public class CoinScript : MonoBehaviour
     {
         if (IsTouchingPlayer())
         {
-            Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             Destroy(gameObject);
         }
     }
@@ -40,7 +42,8 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             Destroy(gameObject);
         }
     }

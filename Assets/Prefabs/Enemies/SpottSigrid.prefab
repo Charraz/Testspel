@@ -230,5 +230,6 @@ MonoBehaviour:
   spitBulletPrefab: {fileID: 6699414634871007293, guid: 2cf518fe1848edf49958570877d2c6b0, type: 3}
   shotPosition: {fileID: 1420584275}
   onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
+  points: 10
   HP: 5
   groundDetection: {fileID: 876772571}
