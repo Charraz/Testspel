@@ -9,9 +9,12 @@ public class TreasureChest : MonoBehaviour
     public GameObject chestPickedUp;
     public GameObject coinParticleSystem;
     [SerializeField] private LayerMask playerMask;
+    private GameController gameController;
+    public int points;
 
     void Start()
     {
+        gameController = GameController.InstanceOfGame;
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -22,6 +25,7 @@ public class TreasureChest : MonoBehaviour
         {
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
+            gameController.points += points;
             Destroy(gameObject);
         }
     }
@@ -44,6 +48,7 @@ public class TreasureChest : MonoBehaviour
         {
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
+            gameController.points += points;
             Destroy(gameObject);
         }
     }

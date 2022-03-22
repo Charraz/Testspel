@@ -69,7 +69,6 @@ public class GhostBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            playerController.playerHealth--;
             if (spriterenderer.flipX == true)
             {
                 transform.Translate(new Vector2(-7f, 0f));

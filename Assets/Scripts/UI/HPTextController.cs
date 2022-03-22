@@ -11,7 +11,7 @@ public class HPTextController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameTime = 180f;
+        gameTime = 300f;
     }
 
     // Update is called once per frame

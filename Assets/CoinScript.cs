@@ -8,9 +8,12 @@ public class CoinScript : MonoBehaviour
     private BoxCollider2D boxCollider;
     public GameObject coinPickedUp;
     [SerializeField] private LayerMask playerMask;
+    private GameController gameController;
+    public int points;
 
     void Start()
     {
+        gameController = GameController.InstanceOfGame;
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -20,6 +23,7 @@ public class CoinScript : MonoBehaviour
         if (IsTouchingPlayer())
         {
             Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            gameController.points += points;
             Destroy(gameObject);
         }
     }
@@ -41,6 +45,7 @@ public class CoinScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            gameController.points += points;
             Destroy(gameObject);
         }
     }

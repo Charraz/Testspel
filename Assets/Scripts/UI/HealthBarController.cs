@@ -47,7 +47,7 @@ public class HealthBarController : MonoBehaviour
             animator.SetInteger("HP", 1);
         }
 
-        else if (playerController.playerHealth == 0)
+        else if (playerController.playerHealth <= 0)
         {
             animator.SetInteger("HP", 0);
         }

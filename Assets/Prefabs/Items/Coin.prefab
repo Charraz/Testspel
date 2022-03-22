@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPickedUp: {fileID: 4567819996633435227, guid: 043a0afdf8050194390c45f574394eca, type: 3}
-  coinParticleSystem: {fileID: 5146496452837001464, guid: 406cf3ea0d833bf4bb4a1384fe476721, type: 3}
   playerMask:
     serializedVersion: 2
     m_Bits: 1024
+  points: 100

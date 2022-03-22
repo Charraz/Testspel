@@ -10,14 +10,15 @@ public class EnemySpawner : MonoBehaviour
     private bool johnnyIsReady;
     private int randomEnemy;
     private int randomSpawnPoint;
-    public int lowerSpawnTime;
-    public int higherSpawnTime;
+    //public int lowerSpawnTime;
+    //public int higherSpawnTime;
 
     void Start()
     {
         johnnyIsReady = false;
-        spawnCooldown = Random.Range(lowerSpawnTime, higherSpawnTime);
+        spawnCooldown = 5; /*Random.Range(lowerSpawnTime, higherSpawnTime);*/
         Invoke("heresJohnny", spawnCooldown);
+        Invoke("changeSpawnCooldown", 30f);
     }
 
     void Update()
@@ -38,7 +39,17 @@ public class EnemySpawner : MonoBehaviour
         
 
         johnnyIsReady = true;
-        spawnCooldown = Random.Range(lowerSpawnTime, higherSpawnTime);
+        //spawnCooldown = Random.Range(lowerSpawnTime, higherSpawnTime);
         Invoke("heresJohnny", spawnCooldown);
     }
+
+    private void changeSpawnCooldown()
+    {
+        if (spawnCooldown > 1)
+        {
+            spawnCooldown = spawnCooldown - 0.5f;
+            Invoke("changeSpawnCooldown", 30f);
+        }
+    }
+
 }
