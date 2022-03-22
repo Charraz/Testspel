@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     //Partikelvariabler
     public GameObject dustEffect;
+    public GameObject doubleJumpPoofEffect;
     private bool coroutineAllowed;
     private bool particleCD;
 
@@ -90,6 +91,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump")  && hasJumped == false)
             {
                 canDoubleJump = true;
+                Instantiate(doubleJumpPoofEffect, new Vector3(transform.position.x, transform.position.y + -0.5f, transform.position.z), transform.rotation);
             }
         }
 
