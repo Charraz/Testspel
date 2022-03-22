@@ -8,10 +8,12 @@ public class PlayerRocketController : MonoBehaviour
     Rigidbody2D rb;
     public GameObject particleExplosion;
     public GameObject explosionRadius;
+    private SFXController sfxController;
 
     // Start is called before the first frame update
     void Start()
     {
+        sfxController = SFXController.InstanceOfSFX;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
 
@@ -28,7 +30,7 @@ public class PlayerRocketController : MonoBehaviour
     {
         particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
         explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
-
+        sfxController.PlayGrenadeExplosion();
         Destroy(gameObject);
     }
 
@@ -38,6 +40,7 @@ public class PlayerRocketController : MonoBehaviour
         {
             particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
             explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
+            sfxController.PlayGrenadeExplosion();
             Destroy(gameObject);
         }
 
@@ -50,6 +53,7 @@ public class PlayerRocketController : MonoBehaviour
         {
             particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
             explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
+            sfxController.PlayGrenadeExplosion();
             Destroy(gameObject);
         }
 

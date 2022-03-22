@@ -15,6 +15,9 @@ public class RangedWeaponController : MonoBehaviour
     public ParticleSystem bulletShells;
     private bool weapon1CD;
     private bool weapon2CD;
+
+    private SFXController sfxController;
+
     //Animatorbools
     //private bool pointRight;
     //private bool pointLeft;
@@ -26,6 +29,8 @@ public class RangedWeaponController : MonoBehaviour
     {
         weapon1CD = false;
         weapon2CD = false;
+
+        sfxController = SFXController.InstanceOfSFX;
 
         //pointRight = true;
         //pointLeft = false;
@@ -111,6 +116,7 @@ public class RangedWeaponController : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         Instantiate(muzzleFlash, firePoint.position, firePoint.rotation);
         gunAnimator.SetTrigger("Shoot");
+        sfxController.PlayBulletShoot();
         bulletShells.Play();
     }
 

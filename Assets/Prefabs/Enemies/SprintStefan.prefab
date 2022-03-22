@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 681427023061891591}
   - component: {fileID: 681427023061891589}
   - component: {fileID: 681427023061891590}
+  - component: {fileID: 3939353054315896820}
   m_Layer: 8
   m_Name: SprintStefan
   m_TagString: Enemy
@@ -202,3 +203,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3939353054315896820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681427023061891592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d419a7fb205ad41a5a391d973e1ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rhinoRoar: {fileID: 0}
+  rhinoDamaged: {fileID: 0}
+  rhinoChargeHit: {fileID: 0}

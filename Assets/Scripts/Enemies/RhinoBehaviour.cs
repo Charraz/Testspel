@@ -17,6 +17,7 @@ public class RhinoBehaviour : MonoBehaviour
     private GameController gameController;
     public Transform groundDetection;
     public int points;
+    private SFXController sfxController;
 
     float moveSpeed;
     bool movingLeft;
@@ -29,6 +30,7 @@ public class RhinoBehaviour : MonoBehaviour
         animation = gameObject.GetComponent<Animator>();
         playerController = PlayerController.InstanceOfPlayer;
         gameController = GameController.InstanceOfGame;
+        sfxController = SFXController.InstanceOfSFX;
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
@@ -145,6 +147,8 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoWallOrPlayerHit()
     {
+        sfxController.PlayRhinoChargeHit();
+
         if (movingLeft == true)
         {
             rigidkropp.AddForce(new Vector2(12f, 4f), ForceMode2D.Impulse);
@@ -267,6 +271,7 @@ public class RhinoBehaviour : MonoBehaviour
             HP = HP - 1;
             whiteFlash();
             Invoke("resetMaterial", 0.1f);
+            sfxController.PlayRhinoDamaged();
         }
 
         if (collision.gameObject.tag == "PlayerExplosion")
@@ -274,6 +279,7 @@ public class RhinoBehaviour : MonoBehaviour
             HP = HP - 5;
             whiteFlash();
             Invoke("resetMaterial", 0.2f);
+            sfxController.PlayRhinoDamaged();
         }
     }
 
