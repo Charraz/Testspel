@@ -10,6 +10,7 @@ public class RhinoBehaviour : MonoBehaviour
     SpriteRenderer spriterenderer;
     public GameObject onDeathBloodAnimation;
     public GameObject onDeathBloodParticleSystem;
+    public GameObject onDeathCoin;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matRed; //Används för att göra rhinon röd när han är arger
     private Material matDefault; //Återställer rhinons materail till default
@@ -180,6 +181,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
+        onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
         gameController.points += points;
         Destroy(gameObject);
     }
