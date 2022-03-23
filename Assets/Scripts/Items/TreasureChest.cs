@@ -12,6 +12,7 @@ public class TreasureChest : MonoBehaviour
     private GameController gameController;
     public int points;
     private SFXController sfxController;
+    private ChestSpawner chestSpawner;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class TreasureChest : MonoBehaviour
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         sfxController = SFXController.InstanceOfSFX;
+        chestSpawner = ChestSpawner.InstanceOfChestSpawner;
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class TreasureChest : MonoBehaviour
         {
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
+            chestSpawner.chestExists = false;
             gameController.points += points;
             sfxController.PlayChestPickup();
             Destroy(gameObject);
@@ -51,6 +54,7 @@ public class TreasureChest : MonoBehaviour
         {
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
+            chestSpawner.chestExists = false;
             gameController.points += points;
             sfxController.PlayChestPickup();
             Destroy(gameObject);
