@@ -9,6 +9,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     private Rigidbody2D rigidkropp;
     public Transform shotPosition;
     public GameObject onDeathBloodParticleSystem;
+    public GameObject shotSpitPrefab;
     private State state = State.SpottSigridWalk;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
@@ -51,15 +52,6 @@ public class SpottSigridBehaviour : MonoBehaviour
         }
         switch (state)
         {
-            //case State.SpottSigridIdle:
-            //    RaycastHit2D SeesPlayerIdleState = Physics2D.Raycast(groundDetection.position, Vector2.left, 10f);
-            //    if (SeesPlayerIdleState.collider.tag == "Player")
-            //    {
-            //        Invoke("spitAttack", 1f);
-            //        state = State.SpottSigridAttack;
-            //    }
-            //    break;
-
             case State.SpottSigridWalk:
                 spottSigridWalk();
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
@@ -121,6 +113,14 @@ public class SpottSigridBehaviour : MonoBehaviour
         if ( canShoot == true)
         {
             Instantiate(spitBulletPrefab, shotPosition.position, shotPosition.rotation);
+            if (movingLeft == false)
+            {
+                Instantiate(shotSpitPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), shotSpitPrefab.transform.rotation = Quaternion.Euler(0f, 90f, -90f));
+            }
+            else if (movingLeft == true)
+            {
+                Instantiate(shotSpitPrefab, new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), shotSpitPrefab.transform.rotation = Quaternion.Euler(180f, 90f, -90f));
+            }
             canShoot = false;
         }
     }
