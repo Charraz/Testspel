@@ -11,12 +11,14 @@ public class TreasureChest : MonoBehaviour
     [SerializeField] private LayerMask playerMask;
     private GameController gameController;
     public int points;
+    private SFXController sfxController;
 
     void Start()
     {
         gameController = GameController.InstanceOfGame;
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        sfxController = SFXController.InstanceOfSFX;
     }
 
     void Update()
@@ -26,6 +28,7 @@ public class TreasureChest : MonoBehaviour
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             gameController.points += points;
+            sfxController.PlayChestPickup();
             Destroy(gameObject);
         }
     }
@@ -49,6 +52,7 @@ public class TreasureChest : MonoBehaviour
             Instantiate(chestPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             gameController.points += points;
+            sfxController.PlayChestPickup();
             Destroy(gameObject);
         }
     }
