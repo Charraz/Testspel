@@ -10,6 +10,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     public Transform shotPosition;
     public GameObject onDeathBloodParticleSystem;
     public GameObject shotSpitPrefab;
+    public GameObject onDeathCoin;
     private State state = State.SpottSigridWalk;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
@@ -26,6 +27,7 @@ public class SpottSigridBehaviour : MonoBehaviour
     //referens till spelare
     private PlayerController playerController;
     private GameController gameController;
+    private SFXController sfxController;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         matDefault = spriterenderer.material;
         playerController = PlayerController.InstanceOfPlayer;
         gameController = GameController.InstanceOfGame;
+        sfxController = SFXController.InstanceOfSFX;
 
         canShoot = false;
         moveSpeed = -2;
@@ -144,6 +147,8 @@ public class SpottSigridBehaviour : MonoBehaviour
     {
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
+        onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
+        sfxController.PlaySigridDeath();
         gameController.points += points;
         Destroy(gameObject);
     }

@@ -74,6 +74,11 @@ public class SFXController : MonoBehaviour
     {
         rhinoChargeHit.Play();
     }
+
+    public void PlayRhinoDeath()
+    {
+        rhinoDeath.Play();
+    }
     #endregion
 
     #region SigridSounds

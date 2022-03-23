@@ -10,6 +10,7 @@ public class SigridBulletController : MonoBehaviour
 
     //referens till spelare
     private PlayerController playerController;
+    
 
     private void Awake()
     {

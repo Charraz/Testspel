@@ -18,6 +18,7 @@ public class GhostBehaviour : MonoBehaviour
     //referar till player
     private PlayerController playerController;
     private GameController gameController;
+    private SFXController sfxController;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class GhostBehaviour : MonoBehaviour
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
         gameController = GameController.InstanceOfGame;
+        sfxController = SFXController.InstanceOfSFX;
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class GhostBehaviour : MonoBehaviour
             Instantiate(ghostDeathEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
             onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
+            sfxController.PlayGhostDeath();
             gameController.points += points;
             Destroy(gameObject);
         }

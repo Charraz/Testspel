@@ -2253,10 +2253,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1081049185}
     m_Modifications:
-    - target: {fileID: 505737808, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 6210009176333039466, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2304,14 +2300,6 @@ PrefabInstance:
     - target: {fileID: 6210009176333039467, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
       propertyPath: m_Name
       value: SFXController
-      objectReference: {fileID: 0}
-    - target: {fileID: 6210009177221894777, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6210009177361070090, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08802e54793ffd44cb40ccf3f175b486, type: 3}
@@ -2648,8 +2636,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5927766470495396306, guid: 1c482437a2c95ea4690c2379f9f61ab4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927766470495396306, guid: 1c482437a2c95ea4690c2379f9f61ab4, type: 3}
       propertyPath: m_Name
       value: ChestSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927766470495396306, guid: 1c482437a2c95ea4690c2379f9f61ab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5927766470495396307, guid: 1c482437a2c95ea4690c2379f9f61ab4, type: 3}
       propertyPath: m_RootOrder

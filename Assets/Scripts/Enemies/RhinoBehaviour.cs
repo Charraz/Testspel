@@ -182,6 +182,7 @@ public class RhinoBehaviour : MonoBehaviour
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
+        sfxController.PlayRhinoDeath();
         gameController.points += points;
         Destroy(gameObject);
     }

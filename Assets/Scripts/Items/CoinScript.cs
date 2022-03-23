@@ -26,6 +26,7 @@ public class CoinScript : MonoBehaviour
         {
             Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             gameController.points += points;
+            sfxController.PlayCoinPickup();
             Destroy(gameObject);
         }
     }
