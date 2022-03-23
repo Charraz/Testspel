@@ -467,7 +467,8 @@ MonoBehaviour:
   - {fileID: 2200491637818436430}
   - {fileID: 4554723139872040667}
   chestPrefab: {fileID: 1378001417543692856, guid: 2ad9ada9eb0bdf04a9ec2b3baebd6eea, type: 3}
-  spawnCooldown: 1
+  spawnCooldown: 10
+  chestExists: 0
 --- !u!1 &7392791377121176304
 GameObject:
   m_ObjectHideFlags: 0
