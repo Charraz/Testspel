@@ -11,13 +11,13 @@ public class PointTextController : MonoBehaviour
 
     private void Awake()
     {
-        game = GameController.InstanceOfGame;
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        game = GameController.InstanceOfGame;
     }
 
     // Update is called once per frame

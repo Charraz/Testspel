@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     private Material matWhite;
     private Material matDefault;
 
+    //Ljudgrejer
+    private SFXController sfxController;
 
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<BoxCollider2D>();
+        sfxController = SFXController.InstanceOfSFX;
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = playerSprite.material;
         hasJumped = false;
@@ -172,7 +175,7 @@ public class PlayerController : MonoBehaviour
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
-                Debug.Log(playerHealth);
+                sfxController.PlayPlayerDamaged();
                 whiteFlash();
                 Invoke("resetMaterial", 0.2f);
                 Invoke("whiteFlash", 0.4f);
@@ -191,7 +194,7 @@ public class PlayerController : MonoBehaviour
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
-                Debug.Log(playerHealth);
+                sfxController.PlayPlayerDamaged();
                 whiteFlash();
                 Invoke("resetMaterial", 0.2f);
                 Invoke("whiteFlash", 0.4f);
@@ -213,7 +216,7 @@ public class PlayerController : MonoBehaviour
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
                 iFrame = true;
                 playerHealth--;
-                Debug.Log(playerHealth);
+                sfxController.PlayPlayerDamaged();
                 whiteFlash();
                 Invoke("resetMaterial", 0.2f);
                 Invoke("whiteFlash", 0.4f);
