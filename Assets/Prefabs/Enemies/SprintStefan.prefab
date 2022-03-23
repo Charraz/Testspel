@@ -157,7 +157,7 @@ MonoBehaviour:
   onDeathCoin: {fileID: 9032735162423030646, guid: 8d90896061908bf48a249acb518ddc9d, type: 3}
   groundDetection: {fileID: 5826719297514410488}
   points: 10
-  HP: 10
+  HP: 8
 --- !u!61 &681427023061891589
 BoxCollider2D:
   m_ObjectHideFlags: 0
