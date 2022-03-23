@@ -11,6 +11,14 @@ public class CoinScript : MonoBehaviour
     private GameController gameController;
     private SFXController sfxController;
     public int points;
+    private float spawnVelocityX;
+    private float spawnVelocityY;
+
+    private void Awake()
+    {
+        spawnVelocityX = Random.Range(-3f, 3f);
+        spawnVelocityY = Random.Range(3f, 5f);
+    }
 
     void Start()
     {
@@ -18,6 +26,8 @@ public class CoinScript : MonoBehaviour
         sfxController = SFXController.InstanceOfSFX;
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
+
+        rigidkropp.AddForce(new Vector2(spawnVelocityX, spawnVelocityY), ForceMode2D.Impulse);
     }
 
     void Update()
