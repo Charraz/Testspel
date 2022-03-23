@@ -158,4 +158,5 @@ MonoBehaviour:
   HP: 5
   ghostDeathEffect: {fileID: 2604439983860290957, guid: 8fa757e332408d549b330a8be023e3e5, type: 3}
   onDeathGooParticleSystem: {fileID: 1907627891148627254, guid: adc911ec6b3db0b4989295049b28c22a, type: 3}
+  onDeathCoin: {fileID: 9032735162423030646, guid: 8d90896061908bf48a249acb518ddc9d, type: 3}
   points: 10

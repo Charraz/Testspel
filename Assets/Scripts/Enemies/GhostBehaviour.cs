@@ -12,6 +12,7 @@ public class GhostBehaviour : MonoBehaviour
     private Material matDefault; //Återställer rhinons materail till default
     public GameObject ghostDeathEffect;
     public GameObject onDeathGooParticleSystem;
+    public GameObject onDeathCoin;
     public int points;
 
     //referar till player
@@ -36,6 +37,7 @@ public class GhostBehaviour : MonoBehaviour
         {
             Instantiate(ghostDeathEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
+            onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
             gameController.points += points;
             Destroy(gameObject);
         }
