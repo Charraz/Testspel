@@ -33,3 +33,4 @@ public class ChestSpawner : MonoBehaviour
         Instantiate(chestPrefab, spawnPoints[randomSpawnPoint].position, transform.rotation);
     }
 }
+
