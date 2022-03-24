@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Transform[] spawnPoints;
+    public Transform Portal1;
+    public Transform Portal2;
+    public Transform Portal3;
+    public Transform Portal4;
+    public Transform Portal5;
+    public Transform Portal6;
+    private Transform nextSpawnPoint;
     public GameObject[] enemyPrefabs;
     private float spawnCooldown;
     private bool johnnyIsReady;
     private int randomEnemy;
     private int randomSpawnPoint;
-    //public int lowerSpawnTime;
-    //public int higherSpawnTime;
+    private int chooseNextSpawnPoint;
 
     void Start()
     {
         johnnyIsReady = false;
-        spawnCooldown = 4; /*Random.Range(lowerSpawnTime, higherSpawnTime);*/
+        spawnCooldown = 4;
+        ChooseNextSpawnPoint();
         Invoke("heresJohnny", spawnCooldown);
         Invoke("changeSpawnCooldown", 30f);
     }
@@ -26,20 +32,44 @@ public class EnemySpawner : MonoBehaviour
         if (johnnyIsReady == true)
         {
             randomEnemy = Random.Range(0, enemyPrefabs.Length);
-            randomSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-            Instantiate(enemyPrefabs[randomEnemy], spawnPoints[randomSpawnPoint].position, transform.rotation);
-
+            Instantiate(enemyPrefabs[randomEnemy], nextSpawnPoint.position, transform.rotation);
+            ChooseNextSpawnPoint();
             johnnyIsReady = false;
+        }
+    }
+
+    private void ChooseNextSpawnPoint()
+    {
+        chooseNextSpawnPoint = Random.Range(1, 6);
+        if(chooseNextSpawnPoint == 1)
+        {
+            nextSpawnPoint = Portal1;
+        }
+        else if (chooseNextSpawnPoint == 2)
+        {
+            nextSpawnPoint = Portal2;
+        }
+        else if (chooseNextSpawnPoint == 3)
+        {
+            nextSpawnPoint = Portal3;
+        }
+        else if (chooseNextSpawnPoint == 4)
+        {
+            nextSpawnPoint = Portal4;
+        }
+        else if (chooseNextSpawnPoint == 5)
+        {
+            nextSpawnPoint = Portal5;
+        }
+        else if (chooseNextSpawnPoint == 6)
+        {
+            nextSpawnPoint = Portal6;
         }
     }
 
     private void heresJohnny()
     {
-        
-
         johnnyIsReady = true;
-        //spawnCooldown = Random.Range(lowerSpawnTime, higherSpawnTime);
         Invoke("heresJohnny", spawnCooldown);
     }
 

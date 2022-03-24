@@ -6,6 +6,7 @@ public class CoinScript : MonoBehaviour
 {
     private Rigidbody2D rigidkropp;
     private BoxCollider2D boxCollider;
+    private SpriteRenderer coinSpriteRenderer;
     public GameObject coinPickedUp;
     [SerializeField] private LayerMask playerMask;
     private GameController gameController;
@@ -26,8 +27,11 @@ public class CoinScript : MonoBehaviour
         sfxController = SFXController.InstanceOfSFX;
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        coinSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         rigidkropp.AddForce(new Vector2(spawnVelocityX, spawnVelocityY), ForceMode2D.Impulse);
+        Invoke("BlinkWhenSoonDespawning", 25);
+        Invoke("KillSelf", 30f);
     }
 
     void Update()
@@ -45,11 +49,7 @@ public class CoinScript : MonoBehaviour
     {
         float extraLength = 0.5f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.up, extraLength, playerMask);
-
-        Debug.DrawRay(boxCollider.bounds.center + new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
-        Debug.DrawRay(boxCollider.bounds.center - new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
-        //Debug.DrawRay(boxCollider.bounds.center - new Vector3(0, boxCollider.bounds.extents.y), Vector2.right * (boxCollider.bounds.extents.x), Color.green);
-
+        //Debug.DrawRay(boxCollider.bounds.center + new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
         return raycastHit.collider != null;
     }
 
@@ -62,5 +62,50 @@ public class CoinScript : MonoBehaviour
             sfxController.PlayCoinPickup();
             Destroy(gameObject);
         }
+    }
+
+    private void BlinkWhenSoonDespawning()
+    {
+        Invoke("Transparence", 0f);
+        Invoke("TransparenceReset", 0.2f);
+        Invoke("Transparence", 0.4f);
+        Invoke("TransparenceReset", 0.6f);
+        Invoke("Transparence", 0.8f);
+        Invoke("TransparenceReset", 1f);
+        Invoke("Transparence", 1.2f);
+        Invoke("TransparenceReset", 1.4f);
+        Invoke("Transparence", 1.6f);
+        Invoke("TransparenceReset", 1.8f);
+        Invoke("Transparence", 2f);
+        Invoke("TransparenceReset", 2.2f);
+        Invoke("Transparence", 2.4f);
+        Invoke("TransparenceReset", 2.6f);
+        Invoke("Transparence", 2.8f);
+        Invoke("TransparenceReset", 3f);
+        Invoke("Transparence", 3.2f);
+        Invoke("TransparenceReset", 3.4f);
+        Invoke("Transparence", 3.6f);
+        Invoke("TransparenceReset", 3.8f);
+        Invoke("Transparence", 4f);
+        Invoke("TransparenceReset", 4.2f);
+        Invoke("Transparence", 4.4f);
+        Invoke("TransparenceReset", 4.6f);
+        Invoke("Transparence", 4.8f);
+        Invoke("TransparenceReset", 5f);
+    }
+
+    private void Transparence()
+    {
+        coinSpriteRenderer.color = new Color(1, 1, 1, 0);
+    }
+
+    private void TransparenceReset()
+    {
+        coinSpriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+
+    private void KillSelf()
+    {
+        Destroy(gameObject);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4071909}
   - component: {fileID: 4071908}
   m_Layer: 0
-  m_Name: SpawnPortal
+  m_Name: Portal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4071906}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.4, y: 12.610001, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -9.48, y: 12.610001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &4071909
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 186719391}
   - component: {fileID: 186719390}
   m_Layer: 0
-  m_Name: SpawnPortal (2)
+  m_Name: Portal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,13 +127,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186719388}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.33, y: 3.6100001, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -9.27, y: 3.6100001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &186719391
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 738056526}
   - component: {fileID: 738056525}
   m_Layer: 0
-  m_Name: SpawnPortal (6)
+  m_Name: Portal6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,13 +229,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738056523}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 11.21, y: 3.6100001, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: 10.15, y: 3.6100001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!212 &738056526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 1049934594}
   - component: {fileID: 1049934593}
   m_Layer: 0
-  m_Name: SpawnPortal (5)
+  m_Name: Portal5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,13 +331,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049934591}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 16.369999, y: 7.61, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: 15.3099985, y: 7.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!212 &1049934594
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 1344641858}
   - component: {fileID: 1344641857}
   m_Layer: 0
-  m_Name: SpawnPortal (4)
+  m_Name: Portal4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,13 +433,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344641855}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 11.31, y: 12.610001, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: 10.25, y: 12.610001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!212 &1344641858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 1528851547}
   - component: {fileID: 1528851546}
   m_Layer: 0
-  m_Name: SpawnPortal (1)
+  m_Name: Portal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,13 +535,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528851544}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.42, y: 7.61, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -14.360001, y: 7.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5927766470495396307}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1528851547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -661,16 +661,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f9f77dc904fdd43af14906658006da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 4071907}
-  - {fileID: 1528851545}
-  - {fileID: 186719389}
-  - {fileID: 1344641856}
-  - {fileID: 1049934592}
-  - {fileID: 738056524}
+  Portal1: {fileID: 4071907}
+  Portal2: {fileID: 1528851545}
+  Portal3: {fileID: 186719389}
+  Portal4: {fileID: 1344641856}
+  Portal5: {fileID: 1049934592}
+  Portal6: {fileID: 738056524}
   enemyPrefabs:
   - {fileID: 4962247884010541390, guid: 6e575bc9958613f46bb6de8a51e4e465, type: 3}
   - {fileID: 8681164780338499734, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
   - {fileID: 681427023061891592, guid: 1bb159c53dc6cd240a32d1f9152566a9, type: 3}
-  lowerSpawnTime: 3
-  higherSpawnTime: 5

@@ -73,7 +73,7 @@ public class RhinoBehaviour : MonoBehaviour
 
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
-                if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall" || HittingSomething.collider != null && HittingSomething.collider.tag == "Enemy")
+                if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall" /*|| HittingSomething.collider != null && HittingSomething.collider.tag == "Enemy"*/)
                 {
                     //spriterenderer.color = Color.white;
                     resetMaterial();
@@ -113,7 +113,7 @@ public class RhinoBehaviour : MonoBehaviour
 
         //Vänd när Rhino kommer till en vägg eller en annan fiende
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
-        if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall" || TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Enemy")
+        if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall" /*|| TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Enemy"*/)
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
             movingLeft = !movingLeft;
@@ -221,34 +221,6 @@ public class RhinoBehaviour : MonoBehaviour
                 UpdateAnimation(false, true, false, false);
                 break;
         }
-        //if (state == State.RhinoWalk)
-        //{
-        //    animation.SetBool("SeesPlayer", false);
-        //    animation.SetBool("HitWall", false);
-        //    animation.SetBool("Jumping", false);
-        //    animation.SetBool("Charge", false);
-        //}
-        //else if (state == State.RhinoJumping)
-        //{
-        //    animation.SetBool("SeesPlayer", true);
-        //    animation.SetBool("HitWall", false);
-        //    animation.SetBool("Jumping", true);
-        //    animation.SetBool("Charge", false);
-        //}
-        //else if (state == State.RhinoRun)
-        //{
-        //    animation.SetBool("SeesPlayer", false);
-        //    animation.SetBool("HitWall", false);
-        //    animation.SetBool("Jumping", false);
-        //    animation.SetBool("Charge", true);
-        //}
-        //else if (state == State.RhinoWallOrPlayerHit)
-        //{
-        //    animation.SetBool("SeesPlayer", false);
-        //    animation.SetBool("HitWall", true);
-        //    animation.SetBool("Jumping", false);
-        //    animation.SetBool("Charge", false);
-        //}
     }
 
     private void UpdateAnimation(bool seesPlayer, bool hitwall, bool jumping, bool charge)
