@@ -176,12 +176,12 @@ public class PlayerController : MonoBehaviour
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
-                whiteFlash();
-                Invoke("resetMaterial", 0.2f);
-                Invoke("whiteFlash", 0.4f);
-                Invoke("resetMaterial", 0.6f);
-                Invoke("whiteFlash", 0.8f);
-                Invoke("resetMaterial", 1f);
+                TransparentFlash();
+                Invoke("TransparentReset", 0.2f);
+                Invoke("TransparentFlash", 0.4f);
+                Invoke("TransparentReset", 0.6f);
+                Invoke("TransparentFlash", 0.8f);
+                Invoke("TransparentReset", 1f);
                 Invoke("iFrameCD", 1f);
             }
         }
@@ -195,12 +195,12 @@ public class PlayerController : MonoBehaviour
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
-                whiteFlash();
-                Invoke("resetMaterial", 0.2f);
-                Invoke("whiteFlash", 0.4f);
-                Invoke("resetMaterial", 0.6f);
-                Invoke("whiteFlash", 0.8f);
-                Invoke("resetMaterial", 1f);
+                TransparentFlash();
+                Invoke("TransparentReset", 0.2f);
+                Invoke("TransparentFlash", 0.4f);
+                Invoke("TransparentReset", 0.6f);
+                Invoke("TransparentFlash", 0.8f);
+                Invoke("TransparentReset", 1f);
                 Invoke("iFrameCD", 1f);
             }
         }
@@ -217,12 +217,12 @@ public class PlayerController : MonoBehaviour
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
-                whiteFlash();
-                Invoke("resetMaterial", 0.2f);
-                Invoke("whiteFlash", 0.4f);
-                Invoke("resetMaterial", 0.6f);
-                Invoke("whiteFlash", 0.8f);
-                Invoke("resetMaterial", 1f);
+                TransparentFlash();
+                Invoke("TransparentReset", 0.2f);
+                Invoke("TransparentFlash", 0.4f);
+                Invoke("TransparentReset", 0.6f);
+                Invoke("TransparentFlash", 0.8f);
+                Invoke("TransparentReset", 1f);
                 Invoke("iFrameCD", 1f);
             }
         }
@@ -267,5 +267,15 @@ public class PlayerController : MonoBehaviour
     private void whiteFlash()
     {
         playerSprite.material = matWhite;
+    }
+
+    private void TransparentFlash()
+    {
+        playerSprite.color = new Color(1, 1, 1, 0.2f);
+    }
+
+    private void TransparentReset()
+    {
+        playerSprite.color = new Color(1, 1, 1, 1f);
     }
 }
