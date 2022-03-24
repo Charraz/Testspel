@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner InstanceOfEnemySpawner;
     public Transform Portal1;
     public Transform Portal2;
     public Transform Portal3;
     public Transform Portal4;
     public Transform Portal5;
     public Transform Portal6;
-    private Transform nextSpawnPoint;
+    public int Level;
+    public Transform nextSpawnPoint;
     public GameObject[] enemyPrefabs;
     private float spawnCooldown;
     private bool johnnyIsReady;
@@ -18,13 +20,19 @@ public class EnemySpawner : MonoBehaviour
     private int randomSpawnPoint;
     private int chooseNextSpawnPoint;
 
+    private void Awake()
+    {
+        InstanceOfEnemySpawner = this;
+    }
+
     void Start()
     {
         johnnyIsReady = false;
+        Level = 1;
         spawnCooldown = 4;
         ChooseNextSpawnPoint();
         Invoke("heresJohnny", spawnCooldown);
-        Invoke("changeSpawnCooldown", 30f);
+        Invoke("changeSpawnCooldownAndLevel", 30f);
     }
 
     void Update()
@@ -73,12 +81,13 @@ public class EnemySpawner : MonoBehaviour
         Invoke("heresJohnny", spawnCooldown);
     }
 
-    private void changeSpawnCooldown()
+    private void changeSpawnCooldownAndLevel()
     {
         if (spawnCooldown > 1)
         {
+            Level++;
             spawnCooldown = spawnCooldown - 0.3f;
-            Invoke("changeSpawnCooldown", 30f);
+            Invoke("changeSpawnCooldownAndLevel", 30f);
         }
     }
 

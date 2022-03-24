@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4071907}
   - component: {fileID: 4071909}
   - component: {fileID: 4071908}
+  - component: {fileID: 3486277804970075301}
   m_Layer: 0
   m_Name: Portal1
   m_TagString: Untagged
@@ -102,6 +103,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3486277804970075301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &186719388
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +126,7 @@ GameObject:
   - component: {fileID: 186719389}
   - component: {fileID: 186719391}
   - component: {fileID: 186719390}
+  - component: {fileID: 619537664993616707}
   m_Layer: 0
   m_Name: Portal3
   m_TagString: Untagged
@@ -204,6 +218,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &619537664993616707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186719388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738056523
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +241,7 @@ GameObject:
   - component: {fileID: 738056524}
   - component: {fileID: 738056526}
   - component: {fileID: 738056525}
+  - component: {fileID: 6564012241017529104}
   m_Layer: 0
   m_Name: Portal6
   m_TagString: Untagged
@@ -306,6 +333,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6564012241017529104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738056523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049934591
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +356,7 @@ GameObject:
   - component: {fileID: 1049934592}
   - component: {fileID: 1049934594}
   - component: {fileID: 1049934593}
+  - component: {fileID: 4945799903080583266}
   m_Layer: 0
   m_Name: Portal5
   m_TagString: Untagged
@@ -408,6 +448,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4945799903080583266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049934591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1344641855
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +471,7 @@ GameObject:
   - component: {fileID: 1344641856}
   - component: {fileID: 1344641858}
   - component: {fileID: 1344641857}
+  - component: {fileID: 6114711543866923184}
   m_Layer: 0
   m_Name: Portal4
   m_TagString: Untagged
@@ -510,6 +563,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6114711543866923184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344641855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1528851544
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +586,7 @@ GameObject:
   - component: {fileID: 1528851545}
   - component: {fileID: 1528851547}
   - component: {fileID: 1528851546}
+  - component: {fileID: 1864606036795372440}
   m_Layer: 0
   m_Name: Portal2
   m_TagString: Untagged
@@ -612,6 +678,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1864606036795372440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528851544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5927766470495396306
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +745,7 @@ MonoBehaviour:
   Portal4: {fileID: 1344641856}
   Portal5: {fileID: 1049934592}
   Portal6: {fileID: 738056524}
+  Level: 0
   enemyPrefabs:
   - {fileID: 4962247884010541390, guid: 6e575bc9958613f46bb6de8a51e4e465, type: 3}
   - {fileID: 8681164780338499734, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
