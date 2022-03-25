@@ -37,7 +37,6 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(nextSpawnPoint);
         if (johnnyIsReady == true)
         {
             randomEnemy = Random.Range(0, enemyPrefabs.Length);

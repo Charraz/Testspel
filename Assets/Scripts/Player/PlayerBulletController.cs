@@ -37,7 +37,7 @@ public class PlayerBulletController : MonoBehaviour
             
         }
 
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Wall"/* || collision.gameObject.tag == "Ground"*/)
         {
             Destroy(gameObject);
             Instantiate(bulletEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
