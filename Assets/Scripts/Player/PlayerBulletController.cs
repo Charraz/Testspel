@@ -8,6 +8,7 @@ public class PlayerBulletController : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     public GameObject bulletEffect;
+    public GameObject bulletBloodEffect;
 
     Vector2 lastVelocity;
 
@@ -33,8 +34,8 @@ public class PlayerBulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Instantiate(bulletBloodEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             Object.Destroy(gameObject);
-            
         }
 
         if (collision.gameObject.tag == "Wall"/* || collision.gameObject.tag == "Ground"*/)

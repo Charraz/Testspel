@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   bulletEffect: {fileID: 691269348542068283, guid: 18bbbf9496860ee4e87f9a701d697352, type: 3}
+  bulletBloodEffect: {fileID: 691269348542068283, guid: 5c583ea75737ac04e9755d3e840223eb, type: 3}
 --- !u!96 &-8441441782820088824
 TrailRenderer:
   serializedVersion: 2
