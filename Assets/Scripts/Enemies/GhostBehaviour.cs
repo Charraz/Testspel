@@ -30,6 +30,7 @@ public class GhostBehaviour : MonoBehaviour
         matDefault = spriterenderer.material;
         gameController = GameController.InstanceOfGame;
         sfxController = SFXController.InstanceOfSFX;
+        sfxController.PlayGhostSpawn();
     }
 
     // Update is called once per frame
@@ -37,6 +38,8 @@ public class GhostBehaviour : MonoBehaviour
     {
         if (HP <= 0)
         {
+            sfxController.PlayGhostDeath();
+            sfxController.PlayGhostDeathSound();
             Instantiate(ghostDeathEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
             onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
@@ -60,6 +63,7 @@ public class GhostBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerBullet")
         {
+            sfxController.PlayGhostDamaged();
             HP = HP - 1;
             whiteFlash();
             Invoke("resetMaterial", 0.1f);

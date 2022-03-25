@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HPTextController : MonoBehaviour
 {
-    [SerializeField] private float gameTime;
+    public float gameTime;
     public Text timeText;
 
     // Start is called before the first frame update

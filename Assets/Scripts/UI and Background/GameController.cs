@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
     public int points = 0;
     private PlayerController playerController;
 
+    //Referera till HPTextController
+    private HPTextController hpTextController;
+    public GameObject timecontroller;
+
     private void Awake()
     {
         InstanceOfGame = this;
@@ -21,12 +25,19 @@ public class GameController : MonoBehaviour
     void Start()
     {
         playerController = PlayerController.InstanceOfPlayer;
+        hpTextController = timecontroller.GetComponent<HPTextController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (playerController.playerHealth <= 0)
+        {
+            Cursor.visible = true;
+            SceneManager.LoadScene("GameOver");
+        }
+
+        if (hpTextController.gameTime <= 0)
         {
             Cursor.visible = true;
             SceneManager.LoadScene("GameOver");

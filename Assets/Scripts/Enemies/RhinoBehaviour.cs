@@ -162,6 +162,7 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void rhinoJumping()
     {
+        sfxController.PlayRhinoRoar();
         moveSpeed = 0;
         rigidkropp.velocity = new Vector2(moveSpeed, rigidkropp.velocity.y);
     }

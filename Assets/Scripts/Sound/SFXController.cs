@@ -25,6 +25,8 @@ public class SFXController : MonoBehaviour
     //GhostSounds
     public AudioSource ghostDamaged;
     public AudioSource ghostDeath;
+    public AudioSource ghostDeathSound;
+    public AudioSource ghostSpawn;
 
     //WeaponSounds
     public AudioSource bulletShoot;
@@ -108,6 +110,16 @@ public class SFXController : MonoBehaviour
     public void PlayGhostDeath()
     {
         ghostDeath.Play();
+    }
+
+    public void PlayGhostDeathSound()
+    {
+        ghostDeathSound.Play();
+    }
+
+    public void PlayGhostSpawn()
+    {
+        ghostSpawn.Play();
     }
     #endregion
 

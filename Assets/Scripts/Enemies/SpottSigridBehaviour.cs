@@ -116,6 +116,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         if ( canShoot == true)
         {
             Instantiate(spitBulletPrefab, shotPosition.position, shotPosition.rotation);
+            sfxController.PlaySigridShoot();
             if (movingLeft == false)
             {
                 Instantiate(shotSpitPrefab, new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), shotSpitPrefab.transform.rotation = Quaternion.Euler(0f, 90f, -90f));
