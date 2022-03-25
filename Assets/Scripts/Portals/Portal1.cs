@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalChildren : MonoBehaviour
+public class Portal1 : MonoBehaviour
 {
     private EnemySpawner enemySpawner;
     private SpriteRenderer spriterenderer;
@@ -23,20 +23,18 @@ public class PortalChildren : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(readyToBlink);
         CheckIfIShouldBlink();
     }
 
     private void blinkingPortalEffect()
     {
-        Invoke("ReadyToBlink", 1f);
         Invoke("whiteFlash", 0f);
         Invoke("resetMaterial", 0.2f);
         Invoke("whiteFlash", 0.4f);
         Invoke("resetMaterial", 0.6f);
         Invoke("whiteFlash", 0.8f);
         Invoke("resetMaterial", 1f);
-        Invoke("ReadyToBlink", 1f);
+        Invoke("ReadyToBlink", 1.1f);
     }
 
 

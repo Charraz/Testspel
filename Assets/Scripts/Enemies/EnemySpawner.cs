@@ -37,12 +37,13 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(nextSpawnPoint);
         if (johnnyIsReady == true)
         {
             randomEnemy = Random.Range(0, enemyPrefabs.Length);
             Instantiate(enemyPrefabs[randomEnemy], nextSpawnPoint.position, transform.rotation);
-            ChooseNextSpawnPoint();
             johnnyIsReady = false;
+            ChooseNextSpawnPoint();
         }
     }
 

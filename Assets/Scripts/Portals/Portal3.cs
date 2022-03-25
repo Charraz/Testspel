@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalChildren : MonoBehaviour
+public class Portal3 : MonoBehaviour
 {
     private EnemySpawner enemySpawner;
     private SpriteRenderer spriterenderer;
@@ -23,20 +23,18 @@ public class PortalChildren : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(readyToBlink);
         CheckIfIShouldBlink();
     }
 
     private void blinkingPortalEffect()
     {
-        Invoke("ReadyToBlink", 1f);
         Invoke("whiteFlash", 0f);
         Invoke("resetMaterial", 0.2f);
         Invoke("whiteFlash", 0.4f);
         Invoke("resetMaterial", 0.6f);
         Invoke("whiteFlash", 0.8f);
         Invoke("resetMaterial", 1f);
-        Invoke("ReadyToBlink", 1f);
+        Invoke("ReadyToBlink", 1.1f);
     }
 
 
@@ -64,7 +62,7 @@ public class PortalChildren : MonoBehaviour
 
     private void CheckIfIShouldBlink()
     {
-        if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 1)
+        if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 1)
         {
             if (readyToBlink == true)
             {
@@ -72,7 +70,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 3f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 2)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 2)
         {
             if (readyToBlink == true)
             {
@@ -80,7 +78,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 2.7f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 3)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 3)
         {
             if (readyToBlink == true)
             {
@@ -88,7 +86,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 2.4f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 4)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 4)
         {
             if (readyToBlink == true)
             {
@@ -96,7 +94,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 2.1f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 5)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 5)
         {
             if (readyToBlink == true)
             {
@@ -104,7 +102,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 1.8f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 6)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 6)
         {
             if (readyToBlink == true)
             {
@@ -112,7 +110,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 1.5f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 7)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 7)
         {
             if (readyToBlink == true)
             {
@@ -120,7 +118,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 1.2f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 8)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 8)
         {
             if (readyToBlink == true)
             {
@@ -128,7 +126,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 0.9f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 9)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 9)
         {
             if (readyToBlink == true)
             {
@@ -136,7 +134,7 @@ public class PortalChildren : MonoBehaviour
                 Invoke("blinkingPortalEffect", 0.6f);
             }
         }
-        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal1 && enemySpawner.Level == 10)
+        else if (enemySpawner.nextSpawnPoint == enemySpawner.Portal3 && enemySpawner.Level == 10)
         {
             if (readyToBlink == true)
             {

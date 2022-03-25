@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4071907}
   - component: {fileID: 4071909}
   - component: {fileID: 4071908}
-  - component: {fileID: 3486277804970075301}
+  - component: {fileID: 2222725292082498596}
   m_Layer: 0
   m_Name: Portal1
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3486277804970075301
+--- !u!114 &2222725292082498596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4071906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: f164fa1d08bf9734e815c3ea225ff27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &186719388
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 186719389}
   - component: {fileID: 186719391}
   - component: {fileID: 186719390}
-  - component: {fileID: 619537664993616707}
+  - component: {fileID: 3934060152748803974}
   m_Layer: 0
   m_Name: Portal3
   m_TagString: Untagged
@@ -218,7 +218,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &619537664993616707
+--- !u!114 &3934060152748803974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 186719388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: c9313093cc5a1624d901e6b284232f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &738056523
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 738056524}
   - component: {fileID: 738056526}
   - component: {fileID: 738056525}
-  - component: {fileID: 6564012241017529104}
+  - component: {fileID: 5791900087540871298}
   m_Layer: 0
   m_Name: Portal6
   m_TagString: Untagged
@@ -333,7 +333,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6564012241017529104
+--- !u!114 &5791900087540871298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 738056523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fe48a5facab9744ba28556556dcc2ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1049934591
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1049934592}
   - component: {fileID: 1049934594}
   - component: {fileID: 1049934593}
-  - component: {fileID: 4945799903080583266}
+  - component: {fileID: 3329926270006543547}
   m_Layer: 0
   m_Name: Portal5
   m_TagString: Untagged
@@ -448,7 +448,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4945799903080583266
+--- !u!114 &3329926270006543547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1049934591}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 5efdd8f71f5531f47857f4781fbff435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1344641855
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 1344641856}
   - component: {fileID: 1344641858}
   - component: {fileID: 1344641857}
-  - component: {fileID: 6114711543866923184}
+  - component: {fileID: 6041607587762937202}
   m_Layer: 0
   m_Name: Portal4
   m_TagString: Untagged
@@ -563,7 +563,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6114711543866923184
+--- !u!114 &6041607587762937202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344641855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2b12819d53a9745b4b8d8a95e7852c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1528851544
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 1528851545}
   - component: {fileID: 1528851547}
   - component: {fileID: 1528851546}
-  - component: {fileID: 1864606036795372440}
+  - component: {fileID: 435603077563433006}
   m_Layer: 0
   m_Name: Portal2
   m_TagString: Untagged
@@ -678,7 +678,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1864606036795372440
+--- !u!114 &435603077563433006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1528851544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dec5f94040f0ca4eaab38627a9e66ec, type: 3}
+  m_Script: {fileID: 11500000, guid: fc79b30e3a614894fa010b4581f39f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5927766470495396306
@@ -746,6 +746,7 @@ MonoBehaviour:
   Portal5: {fileID: 1049934592}
   Portal6: {fileID: 738056524}
   Level: 0
+  nextSpawnPoint: {fileID: 0}
   enemyPrefabs:
   - {fileID: 4962247884010541390, guid: 6e575bc9958613f46bb6de8a51e4e465, type: 3}
   - {fileID: 8681164780338499734, guid: 7a87a0664bb209c469b8da095da3a1fd, type: 3}
