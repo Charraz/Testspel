@@ -49,7 +49,7 @@ public class PlayerRocketController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Traps")
         {
             particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
             explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);

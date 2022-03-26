@@ -35,7 +35,7 @@ public class PlayerBulletController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Instantiate(bulletBloodEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            Object.Destroy(gameObject);
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Wall"/* || collision.gameObject.tag == "Ground"*/)

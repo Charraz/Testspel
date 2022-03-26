@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - EnemyBullet
   - PlayerExplosion
+  - Traps
   layers:
   - Default
   - TransparentFX
