@@ -29,6 +29,9 @@ public class SpottSigridBehaviour : MonoBehaviour
     private GameController gameController;
     private SFXController sfxController;
 
+    //Teleporter Transform
+    [SerializeField] private Transform teleporterTop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -177,6 +180,16 @@ public class SpottSigridBehaviour : MonoBehaviour
             whiteFlash();
 
             Invoke("resetMaterial", 0.2f);
+        }
+
+
+        if (collision.gameObject.tag == "Teleporter")
+        {
+            Vector2 position = new Vector2(transform.position.x, teleporterTop.position.y);
+            transform.position = position;
+
+            Vector2 speed = new Vector2(rigidkropp.velocity.x, -3f);
+            rigidkropp.velocity = speed;
         }
     }
 

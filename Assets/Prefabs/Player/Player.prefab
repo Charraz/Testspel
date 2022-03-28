@@ -241,6 +241,7 @@ MonoBehaviour:
   dustEffect: {fileID: 4558462613707730391, guid: c398d66d461686247a30a558c6b68791, type: 3}
   doubleJumpPoofEffect: {fileID: 1552685950231211276, guid: a99dcf45adbe5974cabc0ce6a43fc9a5, type: 3}
   playerHealth: 5
+  teleporterTop: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}
 --- !u!61 &6325820368308811901
 BoxCollider2D:
   m_ObjectHideFlags: 0

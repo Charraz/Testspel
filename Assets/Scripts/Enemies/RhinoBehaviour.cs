@@ -25,6 +25,9 @@ public class RhinoBehaviour : MonoBehaviour
     bool isRed;
     [SerializeField] float HP;
 
+    //Teleporter Transform
+    [SerializeField] private Transform teleporterTop;
+
     void Start()
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
@@ -256,6 +259,15 @@ public class RhinoBehaviour : MonoBehaviour
             whiteFlash();
             Invoke("resetMaterial", 0.2f);
             sfxController.PlayRhinoDamaged();
+        }
+
+        if (collision.gameObject.tag == "Teleporter")
+        {
+            Vector2 position = new Vector2(transform.position.x, teleporterTop.position.y);
+            transform.position = position;
+
+            Vector2 speed = new Vector2(rigidkropp.velocity.x, -3f);
+            rigidkropp.velocity = speed;
         }
     }
 
