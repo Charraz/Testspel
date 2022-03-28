@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Game Title
+  m_text: SkjutKnut
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cde24a12290a02e4185687b24f31de1f, type: 2}
   m_sharedMaterial: {fileID: -2324250407170637344, guid: cde24a12290a02e4185687b24f31de1f, type: 2}
@@ -207,14 +207,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 244.4
+  m_fontSize: 300
   m_fontSizeBase: 124
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 300
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

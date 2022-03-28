@@ -235,3 +235,4 @@ MonoBehaviour:
   points: 10
   HP: 5
   groundDetection: {fileID: 876772571}
+  teleporterTop: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}

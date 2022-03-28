@@ -15,6 +15,9 @@ public class CoinScript : MonoBehaviour
     private float spawnVelocityX;
     private float spawnVelocityY;
 
+    //Teleporter Transform
+    [SerializeField] private Transform teleporterTop;
+
     private void Awake()
     {
         spawnVelocityX = Random.Range(-3f, 3f);
@@ -61,6 +64,18 @@ public class CoinScript : MonoBehaviour
             gameController.points += points;
             sfxController.PlayCoinPickup();
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Teleporter")
+        {
+            Vector2 position = new Vector2(transform.position.x, teleporterTop.position.y);
+            transform.position = position;
+
+            Vector2 speed = new Vector2(rigidkropp.velocity.x, -3f);
+            rigidkropp.velocity = speed;
         }
     }
 

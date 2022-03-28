@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     //Ljudgrejer
     private SFXController sfxController;
 
+    //Teleporter Transform
+    [SerializeField] private Transform teleporterTop;
+
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
     private void Awake()
@@ -203,6 +206,15 @@ public class PlayerController : MonoBehaviour
                 Invoke("TransparentReset", 1f);
                 Invoke("iFrameCD", 1f);
             }
+        }
+
+        if (collision.gameObject.tag == "Teleporter")
+        {
+            Vector2 position = new Vector2(transform.position.x, teleporterTop.position.y);
+            transform.position = position;
+
+            Vector2 speed = new Vector2(playerRigidbody.velocity.x, -3f);
+            playerRigidbody.velocity = speed;
         }
     }
 
