@@ -9,18 +9,23 @@ public class PlayerBulletController : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject bulletEffect;
     public GameObject bulletBloodEffect;
+    private CinemachineScreenShake cinemachineScreenShake;
 
     Vector2 lastVelocity;
+
+    private void Awake()
+    {
+        cinemachineScreenShake = CinemachineScreenShake.InstanceOfCinemachine;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
-
         transform.Rotate(0, 0, -90);
-        //Döda bullet efter 3 sekunder
         Invoke("Death", 3f);
+        cinemachineScreenShake.ShakeCamera(1f, 0.1f);
     }
 
     // Update is called once per frame

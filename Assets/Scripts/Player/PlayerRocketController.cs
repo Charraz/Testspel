@@ -9,6 +9,12 @@ public class PlayerRocketController : MonoBehaviour
     public GameObject particleExplosion;
     public GameObject explosionRadius;
     private SFXController sfxController;
+    private CinemachineScreenShake cinemachineScreenShake;
+
+    private void Awake()
+    {
+        cinemachineScreenShake = CinemachineScreenShake.InstanceOfCinemachine;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +37,7 @@ public class PlayerRocketController : MonoBehaviour
         particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
         explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
         sfxController.PlayGrenadeExplosion();
+        cinemachineScreenShake.ShakeCamera(4f, 0.3f);
         Destroy(gameObject);
     }
 
@@ -38,10 +45,11 @@ public class PlayerRocketController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
-            explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
-            sfxController.PlayGrenadeExplosion();
-            Destroy(gameObject);
+            Death();
+            //particleExplosion = Instantiate(particleExplosion, new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
+            //explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
+            //sfxController.PlayGrenadeExplosion();
+            //Destroy(gameObject);
         }
 
 
@@ -51,10 +59,11 @@ public class PlayerRocketController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Traps")
         {
-            particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
-            explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
-            sfxController.PlayGrenadeExplosion();
-            Destroy(gameObject);
+            Death();
+            //particleExplosion = Instantiate(particleExplosion, transform.position = new Vector2(transform.position.x, transform.position.y + 1.6f), Quaternion.identity);
+            //explosionRadius = Instantiate(explosionRadius, transform.position, Quaternion.identity);
+            //sfxController.PlayGrenadeExplosion();
+            //Destroy(gameObject);
         }
 
 

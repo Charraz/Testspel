@@ -83,7 +83,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void changeSpawnCooldownAndLevel()
     {
-        if (spawnCooldown > 1)
+        if (spawnCooldown > 1.3)
         {
             Level++;
             spawnCooldown = spawnCooldown - 0.3f;
