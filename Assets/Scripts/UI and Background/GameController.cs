@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     private HPTextController hpTextController;
     public GameObject timecontroller;
 
+    private bool gameEnd = false;
     private void Awake()
     {
         InstanceOfGame = this;
@@ -31,16 +32,18 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController.playerHealth <= 0)
+        if (playerController.playerHealth <= 0 && gameEnd == false)
         {
             Cursor.visible = true;
             SceneManager.LoadScene("GameOver");
+            gameEnd = true;
         }
 
-        if (hpTextController.gameTime <= 0)
+        if (hpTextController.gameTime <= 0 && gameEnd == false)
         {
             Cursor.visible = true;
             SceneManager.LoadScene("GameOver");
+            gameEnd = true;
         }
     }
 }

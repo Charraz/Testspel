@@ -12,6 +12,7 @@ TagManager:
   - PlayerExplosion
   - Traps
   - Teleporter
+  - RhinoDrop
   layers:
   - Default
   - TransparentFX
