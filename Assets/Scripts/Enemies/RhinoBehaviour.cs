@@ -16,9 +16,9 @@ public class RhinoBehaviour : MonoBehaviour
     private Material matDefault; //Återställer rhinons materail till default
     private PlayerController playerController;
     private GameController gameController;
-    public Transform groundDetection;
     public int points;
     private SFXController sfxController;
+    private bool falling = false;
 
     float moveSpeed;
     bool movingLeft;
@@ -47,6 +47,7 @@ public class RhinoBehaviour : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(falling);
         //Sätter animationen beroende på vilket state rhinon är i
         rhinoStateChecker();
 
@@ -62,7 +63,7 @@ public class RhinoBehaviour : MonoBehaviour
                
                 //Tittar om spelaren är nära nog för att gå in i sitt attack state
                 RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 20f);
-                if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player")
+                if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player" && falling == false)
                 {
                     rigidkropp.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
                     Invoke("jumpComplete", 0.65f);
@@ -113,6 +114,7 @@ public class RhinoBehaviour : MonoBehaviour
     {
         //Sätter hastighet då rhinoWalk är aktivt till -3 och nollställer animationstriggern för rhinoWallOrPlayerHit
         moveSpeed = -3;
+        resetMaterial();
 
         //Vänd när Rhino kommer till en vägg eller en annan fiende
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
@@ -138,6 +140,12 @@ public class RhinoBehaviour : MonoBehaviour
         moveSpeed = -10;
         isRed = true;
 
+        //RaycastHit2D TurnAroundRaycastEdge = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f);
+        //if (TurnAroundRaycastEdge.collider == false)
+        //{
+        //    moveSpeed = -5;
+        //}
+
         //Får Rhino att röra sig
         if (movingLeft == true)
         {
@@ -147,6 +155,8 @@ public class RhinoBehaviour : MonoBehaviour
         {
             rigidkropp.velocity = new Vector2(moveSpeed * -1, rigidkropp.velocity.y);
         }
+
+
     }
 
     private void rhinoWallOrPlayerHit()
@@ -206,6 +216,11 @@ public class RhinoBehaviour : MonoBehaviour
     private void whiteFlash()
     {
         spriterenderer.material = matWhite;
+    }
+
+    private void ChangeFalling()
+    {
+        falling = false;
     }
 
     private void rhinoStateChecker()
@@ -268,6 +283,13 @@ public class RhinoBehaviour : MonoBehaviour
 
             Vector2 speed = new Vector2(rigidkropp.velocity.x, -3f);
             rigidkropp.velocity = speed;
+        }
+
+        if(collision.gameObject.tag == "RhinoDrop")
+        {
+            state = State.RhinoWalk;
+            falling = true;
+            Invoke("ChangeFalling", 1.2f);
         }
     }
 

@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &436678018236497441
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5826719297514410488}
-  m_Layer: 0
-  m_Name: Ground Detection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5826719297514410488
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436678018236497441}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.903, y: -0.451, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 681427023061891594}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681427023061891592
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,8 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.38, y: -1.81, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
-  m_Children:
-  - {fileID: 5826719297514410488}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,7 +124,7 @@ MonoBehaviour:
   onDeathBloodAnimation: {fileID: 7727960266939480054, guid: 7186f0bcb1add39479e320c9f1d62fde, type: 3}
   onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
   onDeathCoin: {fileID: 9032735162423030646, guid: 8d90896061908bf48a249acb518ddc9d, type: 3}
-  groundDetection: {fileID: 5826719297514410488}
+  groundDetection: {fileID: 0}
   points: 10
   HP: 8
   teleporterTop: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}
