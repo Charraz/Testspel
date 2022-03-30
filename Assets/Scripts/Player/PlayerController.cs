@@ -105,6 +105,11 @@ public class PlayerController : MonoBehaviour
 
         //Animation = Jumping
         animation.SetFloat("YSpeed", ySpeed);
+
+        if (playerHealth == 0)
+        {
+            animation.SetBool("PlayerDead", true);
+        }
     }
 
 
