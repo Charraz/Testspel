@@ -19,6 +19,7 @@ public class RhinoBehaviour : MonoBehaviour
     public int points;
     private SFXController sfxController;
     private bool falling = false;
+    private bool matResetBool = true;
 
     float moveSpeed;
     bool movingLeft;
@@ -73,7 +74,10 @@ public class RhinoBehaviour : MonoBehaviour
 
             case State.RhinoRun:
                 rhinoRun();
-
+                if (matResetBool == false)
+                {
+                    matResetBool = true;
+                }
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 0.8f, Color.green);
                 RaycastHit2D HittingSomething = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.8f);
                 if (HittingSomething.collider != null && HittingSomething.collider.tag == "Wall" /*|| HittingSomething.collider != null && HittingSomething.collider.tag == "Enemy"*/)
@@ -102,6 +106,10 @@ public class RhinoBehaviour : MonoBehaviour
 
             case State.RhinoJumping:
                 rhinoJumping();
+                if (matResetBool == false)
+                {
+                    matResetBool = true;
+                }
                 break;
 
             default:
@@ -113,7 +121,12 @@ public class RhinoBehaviour : MonoBehaviour
     {
         //Sätter hastighet då rhinoWalk är aktivt till -3 och nollställer animationstriggern för rhinoWallOrPlayerHit
         moveSpeed = -3;
-        resetMaterial();
+        if (matResetBool)
+        {
+            resetMaterial();
+            matResetBool = false;
+        }
+
 
         //Vänd när Rhino kommer till en vägg eller en annan fiende
         RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);

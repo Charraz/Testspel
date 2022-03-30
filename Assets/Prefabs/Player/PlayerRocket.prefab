@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.1
   m_Material: {fileID: 6200000, guid: dc7260356b7175c4eb3920309ee6e7a8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d27054c2dc70c24dbe6e6def9df2c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 11
   particleExplosion: {fileID: 4494744821287106505, guid: 6231324277e660442981fc3938601d26, type: 3}
   explosionRadius: {fileID: 2866751546348537679, guid: be7d3dac86878b34f898bd66901b5bf1, type: 3}
 --- !u!96 &324839077183627789

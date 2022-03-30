@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f22dd974ba99948b5ba92ea43e8d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 35
   bulletEffect: {fileID: 691269348542068283, guid: 18bbbf9496860ee4e87f9a701d697352, type: 3}
   bulletBloodEffect: {fileID: 207941594461238740, guid: be6b44afaab71f049b842360bb0fe992, type: 3}
 --- !u!96 &-8441441782820088824

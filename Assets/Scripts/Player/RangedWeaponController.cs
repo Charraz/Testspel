@@ -17,6 +17,7 @@ public class RangedWeaponController : MonoBehaviour
     private bool weapon2CD;
 
     private SFXController sfxController;
+    private PlayerController playerController;
 
     //Animatorbools
     //private bool pointRight;
@@ -31,6 +32,7 @@ public class RangedWeaponController : MonoBehaviour
         weapon2CD = false;
 
         sfxController = SFXController.InstanceOfSFX;
+        playerController = PlayerController.InstanceOfPlayer;
 
         //pointRight = true;
         //pointLeft = false;
@@ -41,7 +43,7 @@ public class RangedWeaponController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("Fire1") && weapon1CD == false)
+        if (Input.GetButton("Fire1") && weapon1CD == false && playerController.playerHealth > 0)
         {
             Shoot();
             weapon1CD = true;
@@ -54,11 +56,11 @@ public class RangedWeaponController : MonoBehaviour
             bulletShells.Stop();
         }
 
-        if (Input.GetButtonDown("Fire2") && weapon2CD == false)
+        if (Input.GetButtonDown("Fire2") && weapon2CD == false && playerController.playerHealth > 0)
         {
             ShootRocket();
             weapon2CD = true;
-            Invoke("Weapon2CDActive", 1f);
+            Invoke("Weapon2CDActive", 2f);
         }
     }
     void FixedUpdate()

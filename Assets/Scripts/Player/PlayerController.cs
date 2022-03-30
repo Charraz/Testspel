@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
     //Teleporter Transform
     [SerializeField] private Transform teleporterTop;
 
+    //HitStopVariabel
+    bool waiting;
+
     //Här deklarerar vi singletonen så att den har alla värden som spelaren har.
     //Denna kan sedan kommas åt av alla andra script i projektet.
     private void Awake()
@@ -109,13 +112,14 @@ public class PlayerController : MonoBehaviour
         if (playerHealth == 0)
         {
             animation.SetBool("PlayerDead", true);
+            Time.timeScale = 0.5f;
         }
     }
 
 
     private void FixedUpdate()
     {
-        if (moveHorizontal > 0.1f)
+        if (moveHorizontal > 0.1f && playerHealth > 0)
         {
             //Animation = Running
             animation.SetFloat("Speed", moveSpeed);
@@ -130,7 +134,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        else if (moveHorizontal < -0.1f)
+        else if (moveHorizontal < -0.1f && playerHealth > 0)
         {
             //Animation = Running
             animation.SetFloat("Speed", moveSpeed);
@@ -157,13 +161,13 @@ public class PlayerController : MonoBehaviour
                 coroutineAllowed = true;
         }
 
-        if (canJump == true)
+        if (canJump == true && playerHealth > 0)
         {
             playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             canJump = false;
         }
 
-        if (canDoubleJump == true && hasJumped == false)
+        if (canDoubleJump == true && hasJumped == false && playerHealth > 0)
         {
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
             playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -175,12 +179,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Traps")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Traps" && playerHealth > 0)
         {
             if (iFrame == false)
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                Stop(0.1f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -194,12 +199,13 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "EnemyBullet")
+        if (collision.gameObject.tag == "EnemyBullet" && playerHealth > 0)
         {
             if (iFrame == false)
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                Stop(0.1f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -225,12 +231,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && playerHealth > 0)
         {
             if (iFrame == false)
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                Stop(0.1f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -294,5 +301,21 @@ public class PlayerController : MonoBehaviour
     private void TransparentReset()
     {
         playerSprite.color = new Color(1, 1, 1, 1f);
+    }
+
+    public void Stop(float duration)
+    {
+        if (waiting)
+            return;
+        Time.timeScale = 0.0f;
+        StartCoroutine(Wait(duration));
+    }
+
+    IEnumerator Wait(float duration)
+    {
+        waiting = true;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1.0f;
+        waiting = false;
     }
 }
