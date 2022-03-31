@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PointTextController : MonoBehaviour
 {
     private GameController game;
-    public Text pointText;
+    public TextMeshProUGUI pointText;
     public int myPoints = 0;
 
     private void Awake()

@@ -34,7 +34,9 @@ public class GameController : MonoBehaviour
     {
         if (playerController.playerHealth <= 0 && gameEnd == false)
         {
+            gameEnd = true;
             Invoke("GameEndHP", 3f);
+
         }
 
         if (hpTextController.gameTime <= 0 && gameEnd == false)
@@ -49,6 +51,5 @@ public class GameController : MonoBehaviour
     {
         Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
-        gameEnd = true;
     }
 }

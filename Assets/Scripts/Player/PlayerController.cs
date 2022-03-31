@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private float ySpeed;
 
     //Jumpvariabler
-    bool isGrounded;
     public float jumpForce;
     bool hasJumped;
     bool canJump;
@@ -36,9 +35,11 @@ public class PlayerController : MonoBehaviour
     private bool iFrame;
     private Material matWhite;
     private Material matDefault;
+    private bool dead = false;
 
     //Ljudgrejer
     private SFXController sfxController;
+    bool isAboutToBeDead = false;
 
     //Teleporter Transform
     [SerializeField] private Transform teleporterTop;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         playerHealth = 5;
         iFrame = false;
         particleCD = false;
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -109,11 +111,12 @@ public class PlayerController : MonoBehaviour
         //Animation = Jumping
         animation.SetFloat("YSpeed", ySpeed);
 
-        if (playerHealth == 0)
+        if (playerHealth == 0 && isAboutToBeDead == false)
         {
-            animation.SetBool("PlayerDead", true);
-            Time.timeScale = 0.5f;
+            PlayerDeath();
         }
+
+        PlayerStop();
     }
 
 
@@ -151,7 +154,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        else if (moveHorizontal == 0)
+        else if (moveHorizontal == 0 && playerHealth > 0)
         {
             animation.SetFloat("Speed", 0);
             //Player movement
@@ -163,12 +166,14 @@ public class PlayerController : MonoBehaviour
 
         if (canJump == true && playerHealth > 0)
         {
+            sfxController.PlayPlayerJump();
             playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             canJump = false;
         }
 
         if (canDoubleJump == true && hasJumped == false && playerHealth > 0)
         {
+            sfxController.PlayPlayerDoubleJump();
             playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
             playerRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             canDoubleJump = false;
@@ -273,6 +278,7 @@ public class PlayerController : MonoBehaviour
 
         return raycastHit.collider != null;
     }
+
     private void iFrameCD()
     {
         iFrame = false;
@@ -315,7 +321,47 @@ public class PlayerController : MonoBehaviour
     {
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
-        Time.timeScale = 1.0f;
+        if(playerHealth > 0)
+        { 
+            Time.timeScale = 1.0f;
+        }
+
+        else if (playerHealth == 0)
+        {
+            Time.timeScale = 0.5f;
+        }
         waiting = false;
+    }
+
+    private void PlayerDeath()
+    {
+        if (playerSprite.flipX == false)
+        {
+            playerRigidbody.velocity = new Vector2(-10f, 10f);
+        }
+
+        else if (playerSprite.flipX == true)
+        {
+            playerRigidbody.velocity = new Vector2(10f, 10f);
+        }
+
+        animation.SetBool("PlayerDead", true);
+        sfxController.PlayPlayerDeath();
+        isAboutToBeDead = true;
+        Invoke("Death", 0.3f);
+    }
+
+    private void PlayerStop()
+    {
+        if (playerHealth == 0 && isAboutToBeDead == true && IsGrounded() && dead == true)
+        {
+            playerRigidbody.velocity = new Vector2(0f, 0f);
+            animation.SetBool("PlayerDeadEnd", true);
+        }
+    }
+
+    private void Death()
+    {
+        dead = true;
     }
 }

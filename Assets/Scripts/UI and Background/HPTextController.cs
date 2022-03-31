@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HPTextController : MonoBehaviour
 {
     public float gameTime;
-    public Text timeText;
+    public TextMeshProUGUI timeText;
 
     // Start is called before the first frame update
     void Start()

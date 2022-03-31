@@ -10,6 +10,8 @@ public class SFXController : MonoBehaviour
     //PlayerSounds
     public AudioSource playerDamaged;
     public AudioSource playerJump;
+    public AudioSource playerDoubleJump;
+    public AudioSource playerDeath;
 
     //RhinoSounds
     public AudioSource rhinoRoar;
@@ -58,6 +60,15 @@ public class SFXController : MonoBehaviour
     public void PlayPlayerJump()
     {
         playerJump.Play();
+    }
+
+    public void PlayPlayerDoubleJump()
+    {
+        playerDoubleJump.Play();
+    }
+    public void PlayPlayerDeath()
+    {
+        playerDeath.Play();
     }
     #endregion
 
