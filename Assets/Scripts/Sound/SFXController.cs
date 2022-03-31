@@ -7,6 +7,10 @@ public class SFXController : MonoBehaviour
     public static SFXController InstanceOfSFX;
 
     #region Variables
+
+    //Music
+    public AudioSource backgroundMusic;
+
     //PlayerSounds
     public AudioSource playerDamaged;
     public AudioSource playerJump;
@@ -51,6 +55,14 @@ public class SFXController : MonoBehaviour
     {
 
     }
+
+    #region BackgroundMusic
+
+    public void PlayBackgroundMusic()
+    {
+        backgroundMusic.Stop();
+    }
+    #endregion
 
     #region PlayerSounds
     public void PlayPlayerDamaged()

@@ -347,6 +347,7 @@ public class PlayerController : MonoBehaviour
 
         animation.SetBool("PlayerDead", true);
         sfxController.PlayPlayerDeath();
+        sfxController.PlayBackgroundMusic();
         isAboutToBeDead = true;
         Stop(1f);
         Invoke("Death", 0.3f);
