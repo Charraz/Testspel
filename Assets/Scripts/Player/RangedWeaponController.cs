@@ -131,6 +131,7 @@ public class RangedWeaponController : MonoBehaviour
     void ShootRocket()
     {
         Instantiate(rocketPrefab, firePoint.position, transform.rotation);
+        sfxController.PlayGrenadeThrow();
     }
 
     void Weapon1CDActive()

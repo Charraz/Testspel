@@ -35,6 +35,7 @@ public class SFXController : MonoBehaviour
     public AudioSource bulletWallorGroundHit;
     public AudioSource grenadeHit;
     public AudioSource grenadeExplosion;
+    public AudioSource grenadeThrow;
 
     //CoinSounds
     public AudioSource coinPickup;
@@ -156,6 +157,10 @@ public class SFXController : MonoBehaviour
         grenadeExplosion.Play();
     }
 
+    public void PlayGrenadeThrow()
+    {
+        grenadeThrow.Play();
+    }
     #endregion
 
     #region CoinSounds

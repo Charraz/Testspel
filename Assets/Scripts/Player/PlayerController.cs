@@ -337,17 +337,18 @@ public class PlayerController : MonoBehaviour
     {
         if (playerSprite.flipX == false)
         {
-            playerRigidbody.velocity = new Vector2(-10f, 10f);
+            playerRigidbody.velocity = new Vector2(-5f, 10f);
         }
 
         else if (playerSprite.flipX == true)
         {
-            playerRigidbody.velocity = new Vector2(10f, 10f);
+            playerRigidbody.velocity = new Vector2(5f, 10f);
         }
 
         animation.SetBool("PlayerDead", true);
         sfxController.PlayPlayerDeath();
         isAboutToBeDead = true;
+        Stop(1f);
         Invoke("Death", 0.3f);
     }
 
