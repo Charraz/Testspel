@@ -43,6 +43,12 @@ public class RangedWeaponController : MonoBehaviour
 
     private void Update()
     {
+
+        if (playerController.playerHealth == 0)
+        {
+            Destroy(gameObject);
+        }
+
         if (Input.GetButton("Fire1") && weapon1CD == false && playerController.playerHealth > 0)
         {
             Shoot();

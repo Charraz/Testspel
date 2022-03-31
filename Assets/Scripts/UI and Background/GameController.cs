@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
         if (playerController.playerHealth <= 0 && gameEnd == false)
         {
             gameEnd = true;
-            Invoke("GameEndHP", 3f);
+            Invoke("GameEndHP", 2f);
 
         }
 

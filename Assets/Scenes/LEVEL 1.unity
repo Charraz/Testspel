@@ -2191,9 +2191,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: tester
+      value: 
+      objectReference: {fileID: 6156198130910782824, guid: 92aaddadc172592409ea6935082cca7f, type: 3}
+    - target: {fileID: 6325820368308811900, guid: 319e28013f724074887dddc0e575980f, type: 3}
       propertyPath: teleporterTop
       value: 
       objectReference: {fileID: 563674572}
+    - target: {fileID: 8209259379429390623, guid: 319e28013f724074887dddc0e575980f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319e28013f724074887dddc0e575980f, type: 3}
 --- !u!1 &1027508168

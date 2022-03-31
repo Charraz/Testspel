@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-                Stop(0.1f);
+                Stop(0.05f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-                Stop(0.1f);
+                Stop(0.05f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x, 0f);
                 playerRigidbody.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
-                Stop(0.1f);
+                Stop(0.05f);
                 iFrame = true;
                 playerHealth--;
                 sfxController.PlayPlayerDamaged();
@@ -328,7 +328,7 @@ public class PlayerController : MonoBehaviour
 
         else if (playerHealth == 0)
         {
-            Time.timeScale = 0.5f;
+            Time.timeScale = 0.3f;
         }
         waiting = false;
     }
@@ -357,6 +357,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRigidbody.velocity = new Vector2(0f, 0f);
             animation.SetBool("PlayerDeadEnd", true);
+            animation.SetBool("PlayerDead", false);
         }
     }
 
