@@ -153,7 +153,6 @@ public class SpottSigridBehaviour : MonoBehaviour
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
         sfxController.PlaySigridDeath();
-        gameController.points += points;
         Destroy(gameObject);
     }
 

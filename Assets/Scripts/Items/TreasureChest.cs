@@ -41,8 +41,8 @@ public class TreasureChest : MonoBehaviour
         float extraLength = 0.5f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.up, extraLength, playerMask);
 
-        Debug.DrawRay(boxCollider.bounds.center + new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
-        Debug.DrawRay(boxCollider.bounds.center - new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
+        //Debug.DrawRay(boxCollider.bounds.center + new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
+        //Debug.DrawRay(boxCollider.bounds.center - new Vector3(boxCollider.bounds.extents.x, 0), Vector2.up * (boxCollider.bounds.extents.y + extraLength), Color.green);
         //Debug.DrawRay(boxCollider.bounds.center - new Vector3(0, boxCollider.bounds.extents.y), Vector2.right * (boxCollider.bounds.extents.x), Color.green);
 
         return raycastHit.collider != null;

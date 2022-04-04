@@ -44,7 +44,6 @@ public class GhostBehaviour : MonoBehaviour
             onDeathGooParticleSystem = Instantiate(onDeathGooParticleSystem, transform.position, Quaternion.identity);
             onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
             sfxController.PlayGhostDeath();
-            gameController.points += points;
             Destroy(gameObject);
         }
         transform.position = Vector2.MoveTowards(transform.position, playerController.transform.position, speed * Time.deltaTime);
