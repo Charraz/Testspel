@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
 
     //PlayerScore
     public int points = 0;
+    public float gameTime = 0;
     private PlayerController playerController;
 
     //Referera till HPTextController
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(gameTime);
         if (playerController.playerHealth <= 0 && gameEnd == false)
         {
             gameEnd = true;
@@ -45,6 +47,8 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             gameEnd = true;
         }
+
+        gameTime = hpTextController.gameTime;
     }
 
     private void GameEndHP()
