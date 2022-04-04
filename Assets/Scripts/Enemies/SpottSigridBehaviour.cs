@@ -11,12 +11,14 @@ public class SpottSigridBehaviour : MonoBehaviour
     public GameObject onDeathBloodParticleSystem;
     public GameObject shotSpitPrefab;
     public GameObject onDeathCoin;
+    public GameObject onDeathSeveredHead;
     private State state = State.SpottSigridWalk;
     private SpriteRenderer spriterenderer;
     private Material matWhite; //Används för att blinka vitt när fienden träffas av skott
     private Material matDefault; //Återställer rhinons materail till default
     private new Animator animation;
     public int points;
+    private int spawnDeadHeadOrNot;
 
     private bool canShoot;
     private float moveSpeed;
@@ -43,6 +45,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         playerController = PlayerController.InstanceOfPlayer;
         gameController = GameController.InstanceOfGame;
         sfxController = SFXController.InstanceOfSFX;
+        spawnDeadHeadOrNot = Random.Range(1, 4);
 
         canShoot = false;
         moveSpeed = -2;
@@ -152,6 +155,10 @@ public class SpottSigridBehaviour : MonoBehaviour
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
+        if (spawnDeadHeadOrNot == 1)
+        {
+            onDeathSeveredHead = Instantiate(onDeathSeveredHead, transform.position, Quaternion.identity);
+        }
         sfxController.PlaySigridDeath();
         Destroy(gameObject);
     }

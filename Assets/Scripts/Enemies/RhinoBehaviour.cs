@@ -21,6 +21,7 @@ public class RhinoBehaviour : MonoBehaviour
     private SFXController sfxController;
     private bool falling = false;
     private bool matResetBool = true;
+    private int spawnDeadHeadOrNot;
 
     float moveSpeed;
     bool movingLeft;
@@ -41,6 +42,7 @@ public class RhinoBehaviour : MonoBehaviour
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
+        spawnDeadHeadOrNot = Random.Range(1, 4);
 
         moveSpeed = -3;
         movingLeft = true;
@@ -209,7 +211,10 @@ public class RhinoBehaviour : MonoBehaviour
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
-        onDeathSeveredHead = Instantiate(onDeathSeveredHead, transform.position, Quaternion.identity);
+        if (spawnDeadHeadOrNot == 1)
+        {
+            onDeathSeveredHead = Instantiate(onDeathSeveredHead, transform.position, Quaternion.identity);
+        }
         sfxController.PlayRhinoDeath();
         Destroy(gameObject);
     }

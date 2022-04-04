@@ -232,6 +232,7 @@ MonoBehaviour:
   onDeathBloodParticleSystem: {fileID: 1907627891148627254, guid: cace8b37766378b48acf4dc11b32a39f, type: 3}
   shotSpitPrefab: {fileID: 1552685950231211276, guid: 58b6fa0733f8e3542bb6a23519c874b2, type: 3}
   onDeathCoin: {fileID: 9032735162423030646, guid: 8d90896061908bf48a249acb518ddc9d, type: 3}
+  onDeathSeveredHead: {fileID: 7416036657722849350, guid: 1989a794fac100a449c185a3e63d0d63, type: 3}
   points: 10
   HP: 5
   groundDetection: {fileID: 876772571}

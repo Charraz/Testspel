@@ -5,22 +5,25 @@ using UnityEngine;
 public class SeveredBodyParts : MonoBehaviour
 {
     public GameObject onDeathBloodAnimation;
-    public GameObject onDeathBloodParticleSystem;
     private Rigidbody2D rigidkropp;
     private float spawnVelocityX;
     private float spawnVelocityY;
+    private int spawnTorque;
+    [SerializeField] private Transform teleporterTop;
 
     private void Awake()
     {
-        spawnVelocityX = Random.Range(-5f, 5f);
-        spawnVelocityY = Random.Range(3f, 7f);
+        spawnVelocityX = Random.Range(-10f, 10f);
+        spawnVelocityY = Random.Range(3f, 5f);
+        spawnTorque = Random.Range(-100, 100);
     }
 
     void Start()
     {
         rigidkropp = gameObject.GetComponent<Rigidbody2D>();
         rigidkropp.AddForce(new Vector2(spawnVelocityX, spawnVelocityY), ForceMode2D.Impulse);
-        Invoke("Death", 10f);
+        rigidkropp.AddTorque(spawnTorque);
+        Invoke("Death", 20f);
     }
 
 
@@ -29,10 +32,21 @@ public class SeveredBodyParts : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Teleporter")
+        {
+            Vector2 position = new Vector2(transform.position.x, teleporterTop.position.y);
+            transform.position = position;
+
+            Vector2 speed = new Vector2(rigidkropp.velocity.x, -3f);
+            rigidkropp.velocity = speed;
+        }
+    }
+
     private void Death()
     {
         onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
