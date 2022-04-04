@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &35081462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1806514517, guid: 72b8107ece3a86c49ae9b352071aac71, type: 3}
-  m_PrefabInstance: {fileID: 315914496}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &172186211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}
@@ -1690,6 +1685,11 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!1 &607311066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1131155845, guid: 72b8107ece3a86c49ae9b352071aac71, type: 3}
+  m_PrefabInstance: {fileID: 315914496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &616706816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 78201377921636102, guid: 319e28013f724074887dddc0e575980f, type: 3}
@@ -2209,7 +2209,7 @@ PrefabInstance:
     - target: {fileID: 2513582180345861789, guid: 5f16767873445dd43be4af1da5b963ad, type: 3}
       propertyPath: timecontroller
       value: 
-      objectReference: {fileID: 35081462}
+      objectReference: {fileID: 607311066}
     - target: {fileID: 5237818152087182031, guid: 5f16767873445dd43be4af1da5b963ad, type: 3}
       propertyPath: m_Name
       value: Game
