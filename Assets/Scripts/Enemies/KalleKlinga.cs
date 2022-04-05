@@ -53,7 +53,7 @@ public class KalleKlinga : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            bloodSplash = Instantiate(bloodSplash, new Vector2(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            Instantiate(bloodSplash, new Vector2(transform.position.x, transform.position.y + 1), Quaternion.identity);
             animation.SetBool("Bloody", true);
         }
     }

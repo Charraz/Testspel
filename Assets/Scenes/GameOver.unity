@@ -1539,7 +1539,7 @@ ParticleSystem:
     enabled: 1
     mode: 1
     timeMode: 2
-    fps: 15
+    fps: 30
     frameOverTime:
       serializedVersion: 2
       minMaxState: 1
