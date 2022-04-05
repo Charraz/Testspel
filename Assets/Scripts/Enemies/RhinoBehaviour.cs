@@ -17,6 +17,7 @@ public class RhinoBehaviour : MonoBehaviour
     private Material matDefault; //Återställer rhinons materail till default
     private PlayerController playerController;
     private GameController gameController;
+    private CinemachineScreenShake cinemachineScreenShake;
     public int points;
     private SFXController sfxController;
     private bool falling = false;
@@ -41,8 +42,9 @@ public class RhinoBehaviour : MonoBehaviour
         spriterenderer = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
+        cinemachineScreenShake = CinemachineScreenShake.InstanceOfCinemachine;
         matDefault = spriterenderer.material;
-        spawnDeadHeadOrNot = Random.Range(1, 3);
+        spawnDeadHeadOrNot = Random.Range(1, 2);
 
         moveSpeed = -3;
         movingLeft = true;
@@ -177,6 +179,7 @@ public class RhinoBehaviour : MonoBehaviour
     private void rhinoWallOrPlayerHit()
     {
         sfxController.PlayRhinoChargeHit();
+        cinemachineScreenShake.ShakeCamera(5f, 0.2f);
 
         if (movingLeft == true)
         {
