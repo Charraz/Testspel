@@ -45,7 +45,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         playerController = PlayerController.InstanceOfPlayer;
         gameController = GameController.InstanceOfGame;
         sfxController = SFXController.InstanceOfSFX;
-        spawnDeadHeadOrNot = Random.Range(1, 3);
+        spawnDeadHeadOrNot = Random.Range(1, 2);
 
         canShoot = false;
         moveSpeed = -2;

@@ -9,13 +9,15 @@ public class SeveredBodyParts : MonoBehaviour
     private float spawnVelocityX;
     private float spawnVelocityY;
     private int spawnTorque;
+    public int tourqueLow;
+    public int torqueHigh;
     [SerializeField] private Transform teleporterTop;
 
     private void Awake()
     {
         spawnVelocityX = Random.Range(-10f, 10f);
         spawnVelocityY = Random.Range(3f, 5f);
-        spawnTorque = Random.Range(-100, 100);
+        spawnTorque = Random.Range(tourqueLow, torqueHigh);
     }
 
     void Start()

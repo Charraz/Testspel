@@ -145,4 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onDeathBloodAnimation: {fileID: 7727960266939480054, guid: 7186f0bcb1add39479e320c9f1d62fde, type: 3}
+  tourqueLow: -100
+  torqueHigh: 100
   teleporterTop: {fileID: 0}
