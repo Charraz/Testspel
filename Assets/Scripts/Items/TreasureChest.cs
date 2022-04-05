@@ -21,6 +21,8 @@ public class TreasureChest : MonoBehaviour
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         sfxController = SFXController.InstanceOfSFX;
         chestSpawner = ChestSpawner.InstanceOfChestSpawner;
+        sfxController.PlayChestSpawn();
+        sfxController.PlayChestActive();
     }
 
     void Update()
@@ -31,6 +33,7 @@ public class TreasureChest : MonoBehaviour
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             chestSpawner.chestExists = false;
             gameController.points += points;
+            sfxController.StopChestActive();
             sfxController.PlayChestPickup();
             Destroy(gameObject);
         }
@@ -56,6 +59,7 @@ public class TreasureChest : MonoBehaviour
             Instantiate(coinParticleSystem, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation = Quaternion.Euler(-90f, 0f, 0f));
             chestSpawner.chestExists = false;
             gameController.points += points;
+            sfxController.StopChestActive();
             sfxController.PlayChestPickup();
             Destroy(gameObject);
         }

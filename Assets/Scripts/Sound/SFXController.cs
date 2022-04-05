@@ -44,6 +44,8 @@ public class SFXController : MonoBehaviour
     //CoinSounds
     public AudioSource coinPickup;
     public AudioSource chestPickup;
+    public AudioSource chestSpawn;
+    public AudioSource chestActive;
 
     #endregion
 
@@ -183,6 +185,21 @@ public class SFXController : MonoBehaviour
     public void PlayChestPickup()
     {
         chestPickup.Play();
+    }
+
+    public void PlayChestSpawn()
+    {
+        chestSpawn.Play();
+    }
+
+    public void PlayChestActive()
+    {
+        chestActive.Play();
+    }
+
+    public void StopChestActive()
+    {
+        chestActive.Stop();
     }
     #endregion
 }
