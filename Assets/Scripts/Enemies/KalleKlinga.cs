@@ -5,6 +5,8 @@ using UnityEngine;
 public class KalleKlinga : MonoBehaviour
 {
     private Rigidbody2D rigidKropp;
+    private new Animator animation;
+    public GameObject bloodSplash;
     public float timeToDirectionChange;
     [SerializeField] private float moveSpeed;
     private bool movingLeft;
@@ -21,6 +23,7 @@ public class KalleKlinga : MonoBehaviour
     void Start()
     {
         playerController = PlayerController.InstanceOfPlayer;
+        animation = gameObject.GetComponent<Animator>();
         movingLeft = true;
         moveSpeed = 3f;
         rigidKropp = GetComponent<Rigidbody2D>();
@@ -50,7 +53,8 @@ public class KalleKlinga : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //playerController.playerHealth--;
+            bloodSplash = Instantiate(bloodSplash, new Vector2(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            animation.SetBool("Bloody", true);
         }
     }
 

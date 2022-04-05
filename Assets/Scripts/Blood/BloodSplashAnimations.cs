@@ -28,40 +28,19 @@ public class BloodSplashAnimations : MonoBehaviour
 
     void ChooseAnimation()
     {
-        int animationNumber = Random.Range(1, 9);
+        int animationNumber = Random.Range(1, 3);
+
         if (animationNumber == 1)
-        {
-            animation.SetTrigger("Animation1");
-        }
-        else if (animationNumber == 2)
         {
             animation.SetTrigger("Animation2");
         }
-        else if (animationNumber == 3)
-        {
-            animation.SetTrigger("Animation3");
-        }
-        else if (animationNumber == 4)
-        {
-            animation.SetTrigger("Animation4");
-        }
-        else if (animationNumber == 5)
-        {
-            animation.SetTrigger("Animation5");
-        }
-        else if (animationNumber == 6)
-        {
-            animation.SetTrigger("Animation6");
-        }
-        else if (animationNumber == 7)
+
+        else if (animationNumber == 2)
         {
             animation.SetTrigger("Animation7");
         }
-        else if (animationNumber == 8)
-        {
-            animation.SetTrigger("Animation8");
-        }
-        else if (animationNumber == 9)
+
+        else if (animationNumber == 3)
         {
             animation.SetTrigger("Animation9");
         }
