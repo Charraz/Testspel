@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
 
     public string firstLevel;
+    public string secondLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,11 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(firstLevel);
+    }
+
+    public void StartGame2()
+    {
+        SceneManager.LoadScene(secondLevel);
     }
 
     public void OpenOptions()
