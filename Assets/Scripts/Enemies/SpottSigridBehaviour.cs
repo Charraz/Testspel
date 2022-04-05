@@ -19,6 +19,8 @@ public class SpottSigridBehaviour : MonoBehaviour
     private new Animator animation;
     public int points;
     private int spawnDeadHeadOrNot;
+    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask wallMask;
 
     private bool canShoot;
     private float moveSpeed;
@@ -64,7 +66,7 @@ public class SpottSigridBehaviour : MonoBehaviour
             case State.SpottSigridWalk:
                 spottSigridWalk();
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left) * 10f, Color.green);
-                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector2.left), 12f);
+                RaycastHit2D SeesPlayerWalkState = Physics2D.Raycast(transform.position, transform.TransformDirection (Vector2.left), 12f, playerMask);
                 if (SeesPlayerWalkState.collider != null && SeesPlayerWalkState.collider.tag == "Player")
                 {
                     animation.SetBool("PlayerInSight", true);
@@ -99,7 +101,7 @@ public class SpottSigridBehaviour : MonoBehaviour
         }
             
         //Vänd när SpottSigrid kommer till en plattforms kant
-        RaycastHit2D TurnAroundRaycastEdge = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f);
+        RaycastHit2D TurnAroundRaycastEdge = Physics2D.Raycast(groundDetection.position, Vector2.down, 0.5f, wallMask);
         if (TurnAroundRaycastEdge.collider == false)
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);

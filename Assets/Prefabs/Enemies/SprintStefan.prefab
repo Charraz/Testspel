@@ -126,6 +126,12 @@ MonoBehaviour:
   onDeathCoin: {fileID: 9032735162423030646, guid: 8d90896061908bf48a249acb518ddc9d, type: 3}
   onDeathSeveredHead: {fileID: 7166336188950628923, guid: ebb8c5d391ffcf6478c70cfbcae0718a, type: 3}
   points: 10
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 1280
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 64
   HP: 8
   teleporterTop: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}
 --- !u!61 &681427023061891589
