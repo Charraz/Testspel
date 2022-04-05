@@ -23,6 +23,8 @@ public class RhinoBehaviour : MonoBehaviour
     private bool falling = false;
     private bool matResetBool = true;
     private int spawnDeadHeadOrNot;
+    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask wallMask;
 
     float moveSpeed;
     bool movingLeft;
@@ -67,7 +69,7 @@ public class RhinoBehaviour : MonoBehaviour
                 rhinoWalk();
                
                 //Tittar om spelaren är nära nog för att gå in i sitt attack state
-                RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 20f);
+                RaycastHit2D SeePlayer = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 20f, playerMask);
                 if (SeePlayer.collider != null && SeePlayer.collider.tag == "Player" && falling == false)
                 {
                     rigidkropp.AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
@@ -134,7 +136,7 @@ public class RhinoBehaviour : MonoBehaviour
 
 
         //Vänd när Rhino kommer till en vägg eller en annan fiende
-        RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f);
+        RaycastHit2D TurnAroundRaycast = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 1f, wallMask);
         if (TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Wall" /*|| TurnAroundRaycast.collider != null && TurnAroundRaycast.collider.tag == "Enemy"*/)
         {
             rigidkropp.transform.Rotate(0f, 180f, 0f);
