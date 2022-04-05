@@ -213,12 +213,12 @@ public class RhinoBehaviour : MonoBehaviour
 
     private void killSelf()
     {
-        onDeathBloodAnimation = Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        onDeathBloodParticleSystem = Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
-        onDeathCoin = Instantiate(onDeathCoin, transform.position, Quaternion.identity);
+        Instantiate(onDeathBloodAnimation, transform.position = new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Instantiate(onDeathBloodParticleSystem, transform.position, Quaternion.identity);
+        Instantiate(onDeathCoin, transform.position, Quaternion.identity);
         if (spawnDeadHeadOrNot == 1)
         {
-            onDeathSeveredHead = Instantiate(onDeathSeveredHead, transform.position, Quaternion.identity);
+            Instantiate(onDeathSeveredHead, transform.position, Quaternion.identity);
         }
         sfxController.PlayRhinoDeath();
         Destroy(gameObject);
