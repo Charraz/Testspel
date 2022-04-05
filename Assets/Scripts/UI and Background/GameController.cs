@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public int points = 0;
     public float gameTime = 0;
     private PlayerController playerController;
+    private bool gamePaused;
 
     //Referera till HPTextController
     private HPTextController hpTextController;
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour
     {
         playerController = PlayerController.InstanceOfPlayer;
         hpTextController = timecontroller.GetComponent<HPTextController>();
+        gamePaused = false;
     }
 
     // Update is called once per frame
@@ -45,6 +47,30 @@ public class GameController : MonoBehaviour
             Cursor.visible = true;
             SceneManager.LoadScene("GameOver");
             gameEnd = true;
+        }
+
+        if (Input.GetButtonDown("Cancel") && gamePaused == false)
+        {
+            Time.timeScale = 0f;
+            gamePaused = true;
+        }
+
+        else if (Input.GetButtonDown("Cancel") && gamePaused == true)
+        {
+
+            if (playerController.playerHealth > 0)
+            {
+                Time.timeScale = 1f;
+                gamePaused = false;
+            }
+
+            else if (playerController.playerHealth == 0)
+            {
+                Time.timeScale = 0.3f;
+                gamePaused = false;
+            }
+
+            
         }
 
         gameTime = hpTextController.gameTime;
