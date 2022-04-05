@@ -42,7 +42,7 @@ public class RhinoBehaviour : MonoBehaviour
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matRed = Resources.Load("RedMorning", typeof(Material)) as Material;
         matDefault = spriterenderer.material;
-        spawnDeadHeadOrNot = Random.Range(1, 4);
+        spawnDeadHeadOrNot = Random.Range(1, 3);
 
         moveSpeed = -3;
         movingLeft = true;
