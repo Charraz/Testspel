@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameController : MonoBehaviour
     public float gameTime = 0;
     private PlayerController playerController;
     private bool gamePaused;
+    public int timesPlayed;
 
     //Referera till HPTextController
     private HPTextController hpTextController;

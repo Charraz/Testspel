@@ -410,13 +410,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007049384587925693, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_Name
-      value: PlayButton (1)
+      value: ScoreButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007049384587925693, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007049385032129559, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_text
-      value: 'Play 2
-
-'
+      value: Score
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
@@ -5614,7 +5616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007049384587925690, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -405
+      value: -349
       objectReference: {fileID: 0}
     - target: {fileID: 9007049384587925690, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5801,7 +5803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstLevel: LEVEL 1
-  secondLevel: LEVEL 2
+  score: Score
 --- !u!1001 &9007049384968879726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5887,7 +5889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007049384587925690, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 53
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 9007049384587925690, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5947,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007049385032129559, guid: 73fc6ee39f9f6a843943b1d64f757980, type: 3}
       propertyPath: m_text
-      value: 'Play 1
+      value: 'Play
 
 '
       objectReference: {fileID: 0}
