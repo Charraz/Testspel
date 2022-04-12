@@ -14,6 +14,7 @@ public class CoinScript : MonoBehaviour
     public int points;
     private float spawnVelocityX;
     private float spawnVelocityY;
+    public GameObject pointsObject;
 
     //Teleporter Transform
     [SerializeField] private Transform teleporterTop;
@@ -42,6 +43,7 @@ public class CoinScript : MonoBehaviour
         if (IsTouchingPlayer())
         {
             Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(pointsObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             gameController.points += points;
             sfxController.PlayCoinPickup();
             Destroy(gameObject);
@@ -61,6 +63,7 @@ public class CoinScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Instantiate(coinPickedUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(pointsObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             gameController.points += points;
             sfxController.PlayCoinPickup();
             Destroy(gameObject);

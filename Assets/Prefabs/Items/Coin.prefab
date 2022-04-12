@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 18
+  m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: 0ca730ce7de6c6a44a736e6d5fb08ecc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,4 +169,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   points: 100
+  pointsObject: {fileID: 6194915517524577518, guid: a1099d47166d9ff4896ba93340705ea6, type: 3}
   teleporterTop: {fileID: 1686366667349512578, guid: 13f03504edcab7d43b5f595766d439d2, type: 3}
